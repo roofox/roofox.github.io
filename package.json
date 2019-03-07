@@ -1,12 +1,9 @@
 {
   "name": "gatsby-starter-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "ROOFOX.dev blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Sergio Flores <byoigres@gmail.com>",
   "dependencies": {
     "gatsby": "^2.1.22",
     "gatsby-image": "^2.0.31",
@@ -25,6 +22,7 @@
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-remark": "^2.3.0",
     "gatsby-transformer-sharp": "^2.1.15",
+    "gh-pages": "^2.0.1",
     "prismjs": "^1.15.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
@@ -38,7 +36,7 @@
   "devDependencies": {
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/roofox/roofox.github.io",
   "keywords": [
     "gatsby"
   ],
@@ -46,7 +44,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/roofox/roofox.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
@@ -54,6 +52,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   }
 }
