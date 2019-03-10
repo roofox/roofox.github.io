@@ -1,6 +1,6 @@
 import React from "react"
-import MainLayout from '../components/layouts/MainLayout'
-import GlobalStyle from '../components/GlobalStyle'
+import MainLayout from "../components/layouts/MainLayout"
+import GlobalStyle from "../components/GlobalStyle"
 
 const IndexPage = () => (
   <>
