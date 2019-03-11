@@ -7,8 +7,8 @@ const MainLayout = ({ children }) => (
   <>
     <GlobalStyle />
     <Grid>
-      <Row>
-        <Col style={{ backgroundColor: "red" }}>
+      <Row center="lg">
+        <Col xs={12} sm={12} md={6} lg={7}>
           <Heading />
           {children}
         </Col>
