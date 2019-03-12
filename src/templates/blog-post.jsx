@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Col, Row } from 'react-styled-flexboxgrid'
+import { format, distanceInWords } from 'date-fns'
+import esLocale from'date-fns/locale/es'
 import MainLayout from '../components/layouts/MainLayout';
 
 class BlogPostTemplate extends React.Component {
@@ -19,19 +21,34 @@ class BlogPostTemplate extends React.Component {
       <MainLayout>
         <Row>
           <Col>
-            <h2 style={{ fontFamily: 'Noto Serif JP'}}>{post.frontmatter.title}</h2>
+            <h2 style={{ fontFamily: 'Noto Serif JP' }}>{post.frontmatter.title}</h2>
           </Col>
         </Row>
         <Row>
           <Col>
-            <p>{post.frontmatter.date}</p>
+            <p>
+              <time dateTime={post.frontmatter.date}>
+                {
+                  format(
+                    new Date(post.frontmatter.date),
+                    'D [de] MMMM [de] YYYY',
+                    { locale: esLocale }
+                  )
+                }
+              </time>
+              {" / hace "}
+              {
+                distanceInWords(
+                  new Date(post.frontmatter.date),
+                  new Date(),
+                  { locale: esLocale }
+                )
+              }
+            </p>
           </Col>
         </Row>
-        <Row>
-          <Col
-            lg
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+        <Row center="lg">
+          <Col lg dangerouslySetInnerHTML={{ __html: post.html }} />
         </Row>
         <Row>
           <Col>
@@ -41,11 +58,11 @@ class BlogPostTemplate extends React.Component {
               </Link>
             )}
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={12} lg={12}>
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
-              </Link>
+            </Link>
             )}
           </Col>
         </Row>
