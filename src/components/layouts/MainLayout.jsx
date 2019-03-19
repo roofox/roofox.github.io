@@ -1,20 +1,28 @@
 import React from "react"
-import { Grid, Col, Row } from 'react-styled-flexboxgrid'
+import styled, { ThemeProvider } from "styled-components"
 import Heading from '../../components/Heading'
+import SiteMetadata from "../../components/SiteMetadata"
+import theme from "../../theme"
 import GlobalStyle from "../../components/GlobalStyle"
 
+const Main = styled.main`
+  padding: 0 ${p => p.theme.sidePadding};
+  overflow: hidden;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const MainLayout = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <Grid>
-      <Row center="lg">
-        <Col xs={12} sm={12} md={6} lg={7}>
-          <Heading />
-          {children}
-        </Col>
-      </Row>
-    </Grid>
-  </>
+  <ThemeProvider theme={theme}>
+    <>
+      <SiteMetadata />
+      <GlobalStyle />
+      <Heading />
+      <Main>{children}</Main>
+    </>
+  </ThemeProvider>
 )
 
 export default MainLayout

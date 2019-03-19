@@ -1,14 +1,33 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, Link, graphql } from "gatsby"
+import styled from 'styled-components';
+
+const Header = styled.header`
+  display: flex;
+  justify-content: center;
+`;
+
+const HeaderContainer = styled.div`
+  max-width: 76rem;
+  flex: 1;
+`
+
+const Title = styled.h1`
+  text-align: center;
+`;
 
 const MainLayout = ({
   site: {
-    siteMetadata: {
-      title
-    }
-  }
+    siteMetadata: { title },
+  },
 }) => (
-  <h1>{title}</h1>
+  <Header>
+    <HeaderContainer>
+      <Title>
+        <Link to="/">{title}</Link>
+      </Title>
+    </HeaderContainer>
+  </Header>
 )
 
 const query = graphql`

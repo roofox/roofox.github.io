@@ -5,10 +5,13 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
   /*
+  header,
+  article,
+  main,
   div {
     outline: 1px dashed grey;
   }
-  */
+  //*/
 
   /*
   base: 16px
@@ -32,11 +35,11 @@ const GlobalStyle = createGlobalStyle`
   */
 
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
   
   body {
-    font-family: "Noto Serif JP";
+    font-family: ${p => p.theme.bodyFontFamily};
     font-size: 1.1rem;
   }
 
@@ -71,6 +74,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
+  }
+
+  @media (max-width: 700px) {
+    html {
+      font-size: 15px;
+    }
   }
 `
 export default GlobalStyle

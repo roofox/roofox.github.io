@@ -3,6 +3,8 @@ module.exports = {
     title: `ROOFOX.dev`,
     description: `Blog de ROOFOX.dev`,
     author: `@roofoxdex`,
+    siteUrl: "https://roofox.dev",
+    twitter: "http://t.co/roofoxdev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,13 +33,13 @@ module.exports = {
               inlineCodeMarker: null,
               showLineNumbers: true,
               aliases: {
-                shell: 'bash',
-                hosts: 'bash'
-              }
-            }
-          }
-        ]
-      }
+                shell: "bash",
+                hosts: "bash",
+              },
+            },
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -56,7 +58,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: true
+        displayName: true,
+        fileName: true
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
