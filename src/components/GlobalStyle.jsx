@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Kanit:700');
+  @import url('https://fonts.googleapis.com/css?family=Merriweather');
   @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
   /*
@@ -35,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   */
 
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   body {
@@ -44,9 +45,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2 {
-    /* margin: 0;
-    padding: 0; */
-    font-family: Kanit;
+    font-family: ${p => p.theme.headerFontFamily};
+    font-size: 3rem;
+    line-height: 2.5rem!important;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 1.4375rem;
+    line-height: 2.5875rem;
+    text-align: justify;
   }
 
   /**
@@ -80,6 +91,14 @@ const GlobalStyle = createGlobalStyle`
     html {
       font-size: 15px;
     }
+  }
+
+  blockquote:not([data-name="title"]) {
+    border-left: 1rem solid ${p => p.theme.primaryColor1};
+    font-style: italic;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    position: relative;
   }
 `
 export default GlobalStyle

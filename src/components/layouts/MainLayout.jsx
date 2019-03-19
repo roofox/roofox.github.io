@@ -8,7 +8,7 @@ import GlobalStyle from "../../components/GlobalStyle"
 const Main = styled.main`
   padding: 0 ${p => p.theme.sidePadding};
   overflow: hidden;
-  margin-top: 5rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;

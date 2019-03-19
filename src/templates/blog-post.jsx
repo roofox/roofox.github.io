@@ -28,10 +28,6 @@ const Post = styled.article`
 
 const PostMeta = styled.section``
 
-const PostTitle = styled.h1`
-  font-family: "Noto Serif JP";
-`
-
 const PostContent = styled.section``
 
 class BlogPostTemplate extends React.Component {
@@ -39,14 +35,19 @@ class BlogPostTemplate extends React.Component {
     const {
       data: {
         markdownRemark: post
+      },
+      pathContext: {
+        cover
       }
     } = this.props;
+
+    const Cover = require(`../components/covers/${cover}`).default;
 
     return (
       <MainLayout>
         <Post>
           <PostMeta>
-            <PostTitle>{post.frontmatter.title}</PostTitle>
+            <Cover text={post.frontmatter.title} />
             <DateTime format="MMMM D, YYYY">
               {post.frontmatter.date}
             </DateTime>
