@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   */
 
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   body {
@@ -58,6 +58,24 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.4375rem;
     line-height: 2.5875rem;
     text-align: justify;
+  }
+
+  a {
+    color: ${p => p.theme.primaryColor1};
+    text-decoration: none;
+    border-bottom: 0.1rem solid ${p => p.theme.primaryColor1};
+    padding-bottom: 0px;
+    font-weight: 700;
+
+    &:hover {
+      border-bottom-color: ${p => p.theme.primaryColor2};
+      border-bottom-style: dashed;
+      color: ${p => p.theme.primaryColor2};
+    }
+
+    &:visited {
+      color: ${p => p.theme.primaryColor1};
+    }
   }
 
   /**
@@ -97,7 +115,7 @@ const GlobalStyle = createGlobalStyle`
     border-left: 1rem solid ${p => p.theme.primaryColor1};
     font-style: italic;
     margin: 0;
-    padding: 0 0 0 0.5rem;
+    padding: 0 0 0 2rem;
     position: relative;
   }
 `

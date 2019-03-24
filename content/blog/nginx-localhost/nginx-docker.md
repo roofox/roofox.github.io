@@ -20,19 +20,65 @@ Como todos sabemos, si ingresamos la URL http://localhost/ en el navegador estar
 
 Y bueno, no es muy común ejecutar aplicaciones en el puerto 80 cuando estamos programando, generalmente utilizamos otro puerto como el 3000 o similares, esto nos proporciona la ventaja de ejecutar varias aplicaciones en el equipo local sin necesidad de tener un servidor remoto para la ejecución de cada aplicación.
 
-Un caso muy común hoy en día es el programar el frontend y el backend como proyectos separados, cada uno ejecutandose en un puerto independiente, lo que nos lleva a tener que utilizar dos URLs del tipo http://localhost:3000, pero, _¿no sería genial poder utilizar algo como http://sergio.com/ para acceder al frontend y http://api.sergio.com para la API/backend?_ Podemos hacerlo 😎.
+Un caso muy común hoy en día es el programar el frontend y el backend como proyectos separados, cada uno ejecutandose en un puerto independiente, lo que nos lleva a tener que utilizar dos URLs del tipo http://localhost:3000, pero, _¿no sería genial poder utilizar algo como http://demo-cc9a.com/ para acceder al frontend y http://api.demo-cc9a.com para la API/backend?_ Podemos hacerlo 😎.
+
+## Primeros pasos
+
+Vamos a realizar un redireccionamiento utilizando [nginx][nginx] para que cuando ingresemos a http://demo-cc9a.com y http://api.demo-cc9a.com internamente el servidor web redireccione las peticiones al la direción local y puerto expuestas por [docker][docker].
+
+El ambiente que utilizaremos para la demostración utilizará lo siguiente:
+
+- [ubuntu][ubuntu] `v18.04.2 LTS`
+- [docker][docker] `v18.09.3`
+- [docker-compose][docker-compose] `v1.23.2`
+- [git][git] `v2.17.1`
+
+## Ejecutar las aplicaciones de ejemplo
+
+Vamos a crear un archivo `docker-compose.yml` en la ruta que prefieras al cual agregarás el siguiente contenido:
+
+```yaml
+version: '3.5'
+services:
+    whatsapp-database:
+        container_name: whatsapp-database
+        image: postgres:9.6.9
+        ports:
+            - "4397:${POSTGRES_PORT}"
+        volumes:
+            - ./.docker/postgres/data:/var/lib/postgresql/data
+            - ./schemas:/docker-entrypoint-initdb.d/
+        env_file:
+          - .env
+        networks:
+            - whatsapp-network
+    whatsapp-redis:
+        container_name: whatsapp-redis
+        image: redis:5.0-alpine
+        ports:
+            - "4398:${REDIS_PORT}"
+        volumes:
+            - ./.docker/redis/data:/data
+        env_file:
+          - .env
+        networks:
+            - whatsapp-network
+networks:
+    whatsapp-network:
+        name: whatsapp-network
+        driver: "bridge"
+volumes:
+    data:
+        driver: "local"
+```
+
+Como puedes ver, estamos creando tres servicios en los cuales vamos a exponer en un puerto diferente un servidor web, en cada servicio se mostrará un texto de ejemplo generado desde el lenguaje de programación del servicio.
+
+Si ingresamos en un navegador web con cada uno de los puertos veremos el mensaje que nos muestra.
 
 ## Instalar nginx
 
-### Necesitamos
-
-- ubuntu v18.04.2 LTS
-- docker v18.09.3
-- docker-compose 1.23.2
-- git 2.17.1
-
-
-Vamos a comenzar instalando `nginx` utilizando los siguientes comandos en la terminal.
+Vamos a comenzar instalando [nginx][nginx] utilizando los siguientes comandos en la terminal.
 
 ```shell
 sudo apt-get update
@@ -43,7 +89,7 @@ Después de la instalación procedemos a ingresar en el navegador web la url [ht
 
 > TODO: agregar imagen del resultado de entrar a http://localhost
 
-
+Esta es la página de prueba de [nginx][nginx], lo que nos indica que el servidor web está en ejecución y se encuentra en escuha utilizando el puerto `80`.
 
 ## Primeros pasos
 
@@ -184,4 +230,8 @@ http {
 
 [apache]: https://httpd.apache.org/
 [nginx]: https://nginx.org/
+[ubuntu]: https://www.ubuntu.com/
+[docker]: https://www.docker.com/
+[docker-compose]: https://docs.docker.com/compose/
+[git]: https://www.git-scm.com/
 [host-file-location]: https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system
