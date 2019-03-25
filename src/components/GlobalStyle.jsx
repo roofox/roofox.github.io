@@ -54,20 +54,20 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  p {
+  p, ul {
     font-size: 1.4375rem;
     line-height: 2.5875rem;
     text-align: justify;
   }
 
-  a {
+  a:not(.gatsby-resp-image-link) {
     color: ${p => p.theme.primaryColor1};
-    text-decoration: none;
+    text-decoration: none;    
     border-bottom: 0.1rem solid ${p => p.theme.primaryColor1};
     padding-bottom: 0px;
     font-weight: 700;
 
-    &:hover {
+    &:not(.gatsby-resp-image-link):hover {
       border-bottom-color: ${p => p.theme.primaryColor2};
       border-bottom-style: dashed;
       color: ${p => p.theme.primaryColor2};
@@ -76,6 +76,10 @@ const GlobalStyle = createGlobalStyle`
     &:visited {
       color: ${p => p.theme.primaryColor1};
     }
+  }
+
+  img {
+    border: 0.2rem solid ${p => p.theme.primaryColor1};
   }
 
   /**
@@ -103,6 +107,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
+  }
+
+  .gatsby-highlight-code-line {
+    background-color: ${p => p.theme.primaryColor1};
   }
 
   @media (max-width: 700px) {

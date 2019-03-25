@@ -25,7 +25,15 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        strategy: "img",
         plugins: [
+          "gatsby-remark-draw",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
