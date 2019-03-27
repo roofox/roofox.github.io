@@ -20,11 +20,11 @@ Como todos sabemos, si ingresamos la URL http://localhost/ en el navegador estar
 
 Y bueno, no es muy común ejecutar aplicaciones en el puerto 80 cuando estamos programando, generalmente utilizamos otro puerto como el 3000 o similares, esto nos proporciona la ventaja de ejecutar varias aplicaciones en el equipo local sin necesidad de tener un servidor remoto para la ejecución de cada aplicación.
 
-Un caso muy común hoy en día es el programar el frontend y el backend como proyectos separados, cada uno ejecutandose en un puerto independiente, lo que nos lleva a tener que utilizar dos URLs del tipo _localhost:&lt;puerto&gt;_, pero, _¿no sería genial poder utilizar algo como http://contenedores.com/ para acceder al frontend y http://api.contenedores.com para la API/backend?_ Podemos hacerlo 😎.
+Un caso muy común hoy en día es el programar el frontend y el backend como proyectos separados, cada uno ejecutandose en un puerto independiente, lo que nos lleva a tener que utilizar dos URLs del tipo _localhost:&lt;puerto&gt;_, pero, _¿no sería genial poder utilizar algo como http://superhero-app.com/ para acceder al frontend y http://api.superhero-app.com para la API/backend?_ Podemos hacerlo 😎.
 
 ## Primeros pasos
 
-El objetivo de este ejemplo es el de realizar un redireccionamiento utilizando [nginx][nginx] para que cuando ingresemos a http://my-node-app.com internamente el servidor web redireccione las peticiones a la direción y puerto local expuestas por [docker][docker].
+El objetivo de este ejemplo es el de realizar un redireccionamiento utilizando [nginx][nginx] para que cuando ingresemos a http://my-node-app.com internamente el servidor web redireccione las peticiones a la direción y puerto local expuestas por [docker][docker] (o cualquier otro proyecto ejecutandose en la maquina local).
 
 El flujo general — el que al final de esta publicación deberías entender mejor — es a como se muestra en el siguiente diagrama:
 
@@ -41,15 +41,14 @@ sequenceDiagram
     Navegador->>nginx: 127.0.0.1:80
     Note over Navegador,nginx: Se envía el header<br>Host: my-node-app.com
     Note over nginx: Mediante el header<br/>Host determina el<br/>host y puerto a<br/>redireccionar
-    nginx->>App: http://localhost:3618
+    nginx->>App: http://localhost:3618/
     App-->>Navegador: Envía la respuesta HTTP al navegador
 ```
 
 # Sofware necesario
 
-Utilizaremos un ambiente linux para la demostración del ejemplo y necesitaremos lo siguiente:
+Utilizaremos un ambiente linux para la demostración del ejemplo, [ubuntu][ubuntu] `v18.04.2 LTS` será el sistema operativo y necesitaremos la instalación de los siguientes programas:
 
-- [ubuntu][ubuntu] `v18.04.2 LTS`
 - [docker][docker] `v18.09.3`
 - [docker-compose][docker-compose] `v1.23.2`
 - [git][git] `v2.17.1`
@@ -163,7 +162,7 @@ Probemos acceder a cualquiera de los hostnames que definimos en el archivo anter
 
 ## Proxy Pass — o redireccionando el tráfico —
 
-[nginx](nginx) permite redireccionar el tráfico de una URL hacia otra utilizando la directiva [proxy-pass](proxy-pass) del módulo `ngx_http_proxy_module`, es muy común utilizar está directiva para colocar varios servidores en un mismo espacio de URL.
+[nginx](nginx) permite redireccionar el tráfico de una URL hacia otra utilizando la directiva [proxy_pass][proxy-pass] del módulo `ngx_http_proxy_module`, es muy común utilizar está directiva para colocar varios servidores en un mismo espacio de URL.
 
 Dentro del directorio `/etc/nginx/` se encuentra el archivo de configuración `nginx.conf`, si lo editamos veremos que en alguna parte de la sección `http` contiene lo siguiente:
 
@@ -210,7 +209,7 @@ Listo, ¡ingresa en el navegador web a http://my-node-app.com y verás lo mismo 
 
 # Funcionamiento de `proxy_pass` y `server_name`
 
-La mágia que acabas de hacer, es posible gracias a las directivas [proxy-pass](proxy-pass) y [server-name](server-name) las cuales hacen que la configuración sea tan sencilla como hacer un **match** o **if**.
+La mágia que acabas de hacer, es posible gracias a las directivas [proxy_pass][proxy-pass] y [server_name][server-name] las cuales hacen que la configuración sea tan sencilla como hacer un **match** o **if**.
 
 - El tag `server` define una nueva configuración de servidor
 - Con el tag `listen 80` definimos que nginx escuche por el puerto 80.
@@ -235,10 +234,7 @@ server {
 
 Para finalizar, realiza exactamente los mismos pasos para los dos servicios restantes, creando dos nuevos archivos de configuración y cambiando los valores de las directivas `proxy_pass` y `server_name`.
 
-> TODO:
-> - Cambiar `proxy-pass` por `proxy_pass` y `server-name` por `server_name`.
-> - Arreglar los enlances de `proxy_pass` y `server_name`.
-> -
+Ahora si puedes revisar nuevamente el diagrama del inicio para que entiendas un poco mas el proceso de redireccionamiento y si quieres conocer mas sobre las configuraciones que puedes hacer con [nginx][nginx] puedes revisar la documentación de [proxy_pass][proxy-pass] y [server_name][server-name].
 
 
 [apache]: https://httpd.apache.org/
