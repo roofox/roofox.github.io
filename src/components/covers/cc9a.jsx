@@ -67,14 +67,24 @@ const Blockquote = styled.blockquote`
 const Covercc9a = ({ text }) => (
   <Container>
     <Blockquote data-name="title">
-      {text.split(" ").map((word, index) => (
-        <span
-          key={`${word}-${index}`}
-          style={{ transform: `translate3d(${20 * index}px, 0, 0)` }}
-        >
-          {word}
-        </span>
-      ))}
+      {
+        text.split(" ")
+          .reduce((acc, item, index) => {
+            if (item.length < 3) {
+              acc[index - 1] = `${acc[index - 1]} ${item}`;
+              return acc;
+            }
+            return acc.concat(item);
+          }, [])
+          .map((word, index) => (
+            <span
+              key={`${word}-${index}`}
+              style={{ transform: `translate3d(${20 * index}px, 0, 0)` }}
+            >
+              {word}
+            </span>
+          ))
+      }
     </Blockquote>
   </Container>
 )
