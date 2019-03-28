@@ -5,6 +5,7 @@ module.exports = {
     author: `@roofoxdex`,
     siteUrl: "https://roofox.dev",
     twitter: "http://t.co/roofoxdev",
+    disqusShortname: "roofox-dev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,7 +32,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 700,
+              maxWidth: 960,
             },
           },
           {
@@ -43,9 +44,9 @@ module.exports = {
               aliases: {
                 shell: "bash",
                 hosts: "bash",
-              },
-            },
-          },
+              }
+            }
+          }
         ],
       },
     },
@@ -67,9 +68,10 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: true,
-        fileName: true
+        fileName: true,
       },
     },
+    "gatsby-plugin-catch-links",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

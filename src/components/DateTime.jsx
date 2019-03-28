@@ -6,11 +6,10 @@ import EsLocale from "date-fns/locale/es"
 
 const Time = styled.time`
   font-size: 1rem;
+  width: 100%;
   display: block;
-
-  @media only screen and (max-width: 29.999rem) {
-    font-size: 0.7rem;
-  }
+  text-align: right;
+  padding: 1rem 0;
 `
 
 const DateTime = ({ children: date, format: dateFormat }) => (

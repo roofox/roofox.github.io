@@ -41,16 +41,22 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: ${p => p.theme.bodyFontFamily};
-    font-size: 1.1rem;
   }
 
   h1, h2 {
     font-family: ${p => p.theme.headerFontFamily};
     font-size: 3rem;
     line-height: 2.5rem!important;
+    margin: 0;
+    padding: 2rem 0;
 
     & a {
       text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 2rem;
+      padding: 1rem 0;
     }
   }
 
@@ -61,7 +67,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a:not(.gatsby-resp-image-link) {
-    background: linear-gradient(to bottom, ${p => p.theme.primaryColor1} 0%, ${p => p.theme.primaryColor1} 100%);
+    background: linear-gradient(to bottom, ${p =>
+      p.theme.primaryColor1} 0%, ${p => p.theme.primaryColor1} 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 3px 3px;
@@ -70,33 +77,22 @@ const GlobalStyle = createGlobalStyle`
     padding-bottom: 0.5000rem;
 
     &:hover {
-      background-image: url("data: image/svg+xml;base64,${btoa(`<svg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'><style type='text/css'>.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}</style><path fill='none' stroke='#1E88E5' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/></svg>`)}");
+      background-image: url("data: image/svg+xml;base64,${btoa(
+        `<svg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'><style type='text/css'>.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}</style><path fill='none' stroke='#1E88E5' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/></svg>`
+      )}");
       background-position: 0 100%;
       background-size: auto 6px;
       background-repeat: repeat-x;
       text-decoration: none;
     }
-    /*
-    color: ${p => p.theme.primaryColor1};
-    text-decoration: none;    
-    border-bottom: 0.1rem solid ${p => p.theme.primaryColor1};
-    padding-bottom: 0px;
-    font-weight: 700;
-
-    &:not(.gatsby-resp-image-link):hover {
-      border-bottom-color: ${p => p.theme.primaryColor2};
-      border-bottom-style: dashed;
-      color: ${p => p.theme.primaryColor2};
-    }
-
-    &:visited {
-      color: ${p => p.theme.primaryColor1};
-    }
-    */
   }
 
   img {
     border: 0.2rem solid ${p => p.theme.primaryColor1};
+  }
+
+  :not(pre) > code[class*="language-"] {
+    color: ${p => p.theme.primaryColor1};
   }
 
   /**
@@ -105,7 +101,17 @@ const GlobalStyle = createGlobalStyle`
 
   /* Adjust the position of the line numbers */
   .gatsby-highlight pre[class*="language-"].line-numbers {
-    padding-left: 2.8em;
+    padding-left: 5.8em;
+  }
+
+  .gatsby-highlight pre[class*="language-"]>code {
+    padding-left: 1rem;
+    border-left-width: 1rem;
+    border-left-color: ${p => p.theme.primaryColor1};
+
+    @media (max-width: 700px) {
+      font-size: 0.75rem;
+    }
   }
 
   /**
@@ -113,10 +119,9 @@ const GlobalStyle = createGlobalStyle`
   */
 
   .gatsby-highlight {
-    background-color: #fdf6e3;
     border-radius: 0.3em;
-    margin: 0.5em 0;
-    padding: 1em;
+    margin: 0;
+    padding: 0em;
     overflow: auto;
   }
 
@@ -142,6 +147,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0 0 0 2rem;
     position: relative;
+
+    @media (max-width: 700px) {
+      padding: 0 0 0 1rem;
+    }
   }
 `
+
 export default GlobalStyle

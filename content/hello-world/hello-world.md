@@ -12,4 +12,4 @@ draft: false
 
 ¡Esta es mi primera publicación en roofox.dev!
 
-Estoy seguro que escribiré cosas mas interesantes en el futuro.
+Estoy seguro que escribiré cosas mas interesantes en el futuro. 🤔

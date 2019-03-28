@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { DiscussionEmbed } from "disqus-react"
+import { Waypoint } from "react-waypoint"
 import styled from 'styled-components'
 import MainLayout from '../components/layouts/MainLayout';
 import DateTime from '../components/DateTime'
@@ -30,16 +32,41 @@ const PostMeta = styled.section``
 
 const PostContent = styled.section``
 
+const PostComments = styled.section`
+  width: 100%;
+`;
+
+const LoadingComments = styled.div`
+  &::before {
+    content: "Cargando comentarios...";
+  }
+`
+
 class BlogPostTemplate extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayComments: false,
+    };
+  }
+
   render() {
     const {
       data: {
-        markdownRemark: post
+        markdownRemark: post,
+        site: {
+          siteMetadata: { disqusShortname },
+        },
       },
-      pathContext: {
-        cover
-      }
-    } = this.props;
+      pathContext: { cover },
+    } = this.props
+
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    }
+
+    console.log(disqusConfig, disqusShortname)
 
     const Cover = require(`../components/covers/${cover}`).default;
 
@@ -56,6 +83,22 @@ class BlogPostTemplate extends React.Component {
             /* eslint react/no-danger: 0 */
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
+          <PostComments>
+            <Waypoint
+              onEnter={() => {
+                this.setState({ displayComments: true })
+              }}
+            >
+              {this.state.displayComments ? (
+                <DiscussionEmbed
+                  shortname={disqusShortname}
+                  config={disqusConfig}
+                />
+              ) : (
+                <LoadingComments />
+              )}
+            </Waypoint>
+          </PostComments>
         </Post>
       </MainLayout>
     )
@@ -66,6 +109,11 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        disqusShortname
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
