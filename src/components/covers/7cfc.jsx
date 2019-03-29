@@ -4,6 +4,8 @@ import styled, { keyframes } from 'styled-components';
 const slide = keyframes`
   50% {     
     -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
+    -moz-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
+    clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
   }
 `;
 
@@ -28,7 +30,7 @@ const Text = styled.div`
   &:before {
     background: #262626;
     color: white;
-  content: '${p => p.children}';
+    content: '${p => p.children}';
     overflow: hidden;
     position: absolute;  
     top: 0;  

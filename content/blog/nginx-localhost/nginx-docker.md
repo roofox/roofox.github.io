@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "URLs amigables utilizando NGINX y docker"
-date: 2018-12-4 21:31:00
+date: "2019-03-29T11:13:00.00Z"
 description: Hello World
 categories: nginx docker 
 author: sergio
-path: "/nginx-docker-first-version/"
+path: "/urls-amigables-utilizando-nginx-y-docker/"
 cover: cc9a
 draft: false
 ---
