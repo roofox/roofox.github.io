@@ -20,7 +20,10 @@ const MainLayout = ({ children }) => (
       <SiteMetadata />
       <GlobalStyle />
       <Heading />
-      <Main>{children}</Main>
+      <Main>
+        {children}
+        <div>This is a bottom header</div>
+      </Main>
     </>
   </ThemeProvider>
 )

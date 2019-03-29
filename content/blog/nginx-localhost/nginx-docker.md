@@ -122,7 +122,7 @@ Como ya lo mencionamos, _localhost_ es el **hostname** del equipo local que est�
 
 Minimamente, este archivo contiene algo similar a lo siguiente:
 
-```hosts
+```vim
 127.0.0.1  localhost
 ::1        localhost
 ```
@@ -133,7 +133,7 @@ La configuración anterior es tan simple como decir que el hostname _localhost_ 
 
 Vamos, edita el archivo `/etc/hosts` y agrega el hostname _mi-pagina-local.com_ y luego ingresa a esa URL en el navegador.
 
-```hosts
+```vim
 127.0.0.1  localhost mi-pagina-local.com
 ::1        localhost
 ```
@@ -148,7 +148,7 @@ Y si agregas uno de los puertos de los servicios, también verás lo mismo.
 
 Ahora bien, podemos sacar ventaja de esto para dejar de acceder a las aplicaciones web utilizando el hostname **localhost** y podemos utilizar algo como lo que mencioné anteriormente. Vamos a agregar una nueva configuración al archivo hosts para mapear la dirección IP local con unos nuevos hostnames:
 
-```hosts
+```vim
 127.0.0.1  localhost mi-pagina-local.com
 ::1        localhost
 
@@ -166,7 +166,7 @@ Probemos acceder a cualquiera de los hostnames que definimos en el archivo anter
 
 Dentro del directorio `/etc/nginx/` se encuentra el archivo de configuración `nginx.conf`, si lo editamos veremos que en alguna parte de la sección `http` contiene lo siguiente:
 
-```conf
+```nginx
 include /etc/nginx/conf.d/*.conf;
 include /etc/nginx/sites-enabled/*;
 ```
@@ -179,7 +179,7 @@ Vamos a crear un archivo donde definiremos la configuración para uno de los ser
 
 > **NOTA: El directorio `/etc/nginx` es un directorio en el que solamente se pueden crear ó modificar archivos con permisos de usuario root.**
 
-```conf
+```nginx
 server {
 	listen 80;
     listen [::]:80;
@@ -216,7 +216,7 @@ La mágia que acabas de hacer, es posible gracias a las directivas [proxy_pass][
 - `server_name my-node-app.com` define el nombre del servidor, valor que se utilizará para compararlo con el header `host` que se envíe en la petición HTTP y mismo que definímos en el archivo `hosts` del sistema operativo.
 - Con los tags `location ^~ /` y `proxy_pass http://localhost:3618;` definimos que cuando se acceda a la URL raíz ó `/` se realice el redireccionamiento de la petición HTTP al `host`:`puerto` especificados, en este caso `localhost`:`3618`.
 
-```conf{1,4-6}
+```nginx
 server {
 	listen 80;
     listen [::]:80;

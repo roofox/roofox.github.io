@@ -14,6 +14,12 @@ const Post = styled.article`
   width: 100%;
   max-width: ${p => p.theme.contentMaxWidth};
 
+  p, ul {
+    font-size: 1.4375rem;
+    line-height: 2.5875rem;
+    text-align: justify;
+  }
+
   @media only screen and (max-width: 61.999rem) {
     max-width: 100%;
   }
@@ -21,14 +27,29 @@ const Post = styled.article`
   @media only screen and (max-width: 29.999rem) {
     max-width: 100%;
 
-    p {
+    p, ul  {
       font-size: 1rem;
-      line-height: 1.8rem;
+      line-height: 2rem;
     }
   }
 `
 
-const PostMeta = styled.section``
+const PostMeta = styled.section`
+  position: relative;
+`
+
+const Hr = styled.hr`
+  border: 0;
+  margin-top: 1rem;
+  width: 40%;
+  border-color: ${p => p.theme.primaryColor1};
+  border-style: solid;
+  border-top-width: 0.25rem;
+
+  @media only screen and (max-width: 29.999rem) {
+    width: 100%;
+  }
+`
 
 const PostContent = styled.section``
 
@@ -75,6 +96,7 @@ class BlogPostTemplate extends React.Component {
         <Post>
           <PostMeta>
             <Cover text={post.frontmatter.title} />
+            <Hr />
             <DateTime format="MMMM D, YYYY">
               {post.frontmatter.date}
             </DateTime>

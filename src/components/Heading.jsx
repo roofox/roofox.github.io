@@ -18,7 +18,7 @@ const Title = styled.h1`
 
 const Link = styled(GatsbyLink)`
   background-image: none !important;
-  font-size: 4rem;
+  font-size: 3rem;
 `
 
 const MainLayout = ({

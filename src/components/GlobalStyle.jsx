@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 16px;
+
+    @media (max-width: 700px) {
+      font-size: 15px;
+    }
   }
   
   body {
@@ -58,12 +62,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 2rem;
       padding: 1rem 0;
     }
-  }
-
-  p, ul {
-    font-size: 1.4375rem;
-    line-height: 2.5875rem;
-    text-align: justify;
   }
 
   a:not(.gatsby-resp-image-link) {
@@ -91,15 +89,67 @@ const GlobalStyle = createGlobalStyle`
     border: 0.2rem solid ${p => p.theme.primaryColor1};
   }
 
+  .gatsby-highlight  {
+    position: relative;
+
+    &::before {
+      content: attr(data-language);
+      background: ${p => p.theme.primaryColor1};
+      border-bottom-left-radius: 0.25rem;
+      color: #FFF;
+      font-size: 0.75rem;
+      font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+      letter-spacing: 0.075em;
+      line-height: 1;
+      padding: 0.25rem 0.5rem;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      text-transform: uppercase;
+      top: 0;
+      z-index: 5;
+    }
+  }
+
+  /* pre[class*="language-"]:before, pre[class*="language-"]:after {} */
+
+  pre[class*="language-"] {
+    :before {
+      content: none;
+    }
+
+    :after {
+      content: none;
+    }
+
+    &.line-numbers.line-numbers {
+      code {
+        padding-left: 1rem;
+        border-left-color: ${p => p.theme.primaryColor1};
+        border-left-width: 2rem;
+      }
+      .line-numbers-rows {
+        width: 2rem!important;
+        border-right-color: ${p => p.theme.primaryColor1};
+
+        span::before {
+          color: #FFF;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* pre[class*="language-"] > code {
+    border-left-width: 1rem;
+  } */
+
+  /*
   :not(pre) > code[class*="language-"] {
     color: ${p => p.theme.primaryColor1};
   }
 
-  /**
-  * If you already use line highlighting
-  */
-
-  /* Adjust the position of the line numbers */
   .gatsby-highlight pre[class*="language-"].line-numbers {
     padding-left: 5.8em;
   }
@@ -113,10 +163,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 0.75rem;
     }
   }
-
-  /**
-  * If you only want to use line numbering
-  */
 
   .gatsby-highlight {
     border-radius: 0.3em;
@@ -134,12 +180,7 @@ const GlobalStyle = createGlobalStyle`
   .gatsby-highlight-code-line {
     background-color: ${p => p.theme.primaryColor1};
   }
-
-  @media (max-width: 700px) {
-    html {
-      font-size: 15px;
-    }
-  }
+  */
 
   blockquote:not([data-name="title"]) {
     border-left: 1rem solid ${p => p.theme.primaryColor1};

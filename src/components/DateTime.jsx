@@ -8,8 +8,8 @@ const Time = styled.time`
   font-size: 1rem;
   width: 100%;
   display: block;
-  text-align: right;
-  padding: 1rem 0;
+  text-align: center;
+  padding: 0.25rem 0;
 `
 
 const DateTime = ({ children: date, format: dateFormat }) => (
