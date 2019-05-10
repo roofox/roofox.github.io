@@ -1,8 +1,9 @@
 import React from "react"
-import MainLayout from "../components/layouts/MainLayout"
 import { graphql } from "gatsby"
 import Link from "gatsby-link"
 import styled from 'styled-components'
+import MainLayout from "../components/layouts/MainLayout"
+import SiteMetadata from "../components/SiteMetadata"
 import DateTime from '../components/DateTime';
 
 const Post = styled.section`
@@ -26,6 +27,7 @@ const IndexPage = ({
   },
 }) => (
   <MainLayout>
+    <SiteMetadata pathname="/" />
     <article>
       <h1>Últimas publicaciones</h1>
       {posts.map(post => (

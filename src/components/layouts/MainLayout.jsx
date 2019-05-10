@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import Heading from '../../components/Heading'
-import SiteMetadata from "../../components/SiteMetadata"
 import Footer from "../../components/Footer"
 import theme from "../../theme"
 import GlobalStyle from "../../components/GlobalStyle"
@@ -18,7 +17,6 @@ const Main = styled.main`
 const MainLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
-      <SiteMetadata />
       <GlobalStyle />
       <Heading />
       <Main>

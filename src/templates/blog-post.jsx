@@ -5,6 +5,7 @@ import { Waypoint } from "react-waypoint"
 import styled from 'styled-components'
 import MainLayout from '../components/layouts/MainLayout';
 import DateTime from '../components/DateTime'
+import SiteMetadata from "../components/SiteMetadata"
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -93,6 +94,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <MainLayout>
+        <SiteMetadata pathname={post.frontmatter.path} />
         <Post>
           <PostMeta>
             <Cover text={post.frontmatter.title} />
@@ -144,6 +146,7 @@ export const pageQuery = graphql`
         title
         date
         description
+        path
       }
     }
   }
