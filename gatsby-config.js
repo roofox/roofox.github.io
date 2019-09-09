@@ -26,14 +26,23 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        strategy: "img",
         plugins: [
-          "gatsby-remark-draw",
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
             },
+          },
+          {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+              language: 'mermaid',
+              theme: 'default',
+              viewport: {
+                width: 200,
+                height: 200
+              }
+            }
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -51,7 +60,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -71,9 +79,6 @@ module.exports = {
         fileName: true,
       },
     },
-    "gatsby-plugin-catch-links",
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    "gatsby-plugin-catch-links"
   ],
 }

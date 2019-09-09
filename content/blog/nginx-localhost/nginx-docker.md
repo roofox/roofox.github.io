@@ -29,7 +29,7 @@ El objetivo de este ejemplo es el de realizar un redireccionamiento utilizando [
 El flujo general — el que al final de esta publicación deberías entender mejor — es a como se muestra en el siguiente diagrama:
 
 
-```mermaid-svg
+```mermaid
 sequenceDiagram
     participant Usuario
     participant Navegador
