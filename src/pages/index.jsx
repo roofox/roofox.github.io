@@ -32,7 +32,7 @@ const IndexPage = ({
       <h1>Últimas publicaciones</h1>
       {posts.map(post => (
         <Post key={post.node.frontmatter.path}>
-          <DateTime format="MMMM D, YYYY">{post.node.frontmatter.date}</DateTime>
+          <DateTime format="MMMM d, yyyy">{post.node.frontmatter.date}</DateTime>
           <PostTitle to={post.node.frontmatter.path}>
             {post.node.frontmatter.title}
           </PostTitle>
