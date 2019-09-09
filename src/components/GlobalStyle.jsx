@@ -2,9 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import { Base64 } from 'js-base64';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Kanit:700');
-  @import url('https://fonts.googleapis.com/css?family=Merriweather');
-  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+  @import url('https://fonts.googleapis.com/css?family=Kanit:700|Merriweather|Noto+Serif+JP&display=swap');
 
   /*
   header,
