@@ -22,7 +22,10 @@ const MainLayout = ({ children }) => (
       <Main>
         {children}
         <Footer>
-          <p>Blog escrito por Sergio Flores</p>
+          <p>
+            Blog escrito por&nbsp;
+            <a href="https://byoigr.es/" target="_blank">Sergio Flores</a>
+          </p>
         </Footer>
       </Main>
     </>
