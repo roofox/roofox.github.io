@@ -98,6 +98,13 @@ module.exports = {
         fileName: true,
       },
     },
-    "gatsby-plugin-catch-links"
+    "gatsby-plugin-catch-links",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-98315944-2",
+        head: false,
+      },
+    },
   ],
 }
