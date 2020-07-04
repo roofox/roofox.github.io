@@ -43,10 +43,13 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: ${p => p.theme.bodyFontFamily};
+    background-color: ${p => p.theme.bodyBackgroundColor};
+    color: ${p => p.theme.bodyColor};
   }
 
   h1, h2 {
     font-family: ${p => p.theme.headerFontFamily};
+    color: ${p => p.theme.bodyColor};
     font-size: 3rem;
     line-height: 2.5rem!important;
     margin: 0;
@@ -68,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 3px 3px;
-    color: #000;
+    color: ${p => p.theme.bodyColor};
     text-decoration: none;
     padding-bottom: 0.5000rem;
 

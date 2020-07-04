@@ -31,7 +31,12 @@ module.exports = {
             family: 'Noto Serif JP',
           },
           {
-            family: 'Merriweather',
+            family: 'Merriweather:ital,wght@',
+            variants: [
+              '0,400',
+              '0,900',
+              '1,300'
+            ]
           },
           {
             family: 'Kanit',

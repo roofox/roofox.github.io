@@ -10,7 +10,7 @@ const Post = styled.section`
   flex: 1 0 100%;
   margin: 1rem 0 2rem;
   font-size: 1.4375rem;
-  background-color: white;
+  background-color: transparent;
 
   @media only screen and (max-width: 29.999rem) {
     > a {
