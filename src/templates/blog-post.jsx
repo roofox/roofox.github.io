@@ -42,7 +42,7 @@ const PostMeta = styled.section`
 const Hr = styled.hr`
   border: 0;
   margin-top: 1rem;
-  width: 40%;
+  width: 100%;
   border-color: ${p => p.theme.primaryColor1};
   border-style: solid;
   border-top-width: 0.25rem;
@@ -88,7 +88,9 @@ class BlogPostTemplate extends React.Component {
       title: post.frontmatter.title,
     }
 
-    const Cover = require(`../components/covers/${cover}`).default;
+    const Cover = cover ? 
+      require(`../components/covers/${cover}`).default :
+      ({ text }) => (<h1>{text}</h1>);
 
     return (
       <MainLayout>
