@@ -78,6 +78,7 @@ const GlobalStyle = createGlobalStyle`
       background-size: auto 6px;
       background-repeat: repeat-x;
       text-decoration: none;
+      z-index: 99;
     }
   }
 

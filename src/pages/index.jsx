@@ -8,7 +8,7 @@ import DateTime from '../components/DateTime';
 
 const Post = styled.section`
   flex: 1 0 100%;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
   font-size: 1.4375rem;
   background-color: white;
 
@@ -26,21 +26,21 @@ const IndexPage = ({
     allMarkdownRemark: { edges: posts },
   },
 }) => (
-  <MainLayout>
-    <SiteMetadata pathname="/" />
-    <article>
-      <h1>Últimas publicaciones</h1>
-      {posts.map(post => (
-        <Post key={post.node.frontmatter.path}>
-          <DateTime format="MMMM d, yyyy">{post.node.frontmatter.date}</DateTime>
-          <PostTitle to={post.node.frontmatter.path}>
-            {post.node.frontmatter.title}
-          </PostTitle>
-        </Post>
-      ))}
-    </article>
-  </MainLayout>
-)
+    <MainLayout>
+      <SiteMetadata pathname="/" />
+      <article>
+        <h1>Últimas publicaciones</h1>
+        {posts.map(post => (
+          <Post key={post.node.frontmatter.path}>
+            <DateTime format="MMMM d, yyyy" align="left">{post.node.frontmatter.date}</DateTime>
+            <PostTitle to={post.node.frontmatter.path}>
+              {post.node.frontmatter.title}
+            </PostTitle>
+          </Post>
+        ))}
+      </article>
+    </MainLayout>
+  )
 
 export const pageQuery = graphql`
   query IndexQuery {

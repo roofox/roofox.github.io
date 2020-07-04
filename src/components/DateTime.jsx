@@ -8,12 +8,12 @@ const Time = styled.time`
   font-size: 1rem;
   width: 100%;
   display: block;
-  text-align: center;
+  text-align: ${p => p.align};
   padding: 0.25rem 0;
 `
 
-const DateTime = ({ children: date, format: dateFormat }) => (
-  <Time>
+const DateTime = ({ children: date, format: dateFormat, align = 'center' }) => (
+  <Time align={align}>
     {format(parseISO(date), dateFormat, {
       locale: EsLocale,
     })}

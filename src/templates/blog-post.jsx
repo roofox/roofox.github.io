@@ -88,8 +88,6 @@ class BlogPostTemplate extends React.Component {
       title: post.frontmatter.title,
     }
 
-    console.log(disqusConfig, disqusShortname)
-
     const Cover = require(`../components/covers/${cover}`).default;
 
     return (
