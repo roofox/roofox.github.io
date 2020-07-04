@@ -5,10 +5,13 @@ import styled from "styled-components"
 import EsLocale from "date-fns/locale/es"
 
 const Time = styled.time`
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 100;
   width: 100%;
   display: block;
   text-align: ${p => p.align};
+  color: #616161;
   padding: 0.25rem 0;
 `
 
