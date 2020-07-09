@@ -1,0 +1,28 @@
+{
+  "name": "roofox.dev",
+  "version": "0.2.0",
+  "description": "roofox.dev website",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roofox/roofox.github.io.git"
+  },
+  "keywords": [
+    "11ty",
+    "website"
+  ],
+  "author": "Sergio Flores <byoigres@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roofox/roofox.github.io/issues"
+  },
+  "homepage": "https://github.com/roofox/roofox.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}

@@ -1,0 +1,14 @@
+---
+title: My Rad Blog
+layout: main
+---
+<article class="post">
+  <section class="post-meta">
+    <h1 class="post-title">{{ title }}</h1>
+  </section>
+  <section class="post-content">
+    {{ content | safe }}
+  </section>
+  {# <p>{{ description }}</p>
+  <p>{{ permalink }}</p> #}
+</article>

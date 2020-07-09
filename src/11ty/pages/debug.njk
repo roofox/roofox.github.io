@@ -1,0 +1,36 @@
+---
+title: My index page
+layout: main
+permalink: "debug.html"
+---
+
+<h1>Let's debug!</h1>
+
+<ul>
+{%- for post in collections.all -%}
+    <li>
+        <a href="{{ post.url }}">{{ post.url }}</a>
+    </li>
+{%- endfor -%}
+</ul>
+
+<h1><strong>Collections length:</strong> {{ collections | length }}</h1>
+<h1><strong>Data length:</strong> {{ site | dump }}</h1>
+
+<hr />
+{# {{ collections | dump }} #}
+{%- for post in collections.all -%}
+    {% if post.data.layout === "post"  %}
+    <details>
+        <summary>{{ post.url }}</summary>
+        <pre>{{ post.data | dump }}</pre>
+    </details>
+    {% endif %}
+{%- endfor -%}
+<hr />
+{# {%- for post in collections.all -%}
+    <details>
+        <summary>{{ post.url }}</summary>
+        <pre>{{ post | dump }}</pre>
+    </details>
+{%- endfor -%} #}
