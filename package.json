@@ -4,7 +4,7 @@
   "description": "roofox.dev website",
   "main": "src/index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "npm run clean && eleventy --serve",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/roofox/roofox.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "globby": "^11.0.1"
   }
 }
