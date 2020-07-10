@@ -6,6 +6,7 @@ description: Hello World
 categories: nginx docker 
 author: sergio
 path: "/urls-amigables-utilizando-nginx-y-docker/"
+permalink: "urls-amigables-utilizando-nginx-y-docker/index.html"
 cover: cc9a
 draft: false
 ---

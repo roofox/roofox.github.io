@@ -6,6 +6,7 @@ description: Hello World
 categories: personal
 author: sergio
 path: /hello-world/
+permalink: "hello-world/index.html"
 cover: 7cfc
 draft: false
 ---
