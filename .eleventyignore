@@ -1,7 +1,6 @@
 README.md
 .git
 .gitignore
-README.md
 dist
 node_modules
 package-lock.json
