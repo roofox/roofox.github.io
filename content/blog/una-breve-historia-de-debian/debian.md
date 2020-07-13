@@ -38,6 +38,8 @@ concepto de distribución era prácticamente nuevo.
 
 ![Anuncio de Debian](./debian-announcement.png)
 
+[![Anuncio de Debian](./debian-announcement.png)](./debian-announcement.png)
+
 ## Un nombre creativo
 
 En su momento Ian tenía una novia de nombre _Debra Lynn_ con la que tiempo

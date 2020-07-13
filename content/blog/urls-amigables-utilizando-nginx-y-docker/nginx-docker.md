@@ -27,7 +27,9 @@ El objetivo de este ejemplo es el de realizar un redireccionamiento utilizando [
 
 El flujo general — el que al final de esta publicación deberías entender mejor — es a como se muestra en el siguiente diagrama:
 
+![Diagrama de flujo](./diagrama-de-flujo.png)
 
+<!--
 ```mermaid
 sequenceDiagram
     participant Usuario
@@ -41,8 +43,9 @@ sequenceDiagram
     Note over Navegador,nginx: Se envía el header<br>Host: my-node-app.com
     Note over nginx: Mediante el header<br/>Host determina el<br/>host y puerto a<br/>redireccionar
     nginx->>App: http://localhost:3618/
-    App-->>Navegador: Envía la respuesta HTTP al navegador
+    App-- >>Navegador: Envía la respuesta HTTP al navegador
 ```
+-->
 
 # Sofware necesario
 

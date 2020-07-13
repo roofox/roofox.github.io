@@ -74,7 +74,7 @@ h1, h2 {
     font-family: Kanit;
     // color: ${p => p.theme.bodyColor};
     font-size: 3rem;
-    line-height: 2.5rem!important;
+    line-height: 2.5rem;
     margin: 0;
     padding: 2rem 0;
 
@@ -123,6 +123,9 @@ article {
 
         .post-meta {
             position: relative;
+            .post-title {
+                line-height: 3rem;
+            }
         }
 
         .post-content {
