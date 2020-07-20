@@ -34,3 +34,12 @@ permalink: "debug.html"
         <pre>{{ post | dump }}</pre>
     </details>
 {%- endfor -%} #}
+{# <h1>Hey</h1>
+{%- for post in collections.post -%}
+    {% if post.data.prism  %}
+        {%- for lang in post.data.prism -%}
+        <p>{{ lang }}</p>
+        {%- endfor -%}
+    {% endif %}
+{%- endfor -%}
+<hr /> #}
