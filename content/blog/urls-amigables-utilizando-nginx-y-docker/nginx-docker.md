@@ -7,13 +7,13 @@ tags: ['post']
 categories: nginx docker 
 author: sergio
 path: "/urls-amigables-utilizando-nginx-y-docker/"
-permalink: "urls-amigables-utilizando-nginx-y-docker/index.html"
+permalink: "/urls-amigables-utilizando-nginx-y-docker/index.html"
 cover: cc9a
 prism: ["vim", "bash", "nginx", "yaml"]
 draft: false
 ---
 
-Todos los programadores web conocemos perfectamente el concepto de qué es *localhost*, ya que diariamente trabajamos con el para acceder y probar nuestros sitios web.
+ATodos los programadores web conocemos perfectamente el concepto de qué es *localhost*, ya que diariamente trabajamos con el para acceder y probar nuestros sitios web.
 
 > *localhost* es el nombre del equipo local o _"este equipo"_ el cual tiene la dirección IP _127.0.0.1_.
 

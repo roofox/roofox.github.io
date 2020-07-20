@@ -9,9 +9,28 @@ layout: main
   </section>
   <section class="post-content">
     {{ content | safe }}
+    <div id="disqus_thread"></div>
   </section>
   {# <p>{{ description }}</p>
   <p>{{ permalink }}</p> #}
+
+<script>
+    var disqus_config = function () {
+        this.page.url = '{{ site.url }}{{ permalink }}';
+        this.page.identifier = '{{ site.url }}{{ permalink }}';
+    };
+
+    (function() {
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://byoigres.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   {%- for post in collections.post -%}
