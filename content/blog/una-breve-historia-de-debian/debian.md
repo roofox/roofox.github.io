@@ -9,6 +9,7 @@ categories: debian operating-system
 author: sergio
 path: "/una-breve-historia-de-debian/"
 permalink: "una-breve-historia-de-debian/index.html"
+prism: []
 draft: false
 ---
 

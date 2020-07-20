@@ -4,8 +4,9 @@
   "description": "roofox.dev website",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm-run-all clean --parallel styles:dev eleventy:default --print-label",
+    "start": "npm-run-all clean create-folder --parallel styles:dev eleventy:default --print-label",
     "clean": "rm -rf dist",
+    "create-folder": "mkdir dist",
     "eleventy:default": "eleventy --serve",
     "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true -w -r",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,14 +27,17 @@
   "homepage": "https://github.com/roofox/roofox.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "date-fns": "^2.15.0",
     "globby": "^11.0.1",
     "markdown2html-pro": "^1.0.6",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
-    "remark": "^12.0.0",
-    "remark-external-links": "^6.1.0",
-    "remark-html": "^11.0.2",
-    "remark-images": "^2.0.0",
-    "remark-preset-lint-recommended": "^4.0.1"
-  }
+    "rehype-stringify": "^8.0.0",
+    "remark-parse": "^8.0.3",
+    "remark-rehype": "^7.0.0",
+    "unified": "^9.0.0",
+    "unist-builder": "^2.0.3"
+  },
+  "dependencies": {}
 }
