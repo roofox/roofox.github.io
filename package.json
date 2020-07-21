@@ -4,11 +4,14 @@
   "description": "roofox.dev website",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm-run-all clean create-folder --parallel styles:dev eleventy:default --print-label",
+    "start": "ELEVENTY_ENV=dev npm-run-all clean create-folder --parallel styles:dev eleventy:serve --print-label",
+    "build": "ELEVENTY_ENV=prod npm-run-all clean create-folder eleventy:build styles:prod --print-label",
     "clean": "rm -rf dist",
     "create-folder": "mkdir dist",
-    "eleventy:default": "eleventy --serve",
+    "eleventy:serve": "eleventy --serve",
+    "eleventy:build": "eleventy",
     "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true -w -r",
+    "styles:prod": "node-sass src/styles/ --output-style compressed --output dist/styles/ --source-map true --source-map-contents true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
