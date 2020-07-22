@@ -1,98 +1,75 @@
 // @import "../../node_modules/normalize.css/normalize";
 // @import url("'./node_modules/prismjs/themes/prism-dark.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;1,300;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;1,300;1,900&display=swap');
 
-
-
-@import 'colors';
-@import 'utils/svg-uri';
-@import 'components/prism-theme';
+$background-color: #264653;
 
 html {
-    background-color: $background-color !important;
+    background-color: #181a1b !important;
 }
-
 html, body, input, textarea, select, button {
-    background-color: $background-color;
+    background-color: #181a1b;
 }
-
 html, body, input, textarea, select, button {
     border-color: #736b5e;
     color: #e8e6e3;
 }
-
-// :not(a) > code {
 a {
-    background: linear-gradient(to bottom, $primary-color 0%, $primary-color 100%);
+    background: linear-gradient(to bottom, #3391ff 0%, #3391ff 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 3px 3px;
-    color: $primary-color;
+    color: #3391ff;
     text-decoration: none;
     padding-bottom: 0.5000rem;
 
     &:hover {
-        background-image: svg-uri("<svg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'><style type='text/css'>.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}</style><path fill='none' stroke='" + $primary-color + "' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/></svg>");
-        background-position: 0 100%;
-        background-size: auto 6px;
-        background-repeat: repeat-x;
-        text-decoration: none;
-        z-index: 99;
+      background-image: url("data: image/svg+xml;base64,PHN2ZyBpZD0nc3F1aWdnbGUtbGluaycgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgeG1sbnM6ZXY9J2h0dHA6Ly93d3cudzMub3JnLzIwMDEveG1sLWV2ZW50cycgdmlld0JveD0nMCAwIDIwIDQnPjxzdHlsZSB0eXBlPSd0ZXh0L2Nzcyc+LnNxdWlnZ2xle2FuaW1hdGlvbjpzaGlmdCAuM3MgbGluZWFyIGluZmluaXRlO31Aa2V5ZnJhbWVzIHNoaWZ0IHtmcm9tIHt0cmFuc2Zvcm06dHJhbnNsYXRlWCgwKTt9dG8ge3RyYW5zZm9ybTp0cmFuc2xhdGVYKC0yMHB4KTt9fTwvc3R5bGU+PHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjMUU4OEU1JyBzdHJva2Utd2lkdGg9JzInIGNsYXNzPSdzcXVpZ2dsZScgZD0nTTAsMy41IGMgNSwwLDUsLTMsMTAsLTMgcyA1LDMsMTAsMyBjIDUsMCw1LC0zLDEwLC0zIHMgNSwzLDEwLDMnLz48L3N2Zz4=");
+      background-position: 0 100%;
+      background-size: auto 6px;
+      background-repeat: repeat-x;
+      text-decoration: none;
+      z-index: 99;
     }
-    /*
-    TODO: Fix color when a > code
-    code {
-        &:hover {
-            background-image: svg-uri("<svg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'><style type='text/css'>.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}</style><path fill='none' stroke='" + $secondary-color + "' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/></svg>");
-            background-position: 0 100%;
-            background-size: auto 6px;
-            background-repeat: repeat-x;
-            text-decoration: none;
-            z-index: 99;
-        }
-    }
-    */
 }
 table {
     border-color: #545b5e;
 }
-
-// ::placeholder {
-//     color: #b2aba1;
-// }
-// input:-webkit-autofill,
-// textarea:-webkit-autofill,
-// select:-webkit-autofill {
-//     background-color: #555b00 !important;
-//     color: #e8e6e3 !important;
-// }
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #555b00 !important;
+    color: #e8e6e3 !important;
+}
 ::-webkit-scrollbar {
-    background-color: $background-color;
-    // color: #aba499;
+    background-color: #202324;
+    color: #aba499;
 }
 ::-webkit-scrollbar-thumb {
-    // background-color: #454a4d;
-    background-color: $primary-color;
+    background-color: #454a4d;
 }
-// ::-webkit-scrollbar-thumb:hover {
-//     background-color: #575e62;
-// }
-// ::-webkit-scrollbar-thumb:active {
-//     background-color: #484e51;
-// }
-// ::-webkit-scrollbar-corner {
-//     background-color: $background-color;
-// }
-// * {
-//     scrollbar-color: #202324 #454a4d;
-// }
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #202324 #454a4d;
+}
 ::selection {
-    background-color: #FFD166 !important;
+    background-color: #004daa !important;
     color: #e8e6e3 !important;
 }
 ::-moz-selection {
-    background-color: #FFD166 !important;
+    background-color: #004daa !important;
     color: #e8e6e3 !important;
 }
 
@@ -257,7 +234,7 @@ footer {
 
 blockquote:not([data-name="title"]) {
     // border-left: 1rem solid ${p => p.theme.primaryColor1};
-    border-left: 1rem solid $primary-color;
+    border-left: 1rem solid #3f51b5;
     font-style: italic;
     margin: 0;
     padding: 0 0 0 2rem;
@@ -266,11 +243,6 @@ blockquote:not([data-name="title"]) {
     @media (max-width: 700px) {
         padding: 0 0 0 1rem;
     }
-}
-
-code {
-    font-family: 'Space Mono';
-    color: $secondary-color;
 }
 
 pre[class*=language-] {
@@ -301,7 +273,6 @@ pre[class*=language-] {
 
     &.line-numbers.line-numbers {
       code {
-          font-family: 'Space Mono';
         border-left-color:#3f51b5;
         border-left-width: 2rem;
       }
