@@ -7,7 +7,7 @@ permalink: "index.html"
 <article>
     <h1>Últimas publicaciones</h1>
 
-    {%- for post in collections.all | reverse -%}
+    {%- for post in collections.posts | reverse -%}
         {% if post.data.layout === "post" %}
         <section class="post-list">
             <time class="post-list-time">{{post.data.date | formatDate }}</time>

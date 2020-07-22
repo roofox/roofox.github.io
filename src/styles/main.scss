@@ -243,9 +243,13 @@ blockquote:not([data-name="title"]) {
     }
 }
 
-pre[class*="language-"] {
+code[class*=language-], pre[class*=language-] {
 
     position: relative;
+
+    @media (max-width: 700px) {
+        font-size: 0.8rem!important;
+    }
 
     &:before {
         content: attr(data-language);

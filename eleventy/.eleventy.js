@@ -2,17 +2,19 @@ const path = require('path');
 const setFilters = require('./filters');
 const setLibraries = require('./library');
 const addPlugins = require('./plugins');
+const addTransforms = require('./transforms');
+const addCollections = require('./collections');
 const addPassthroughCopy = require('./passthroughCopy');
 
 const getDir = (name) => path.join('src', '11ty', name);
 
 module.exports = eleventyConfig => {
-
-    // const env = process.env.ELEVENTY_ENV;
   
     setFilters(eleventyConfig);
     setLibraries(eleventyConfig);
     addPlugins(eleventyConfig);
+    addTransforms(eleventyConfig);
+    addCollections(eleventyConfig);
     addPassthroughCopy(eleventyConfig);
 
     return {

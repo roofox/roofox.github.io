@@ -3,7 +3,6 @@ layout: post
 title: "URLs amigables utilizando NGINX y docker"
 date: "2019-03-29T11:13:00.00Z"
 description: Hello World
-tags: ['post']
 categories: nginx docker 
 author: sergio
 path: "/urls-amigables-utilizando-nginx-y-docker/"
