@@ -4,6 +4,7 @@ title: "Una breve historia de Debian"
 creation_date: "2020-07-04T12:48:00.00Z"
 date: "2020-07-04T12:48:00.00Z"
 description: Debian fué uno de los primeros sistemas operativos creado por la frustración de los sistemas operativos actuales.
+tags: ['post']
 categories: debian operating-system
 author: sergio
 path: "/una-breve-historia-de-debian/"

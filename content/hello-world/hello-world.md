@@ -3,6 +3,7 @@ layout: post
 title: Hello World
 date: "2019-03-20T22:12:03.284Z"
 description: Hello World
+tags: ['post']
 categories: personal
 author: sergio
 path: /hello-world/
