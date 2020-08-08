@@ -37,8 +37,6 @@ sistema operativo _desde cero_. Ian anunció Debian[^1] el 16 de agosto de 1993
 donde lo nombró como _The Debian Linux Release_, ya que por aquellos tiempos el
 concepto de distribución era prácticamente nuevo.
 
-![Anuncio de Debian](./debian-announcement.png)
-
 ## Un nombre creativo
 
 En su momento Ian tenía una novia de nombre _Debra Lynn_ con la que tiempo
@@ -71,7 +69,7 @@ encuentra deprecada debido a que existen mejores herramientas como
 [Synaptic][synaptic] que proporciona una interfáz gráfica real y es actualizada
 frecuentemente.
 
-![Anuncio de Debian](./dselect.png)
+![Anuncio de Debian](/assets/blog/una-breve-historia-de-debian/dselect.png)
 
 ## La versión que nunca existío
 
@@ -88,24 +86,24 @@ release se descidió nombrar el siguiente release como _"Debian 1.1"_ el cual fu
 lanzado el 17 de Junio de 1996 y era completamente en formato _ELF_, utilizaba
 el kernel de Linux 2.0 y contenía 474 paquetes disponibles.
 
-![La versión 1.0 de Debian no es lo que parece](./1.1-not-1.0.jpg)
+![La versión 1.0 de Debian no es lo que parece](/assets/blog/una-breve-historia-de-debian/1.1-not-1.0.jpg)
 
 ## Logotipo
 
 El 26 de Agosto de 1999, como resultado de un concurso realizado por GIMP, Debian
 obtubo su logotipo oficial después de la selección de las siguientes propuestas:
 
-- Ants ![Ants](logo_ants_jeannette-0.png)
-- Swirl ![Swirl](logo_swirl_raul-0.png)
-- Seal ![Seal](logo_seal_villate.jpg)
-- Old Logo ![Old Logo](logo_old_logo_debianlogo-3.jpg)
-- Fixed Chicken ![Fixed Chicken](logo_fixed_chicken_fixed_chicken.jpg)
-- DG ![DG](logo_DG_dg.jpg)
+- Ants ![Ants](/assets/blog/una-breve-historia-de-debian/logo_ants_jeannette-0.png)
+- Swirl ![Swirl](/assets/blog/una-breve-historia-de-debian/logo_swirl_raul-0.png)
+- Seal ![Seal](/assets/blog/una-breve-historia-de-debian/logo_seal_villate.jpg)
+- Old Logo ![Old Logo](/assets/blog/una-breve-historia-de-debian/logo_old_logo_debianlogo-3.jpg)
+- Fixed Chicken ![Fixed Chicken](/assets/blog/una-breve-historia-de-debian/logo_fixed_chicken_fixed_chicken.jpg)
+- DG ![DG](/assets/blog/una-breve-historia-de-debian/logo_DG_dg.jpg)
 
 Y como ya lo saben, el ganador del concurso fué el logotipo de nombre
 [_Swirl_][debian-logo] creado por [Raul M. Silva][raul-silva]
 
-![Logo de Debian](debian-openlogo-smal.png)
+![Logo de Debian](/assets/blog/una-breve-historia-de-debian/debian-openlogo-smal.png)
 
 El logotipo utiliza una fuente comercial de nombre _Poppl Laudatio Condensed_
 donde el punto de la letra **i** fué reemplazado por un diamante color rojo.

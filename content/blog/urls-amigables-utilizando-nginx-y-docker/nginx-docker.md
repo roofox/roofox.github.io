@@ -29,7 +29,7 @@ El objetivo de este ejemplo es el de realizar un redireccionamiento utilizando [
 
 El flujo general — el que al final de esta publicación deberías entender mejor — es a como se muestra en el siguiente diagrama:
 
-![Diagrama de flujo](./diagrama-de-flujo.png)
+![Diagrama de flujo](/assets/blog/urls-amigables-utilizando-nginx-y-docker/diagrama-de-flujo.png)
 
 <!--
 ```mermaid
@@ -61,7 +61,7 @@ Utilizaremos un ambiente linux para la demostración del ejemplo, [ubuntu][ubunt
 
 ## Ejecutar las aplicaciones de ejemplo
 
-Vamos a crear un archivo [`docker-compose.yml`](https://github.com/roofox/cc9a-nginx-docker/blob/master/docker-compose.yml) en la ruta que prefieras al cual agregarás el siguiente contenido:
+Vamos a crear un archivo [`docker-compose.yml`](/assets/blog/urls-amigables-utilizando-nginx-y-docker/docker-compose.yml) en la ruta que prefieras al cual agregarás el siguiente contenido:
 
 ```yaml
 version: "3.5"
@@ -96,12 +96,13 @@ Vamos a posicionarnos desde la línea de comandos en el directorio donde creamos
 [Docker](docker) comenzará a descargar las imagenes de los servicios (tardará unos cuantos minutos) para finalmente mostrarlos en ejecución.
 
 
-![Ejecutando docker-compose up](./docker-compose-up.png)
+<!-- ![Ejecutando docker-compose up](docker-compose-up.png) -->
+![Ejecutando docker-compose up](/assets/blog/urls-amigables-utilizando-nginx-y-docker/docker-compose-up.png)
 
 
 Si ingresamos en un navegador web con cada uno de los puertos (`3618`, `3620` y `3622`) veremos el mensaje que despliega cada uno de los servicios así como el saber que se encuentra en ejecución.
 
-![App en ejecución](./browser-localhost.png)
+![App en ejecución](/assets/blog/urls-amigables-utilizando-nginx-y-docker/browser-localhost.png)
 
 Y bueno, tres servicios ejecutandose en diferentes puertos del equipo local, es hora de comenzar con los pasos para el redireccionamiento.
 
@@ -116,7 +117,7 @@ sudo apt-get install nginx
 
 Después de la instalación procedemos a ingresar en el navegador web la url [http://localhost](http://localhost) donde deberás ver lo siguiente:
 
-![Página de bienvenida de nginx](./welcome-to-nginx.png)
+![Página de bienvenida de nginx](/assets/blog/urls-amigables-utilizando-nginx-y-docker/welcome-to-nginx.png)
 
 Esta es la página de bienvenida de [nginx][nginx], lo que nos indica que el servidor web está en ejecución y se encuentra en escucha utilizando el puerto `80`.
 
@@ -144,11 +145,11 @@ Vamos, edita el archivo `/etc/hosts` y agrega el hostname _mi-pagina-local.com_ 
 
 Verás que se muestra lo mismo que al entrar a http://localhost/.
 
-![Lo mismo que localhost](mi-pagina-local.com.png)
+![Lo mismo que localhost](/assets/blog/urls-amigables-utilizando-nginx-y-docker/mi-pagina-local.com.png)
 
 Y si agregas uno de los puertos de los servicios, también verás lo mismo.
 
-![Lo mismo que el localhost:3618](mi-pagina-local.com-3618.png)
+![Lo mismo que el localhost:3618](/assets/blog/urls-amigables-utilizando-nginx-y-docker/mi-pagina-local.com-3618.png)
 
 Ahora bien, podemos sacar ventaja de esto para dejar de acceder a las aplicaciones web utilizando el hostname **localhost** y podemos utilizar algo como lo que mencioné anteriormente. Vamos a agregar una nueva configuración al archivo hosts para mapear la dirección IP local con unos nuevos hostnames:
 
@@ -177,7 +178,7 @@ include /etc/nginx/sites-enabled/*;
 
 Con esas líneas se están incluyendo todas las configuraciones que se encuentren dentro de esos directorios en la sección `http` del archivo principal, y si listamos el contenido del directorio `sites-enabled` veremos que el único archivo de nombre `default` es un elance simbólico haciendo referencia al archivo también de nombre `default` dentro del directorio `sites-available`.
 
-![Sitios habilitados](./sites-enabled.png "Sitios habilitados")
+![Sitios habilitados](/assets/blog/urls-amigables-utilizando-nginx-y-docker/sites-enabled.png "Sitios habilitados")
 
 Vamos a crear un archivo donde definiremos la configuración para uno de los servicios creados con [docker](docker), comenzaremos con el servicio de node.js, para ello hay que crear el archivo `/etc/nginx/sites-available/my-node-app.com` al cual agregaremos la siguiente configuración:
 
@@ -209,7 +210,7 @@ sudo nginx -s reload
 
 Listo, ¡ingresa en el navegador web a http://my-node-app.com y verás lo mismo que el servicio ejecutandose en [http://localhost:3618](http://localhost:3618)!
 
-![¡my-node-app.com sin puerto!](my-node-app.png "¡my-node-app.com sin puerto!")
+![¡my-node-app.com sin puerto!](/assets/blog/urls-amigables-utilizando-nginx-y-docker/my-node-app.png "¡my-node-app.com sin puerto!")
 
 # Funcionamiento de `proxy_pass` y `server_name`
 

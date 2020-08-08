@@ -10,12 +10,12 @@ const getDir = (name) => path.join('src', '11ty', name);
 
 module.exports = eleventyConfig => {
   
+    addPassthroughCopy(eleventyConfig);
     setFilters(eleventyConfig);
     setLibraries(eleventyConfig);
     addPlugins(eleventyConfig);
     addTransforms(eleventyConfig);
     addCollections(eleventyConfig);
-    addPassthroughCopy(eleventyConfig);
 
     return {
         dataTemplateEngine: "njk",

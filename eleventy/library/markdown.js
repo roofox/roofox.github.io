@@ -34,7 +34,6 @@ const getMarkdownInstance = () => {
     set: () => { },
     render: (str, _data) =>
       new Promise((resolve, reject) => {
-
         processor.process(str, (err, file) => {
           if (err) {
             reject(err);

@@ -1,3 +1,5 @@
+const path = require('path');
+
 function addPlugins(eleventyConfig) {
 
   eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"), {
@@ -28,6 +30,18 @@ function addPlugins(eleventyConfig) {
     cleanCSS: process.env.ELEVENTY_ENV === 'prod', // 	Runs the css trough cleanCSS
     cleanCSSOptions: {}, // 	Options to pass to cleanCSS
     autoprefixer: true // Adds browser specific prefixes if needed (adheres to BrowserList)
+  });
+  
+  eleventyConfig.addPlugin(require('eleventy-plugin-lazyimages'), {
+    className: 'ab',
+    transformImgPath: (imgPath) => {
+      if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
+        const newPath = path.join(process.cwd(), imgPath);
+        return newPath;
+      }
+      // console.log('>>> imgPath', imgPath);
+      return imgPath;
+    }
   });
 }
 
