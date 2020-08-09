@@ -1,9 +1,9 @@
-const htmlmin = require('html-minifier');
+const htmlmin = require("html-minifier");
 
 function addTransforms(eleventyConfig) {
   const env = process.env.ELEVENTY_ENV;
 
-  if (env === 'prod') {
+  if (env === "prod") {
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
       if (outputPath.endsWith(".html")) {
         const minified = htmlmin.minify(content, {
@@ -13,7 +13,7 @@ function addTransforms(eleventyConfig) {
           collapseBooleanAttributes: true,
           minifyJS: true,
           minifyCSS: true,
-          removeComments: true
+          removeComments: true,
         });
 
         return minified;

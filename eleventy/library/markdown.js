@@ -1,24 +1,24 @@
 const getMarkdownInstance = () => {
+  const unified = require("unified");
+  const markdown = require("remark-parse");
+  const remark2rehype = require("remark-rehype");
+  const html = require("rehype-stringify");
 
-  const unified = require('unified');
-  const markdown = require('remark-parse');
-  const remark2rehype = require('remark-rehype');
-  const html = require('rehype-stringify');
+  const visit = require("unist-util-visit");
 
-  const visit = require('unist-util-visit');
-
-  const modifyPreCode = (_) => tree => {
+  const modifyPreCode = (_) => (tree) => {
     visit(
       tree,
-      node =>
-        node.tagName === 'pre' && node.children.some(n => n.tagName === 'code'),
-      node => {
-        const lang = node.children[0].properties.className[0]
-        const [, val] = (new RegExp(/^language\-([a-z]+)/)).exec(lang);
+      (node) =>
+        node.tagName === "pre" &&
+        node.children.some((n) => n.tagName === "code"),
+      (node) => {
+        const lang = node.children[0].properties.className[0];
+        const [, val] = new RegExp(/^language\-([a-z]+)/).exec(lang);
 
         node.properties = {
-          className: ['code-segment', 'line-numbers'],
-          'data-language': val
+          className: ["code-segment", "line-numbers"],
+          "data-language": val,
         };
       }
     );
@@ -31,7 +31,7 @@ const getMarkdownInstance = () => {
     .use(modifyPreCode);
 
   return {
-    set: () => { },
+    set: () => {},
     render: (str, _data) =>
       new Promise((resolve, reject) => {
         processor.process(str, (err, file) => {
@@ -42,8 +42,7 @@ const getMarkdownInstance = () => {
 
           resolve(String(file.contents));
         });
-
-      })
+      }),
   };
 };
 
