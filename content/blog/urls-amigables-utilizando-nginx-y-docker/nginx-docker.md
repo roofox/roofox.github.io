@@ -61,7 +61,7 @@ Utilizaremos un ambiente linux para la demostración del ejemplo, [ubuntu][ubunt
 
 ## Ejecutar las aplicaciones de ejemplo
 
-Vamos a crear un archivo [`docker-compose.yml`](/assets/blog/urls-amigables-utilizando-nginx-y-docker/docker-compose.yml) en la ruta que prefieras al cual agregarás el siguiente contenido:
+Vamos a crear un archivo [`docker-compose.yml`](https://github.com/roofox/cc9a-nginx-docker/blob/master/docker-compose.yml) en la ruta que prefieras al cual agregarás el siguiente contenido:
 
 ```yaml
 version: "3.5"
@@ -93,7 +93,7 @@ Como puedes ver, estamos creando tres servicios en los cuales vamos a exponer en
 
 Vamos a posicionarnos desde la línea de comandos en el directorio donde creamos el archivo `docker-compose.yml` y ejecutaremos el comando `docker-compose up`.
 
-[Docker](docker) comenzará a descargar las imagenes de los servicios (tardará unos cuantos minutos) para finalmente mostrarlos en ejecución.
+[Docker][docker] comenzará a descargar las imagenes de los servicios (tardará unos cuantos minutos) para finalmente mostrarlos en ejecución.
 
 
 <!-- ![Ejecutando docker-compose up](docker-compose-up.png) -->
@@ -167,7 +167,7 @@ Probemos acceder a cualquiera de los hostnames que definimos en el archivo anter
 
 ## Proxy Pass — o redireccionando el tráfico —
 
-[nginx](nginx) permite redireccionar el tráfico de una URL hacia otra utilizando la directiva [proxy_pass][proxy-pass] del módulo `ngx_http_proxy_module`, es muy común utilizar está directiva para colocar varios servidores en un mismo espacio de URL.
+[nginx][nginx] permite redireccionar el tráfico de una URL hacia otra utilizando la directiva [proxy_pass][proxy-pass] del módulo `ngx_http_proxy_module`, es muy común utilizar está directiva para colocar varios servidores en un mismo espacio de URL.
 
 Dentro del directorio `/etc/nginx/` se encuentra el archivo de configuración `nginx.conf`, si lo editamos veremos que en alguna parte de la sección `http` contiene lo siguiente:
 
@@ -180,7 +180,7 @@ Con esas líneas se están incluyendo todas las configuraciones que se encuentre
 
 ![Sitios habilitados](/assets/blog/urls-amigables-utilizando-nginx-y-docker/sites-enabled.png "Sitios habilitados")
 
-Vamos a crear un archivo donde definiremos la configuración para uno de los servicios creados con [docker](docker), comenzaremos con el servicio de node.js, para ello hay que crear el archivo `/etc/nginx/sites-available/my-node-app.com` al cual agregaremos la siguiente configuración:
+Vamos a crear un archivo donde definiremos la configuración para uno de los servicios creados con [docker][docker], comenzaremos con el servicio de node.js, para ello hay que crear el archivo `/etc/nginx/sites-available/my-node-app.com` al cual agregaremos la siguiente configuración:
 
 > **NOTA: El directorio `/etc/nginx` es un directorio en el que solamente se pueden crear ó modificar archivos con permisos de usuario root.**
 
@@ -202,7 +202,7 @@ Ahora, crearemos un enlace simbólico de nombre `my-node-app.com` dentro del dir
 sudo ln -s /etc/nginx/sites-available/my-node-app.com /etc/nginx/sites-enabled/my-node-app.com
 ```
 
-Con esto tenemos la configuración terminada y procederemos a reiniciar el servicio de [nginx](nginx) con el siguiente comando:
+Con esto tenemos la configuración terminada y procederemos a reiniciar el servicio de [nginx][nginx] con el siguiente comando:
 
 ```shell
 sudo nginx -s reload
@@ -240,7 +240,6 @@ server {
 Para finalizar, realiza exactamente los mismos pasos para los dos servicios restantes, creando dos nuevos archivos de configuración y cambiando los valores de las directivas `proxy_pass` y `server_name`.
 
 Ahora si puedes revisar nuevamente el diagrama del inicio para que entiendas un poco mas el proceso de redireccionamiento y si quieres conocer mas sobre las configuraciones que puedes hacer con [nginx][nginx] puedes revisar la documentación de [proxy_pass][proxy-pass] y [server_name][server-name].
-
 
 [apache]: https://httpd.apache.org/
 [nginx]: https://nginx.org/
