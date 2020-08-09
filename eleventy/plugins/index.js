@@ -43,6 +43,15 @@ function addPlugins(eleventyConfig) {
       return imgPath;
     }
   });
+
+  eleventyConfig.addPlugin(require('@hirusi/eleventy-plugin-safe-external-links'), {
+    pattern: 'https{0,1}://', // RegExp pattern for external links
+    noopener: true, // Whether to include noopener
+    noreferrer: true, // Whether to include noreferrer
+    files: [ // What output file extensions to work on
+      '.html'
+    ],
+  });
 }
 
 module.exports = addPlugins;
