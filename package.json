@@ -7,12 +7,9 @@
     "start": "ELEVENTY_ENV=dev npm-run-all clean eleventy:serve --print-label",
     "build": "ELEVENTY_ENV=prod npm-run-all clean eleventy:build  --print-label",
     "clean": "rm -rf dist",
-    "create-folder": "mkdir dist",
     "eleventy:serve": "eleventy --serve --config=./eleventy/.eleventy.js",
     "eleventy:build": "eleventy --config=./eleventy/.eleventy.js",
-    "styles:dev": "node-sass src/styles/ --output dist/styles/",
-    "styles:watch": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true -w -r",
-    "styles:prod": "node-sass src/styles/ --output-style compressed --output dist/styles/ --source-map true --source-map-contents true",
+    "deploy": "gh-pages -d dist -b master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,6 +32,7 @@
     "date-fns": "^2.15.0",
     "eleventy-plugin-lazyimages": "^1.1.2",
     "eleventy-plugin-sass": "^1.0.0",
+    "gh-pages": "^3.1.0",
     "globby": "^11.0.1",
     "html-minifier": "^4.0.0",
     "npm-run-all": "^4.1.5",
