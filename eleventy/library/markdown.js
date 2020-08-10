@@ -24,11 +24,37 @@ const getMarkdownInstance = () => {
     );
   };
 
+  const addLineBreakInBloquote = (_) => (tree) => {
+    visit(
+      tree,
+      (node) =>
+        node.tagName === "blockquote" &&
+        node.children
+          .filter((n) => n.tagName === "p")
+          .some((n) => n.children.some((x) => x.type === "text" && x.value === "\n")),
+      (node) => {
+        node.children
+          .filter((n) => n.tagName === "p")
+          .forEach((n) => {
+            n.children.forEach((x) => {
+              if (x.type === "text" && x.value === "\n") {
+                x.type = "element";
+                x.tagName = "br";
+                delete x.text;
+                delete x.value;
+              }
+            })
+          });
+      }
+    );
+  };
+
   const processor = unified()
     .use(markdown)
     .use(remark2rehype)
     .use(html)
-    .use(modifyPreCode);
+    .use(modifyPreCode)
+    .use(addLineBreakInBloquote);
 
   return {
     set: () => {},
