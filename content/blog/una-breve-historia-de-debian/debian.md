@@ -93,12 +93,17 @@ el kernel de Linux 2.0 y contenía 474 paquetes disponibles.
 El 26 de Agosto de 1999, como resultado de un concurso realizado por GIMP, Debian
 obtubo su logotipo oficial después de la selección de las siguientes propuestas:
 
-- Ants ![Ants](/assets/blog/una-breve-historia-de-debian/logo_ants_jeannette-0.png)
-- Swirl ![Swirl](/assets/blog/una-breve-historia-de-debian/logo_swirl_raul-0.png)
-- Seal ![Seal](/assets/blog/una-breve-historia-de-debian/logo_seal_villate.jpg)
-- Old Logo ![Old Logo](/assets/blog/una-breve-historia-de-debian/logo_old_logo_debianlogo-3.jpg)
-- Fixed Chicken ![Fixed Chicken](/assets/blog/una-breve-historia-de-debian/logo_fixed_chicken_fixed_chicken.jpg)
-- DG ![DG](/assets/blog/una-breve-historia-de-debian/logo_DG_dg.jpg)
+![Ants](/assets/blog/una-breve-historia-de-debian/logo_ants_jeannette-0.png)
+
+![Swirl](/assets/blog/una-breve-historia-de-debian/logo_swirl_raul-0.png)
+
+![Seal](/assets/blog/una-breve-historia-de-debian/logo_seal_villate.jpg)
+
+![Old Logo](/assets/blog/una-breve-historia-de-debian/logo_old_logo_debianlogo-3.jpg)
+
+![Fixed Chicken](/assets/blog/una-breve-historia-de-debian/logo_fixed_chicken_fixed_chicken.jpg)
+
+![DG](/assets/blog/una-breve-historia-de-debian/logo_DG_dg.jpg)
 
 Y como ya lo saben, el ganador del concurso fué el logotipo de nombre
 [_Swirl_][debian-logo] creado por [Raul M. Silva][raul-silva]
