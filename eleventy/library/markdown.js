@@ -49,12 +49,51 @@ const getMarkdownInstance = () => {
     );
   };
 
+  const addAltTextToImage = (_) => (tree) => {
+    visit(
+      tree,
+      (node) =>
+      node.tagName === "p" &&
+        node.children.some((n) => n.tagName === "img"),
+      (node) => {
+        if (node.children[0].properties && node.children[0].properties.alt) {
+          node.children.push({
+            type: "element",
+            tagName: "span",
+            properties: {
+              className: "image-alt-text",
+            },
+            children: [
+              {
+                type: "text",
+                value: node.children[0].properties.alt
+              }
+            ]
+          });
+        }
+      }
+    );
+  };
+
+  // const test = (_) => (tree) => {
+  //   visit(
+  //     tree,
+  //     (node) =>
+  //     node.tagName === "p",
+  //     (node) => {
+  //       console.log(JSON.stringify(node, null, 2));
+  //     }
+  //   );
+  // };
+
   const processor = unified()
     .use(markdown)
     .use(remark2rehype)
     .use(html)
     .use(modifyPreCode)
-    .use(addLineBreakInBloquote);
+    .use(addLineBreakInBloquote)
+    .use(addAltTextToImage)
+    .use(test);
 
   return {
     set: () => {},
