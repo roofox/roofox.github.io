@@ -31,7 +31,6 @@ function addPlugins(eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(require("eleventy-plugin-lazyimages"), {
-    className: "ab",
     transformImgPath: (imgPath) => {
       if (imgPath.startsWith("/") && !imgPath.startsWith("//")) {
         const newPath = path.join(process.cwd(), imgPath);
