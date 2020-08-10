@@ -92,8 +92,7 @@ const getMarkdownInstance = () => {
     .use(html)
     .use(modifyPreCode)
     .use(addLineBreakInBloquote)
-    .use(addAltTextToImage)
-    .use(test);
+    .use(addAltTextToImage);
 
   return {
     set: () => {},
