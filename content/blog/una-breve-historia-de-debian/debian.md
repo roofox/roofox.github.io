@@ -69,7 +69,7 @@ encuentra deprecada debido a que existen mejores herramientas como
 [Synaptic][synaptic] que proporciona una interfáz gráfica real y es actualizada
 frecuentemente.
 
-![Anuncio de Debian](/assets/blog/una-breve-historia-de-debian/dselect.png)
+![Interfáz de dselect](/assets/blog/una-breve-historia-de-debian/dselect.png)
 
 ## La versión que nunca existío
 
@@ -103,7 +103,7 @@ obtubo su logotipo oficial después de la selección de las siguientes propuesta
 Y como ya lo saben, el ganador del concurso fué el logotipo de nombre
 [_Swirl_][debian-logo] creado por [Raul M. Silva][raul-silva]
 
-![Logo de Debian](/assets/blog/una-breve-historia-de-debian/debian-openlogo-smal.png)
+![Logotipo oficial de Debian](/assets/blog/una-breve-historia-de-debian/debian-openlogo-smal.png)
 
 El logotipo utiliza una fuente comercial de nombre _Poppl Laudatio Condensed_
 donde el punto de la letra **i** fué reemplazado por un diamante color rojo.
