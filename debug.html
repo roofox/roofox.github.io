@@ -25,7 +25,7 @@
     homepage: &apos;https://github.com/roofox/roofox.github.io#readme&apos;,
     devDependencies: {
       &apos;@11ty/eleventy&apos;: &apos;^0.11.0&apos;,
-      &apos;@11ty/eleventy-plugin-syntaxhighlight&apos;: &apos;^3.0.1&apos;,
+      &apos;@11ty/eleventy-plugin-syntaxhighlight&apos;: &apos;git+https://github.com/byoigres/eleventy-plugin-syntaxhighlight.git#line-numbers&apos;,
       &apos;@hirusi/eleventy-plugin-safe-external-links&apos;: &apos;^0.14.3&apos;,
       &apos;date-fns&apos;: &apos;^2.15.0&apos;,
       &apos;eleventy-plugin-lazyimages&apos;: &apos;^1.1.2&apos;,
@@ -35,12 +35,9 @@
       &apos;html-minifier&apos;: &apos;^4.0.0&apos;,
       &apos;npm-run-all&apos;: &apos;^4.1.5&apos;,
       prettier: &apos;2.0.5&apos;,
-      &apos;rehype-stringify&apos;: &apos;^8.0.0&apos;,
       remark: &apos;^12.0.1&apos;,
+      &apos;remark-footnotes&apos;: &apos;^1.0.0&apos;,
       &apos;remark-html&apos;: &apos;^12.0.0&apos;,
-      &apos;remark-parse&apos;: &apos;^8.0.3&apos;,
-      &apos;remark-rehype&apos;: &apos;^7.0.0&apos;,
-      unified: &apos;^9.0.0&apos;,
       waypoints: &apos;^4.0.1&apos;
     },
     dependencies: {}
@@ -96,7 +93,7 @@
     homepage: &apos;https://github.com/roofox/roofox.github.io#readme&apos;,
     devDependencies: {
       &apos;@11ty/eleventy&apos;: &apos;^0.11.0&apos;,
-      &apos;@11ty/eleventy-plugin-syntaxhighlight&apos;: &apos;^3.0.1&apos;,
+      &apos;@11ty/eleventy-plugin-syntaxhighlight&apos;: &apos;git+https://github.com/byoigres/eleventy-plugin-syntaxhighlight.git#line-numbers&apos;,
       &apos;@hirusi/eleventy-plugin-safe-external-links&apos;: &apos;^0.14.3&apos;,
       &apos;date-fns&apos;: &apos;^2.15.0&apos;,
       &apos;eleventy-plugin-lazyimages&apos;: &apos;^1.1.2&apos;,
@@ -106,12 +103,9 @@
       &apos;html-minifier&apos;: &apos;^4.0.0&apos;,
       &apos;npm-run-all&apos;: &apos;^4.1.5&apos;,
       prettier: &apos;2.0.5&apos;,
-      &apos;rehype-stringify&apos;: &apos;^8.0.0&apos;,
       remark: &apos;^12.0.1&apos;,
+      &apos;remark-footnotes&apos;: &apos;^1.0.0&apos;,
       &apos;remark-html&apos;: &apos;^12.0.0&apos;,
-      &apos;remark-parse&apos;: &apos;^8.0.3&apos;,
-      &apos;remark-rehype&apos;: &apos;^7.0.0&apos;,
-      unified: &apos;^9.0.0&apos;,
       waypoints: &apos;^4.0.1&apos;
     },
     dependencies: {}
@@ -140,6 +134,26 @@
     all: [ [Object], [Object], [Object], [Object], [Object] ],
     post: [ [Object], [Object], [Object] ],
     posts: [ [Object], [Object] ]
+  },
+  references: {
+    APACHE: { title: &apos;&apos;, href: &apos;https://httpd.apache.org/&apos; },
+    NGINX: { title: &apos;&apos;, href: &apos;https://nginx.org/&apos; },
+    UBUNTU: { title: &apos;&apos;, href: &apos;https://www.ubuntu.com/&apos; },
+    DOCKER: { title: &apos;&apos;, href: &apos;https://www.docker.com/&apos; },
+    &apos;DOCKER-COMPOSE&apos;: { title: &apos;&apos;, href: &apos;https://docs.docker.com/compose/&apos; },
+    GIT: { title: &apos;&apos;, href: &apos;https://www.git-scm.com/&apos; },
+    &apos;PROXY-PASS&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&apos;
+    },
+    &apos;SERVER-NAME&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://nginx.org/en/docs/http/server_names.html&apos;
+    },
+    &apos;HOST-FILE-LOCATION&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system&apos;
+    }
   }
 }</pre></details><details><summary>/una-breve-historia-de-debian/</summary><pre>{
   site: { name: &apos;ROOFOX.dev&apos;, url: &apos;https://roofox.dev&apos; },
@@ -168,7 +182,7 @@
     homepage: &apos;https://github.com/roofox/roofox.github.io#readme&apos;,
     devDependencies: {
       &apos;@11ty/eleventy&apos;: &apos;^0.11.0&apos;,
-      &apos;@11ty/eleventy-plugin-syntaxhighlight&apos;: &apos;^3.0.1&apos;,
+      &apos;@11ty/eleventy-plugin-syntaxhighlight&apos;: &apos;git+https://github.com/byoigres/eleventy-plugin-syntaxhighlight.git#line-numbers&apos;,
       &apos;@hirusi/eleventy-plugin-safe-external-links&apos;: &apos;^0.14.3&apos;,
       &apos;date-fns&apos;: &apos;^2.15.0&apos;,
       &apos;eleventy-plugin-lazyimages&apos;: &apos;^1.1.2&apos;,
@@ -178,12 +192,9 @@
       &apos;html-minifier&apos;: &apos;^4.0.0&apos;,
       &apos;npm-run-all&apos;: &apos;^4.1.5&apos;,
       prettier: &apos;2.0.5&apos;,
-      &apos;rehype-stringify&apos;: &apos;^8.0.0&apos;,
       remark: &apos;^12.0.1&apos;,
+      &apos;remark-footnotes&apos;: &apos;^1.0.0&apos;,
       &apos;remark-html&apos;: &apos;^12.0.0&apos;,
-      &apos;remark-parse&apos;: &apos;^8.0.3&apos;,
-      &apos;remark-rehype&apos;: &apos;^7.0.0&apos;,
-      unified: &apos;^9.0.0&apos;,
       waypoints: &apos;^4.0.1&apos;
     },
     dependencies: {}
@@ -212,5 +223,38 @@
     all: [ [Object], [Object], [Object], [Object], [Object] ],
     post: [ [Object], [Object], [Object] ],
     posts: [ [Object], [Object] ]
+  },
+  references: {
+    &apos;1&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://www.flickr.com/photos/iamurdock/20006308374/&apos;
+    },
+    &apos;2&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://www.debian.org/doc/manuals/project-history/releases.en.html&apos;
+    },
+    &apos;3&apos;: { title: &apos;&apos;, href: &apos;https://en.wikipedia.org/wiki/Dselect&apos; },
+    DSELECT: { title: &apos;&apos;, href: &apos;https://wiki.debian.org/dselect&apos; },
+    SYNAPTIC: { title: &apos;&apos;, href: &apos;https://wiki.debian.org/Synaptic&apos; },
+    &apos;WRONG-VERSION&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://lists.debian.org/debian-announce/1995/msg00010.html&apos;
+    },
+    &apos;A.OUT&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://www.freebsd.org/cgi/man.cgi?query=a.out&amp;sektion=5&apos;
+    },
+    ELF: {
+      title: &apos;&apos;,
+      href: &apos;https://www.freebsd.org/cgi/man.cgi?query=elf&amp;sektion=5&apos;
+    },
+    &apos;TOY-STORY&apos;: { title: &apos;&apos;, href: &apos;https://wiki.debian.org/ToyStory&apos; },
+    &apos;DEBIAN-LOGO-CONTEST&apos;: { title: &apos;&apos;, href: &apos;https://www.debian.org/vote/1999/vote_0004&apos; },
+    &apos;RAUL-SILVA&apos;: { title: &apos;&apos;, href: &apos;http://www.silva.com/&apos; },
+    &apos;DEBIAN-LOGO&apos;: { title: &apos;&apos;, href: &apos;https://wiki.debian.org/DebianLogo&apos; },
+    &apos;DEBIAN-LOGO-PANTONE-COLOR&apos;: {
+      title: &apos;&apos;,
+      href: &apos;https://web.archive.org/web/20110215210046/http://small.dropbear.id.au/debian.html&apos;
+    }
   }
 }</pre></details><hr><footer><div><p>Blog escrito por&#xA0; <a href="https://byoigr.es/" target="_blank" rel="noopener noreferrer noopener noreferrer">Sergio Flores</a></p></div></footer></main></body></html>
