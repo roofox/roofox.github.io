@@ -28,7 +28,7 @@
   "homepage": "https://github.com/roofox/roofox.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "git+https://github.com/byoigres/eleventy-plugin-syntaxhighlight.git#line-numbers",
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
     "date-fns": "^2.15.0",
     "eleventy-plugin-lazyimages": "^1.1.2",
@@ -40,6 +40,7 @@
     "prettier": "2.0.5",
     "rehype-stringify": "^8.0.0",
     "remark": "^12.0.1",
+    "remark-footnotes": "^1.0.0",
     "remark-html": "^12.0.0",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
