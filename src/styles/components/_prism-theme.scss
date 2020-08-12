@@ -8,7 +8,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
   background: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: "Space Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;
@@ -25,6 +25,39 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+
+  .line-numbers-rows {
+    border-right-color: #3f51b5;
+
+    span::before {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 700px) {
+    font-size: 0.8rem !important;
+  }
+}
+
+pre[class*="language-"] {
+    &:before {
+    content: attr(data-language);
+    border-bottom-left-radius: 0.25rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.75rem;
+    // font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    // font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0px;
+    z-index: 5;
+    background: rgb(30, 136, 229);
+    padding: 0.25rem 0.5rem;
+  }
 }
 
 /* Code blocks */

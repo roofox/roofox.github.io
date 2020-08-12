@@ -22,17 +22,6 @@ layout: main
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
   <script src="/js/waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  {%- for post in collections.post -%}
-    {# {{ post.data.prism | dump }} #}
-    {% if post.data.prism  %}
-        {%- for lang in post.data.prism -%}
-        {# <p>{{ lang }}</p> #}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-{{ lang }}.min.js"></script>
-        {%- endfor -%}
-    {% endif %}
-  {%- endfor -%}
 </article>
 <script>
     var waypoint = new Waypoint({
