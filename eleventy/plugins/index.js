@@ -1,32 +1,53 @@
 const path = require("path");
 
+const markdownGatsbyLoader = (plugins) => {
+  if (!Array.isArray(plugins)) {
+    throw new Error("plugins is not an Array");
+  }
+
+  return (_) => async (markdownAST, _, done) => {
+    const promises = plugins.map(async (plugin) => {
+      let instance;
+      let options = {};
+
+      if (typeof plugin === "object" && plugin.resolve) {
+        instance = require(plugin.resolve);
+        options = plugin.options ? plugin.options : {};
+      }
+
+      if (typeof plugin === "string") {
+        instance = require(plugin);
+      }
+
+      return instance({ markdownAST }, options);
+    });
+
+    await Promise.all(promises);
+
+    done();
+  };
+};
+
 function addPlugins(eleventyConfig) {
-  //*
-  // eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"), {
-  eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"), {
-    // Change which syntax highlighters are installed
-    templateFormats: ["*"], // default
-
-    // Or, just njk and md syntax highlighters (do not install liquid)
-    // templateFormats: ["njk", "md"],
-
-    // init callback lets you customize Prism
-    init: function ({ Prism }) {
-      // Prism.languages.myCustomLanguage = /* * /;
-      // Prism.languages.foo = Prism.languages['foo-bar'];
-      Prism.languages.insertBefore("inside", "data-value", {
-        style: {
-          // token
+  eleventyConfig.addPlugin(require("@fec/eleventy-plugin-remark"), {
+    plugins: [
+      markdownGatsbyLoader([
+        {
+          resolve: "gatsby-remark-prismjs",
+          options: {
+            lineNumbers: true,
+          },
         },
-      });
-    },
-
-    // Added in 3.0, set to true to always wrap lines in `<span class="highlight-line">`
-    // The default (false) only wraps when line numbers are passed in.
-    alwaysWrapLineHighlights: false,
-    showLineNumbers: true,
+        {
+          resolve: "gatsby-remark-smartypants",
+          options: {
+            dashes: "oldschool",
+          },
+        }
+      ]),
+    ],
   });
-  //*/
+
   /**
    * https://www.npmjs.com/package/eleventy-plugin-sass
    */
@@ -44,7 +65,6 @@ function addPlugins(eleventyConfig) {
         const newPath = path.join(process.cwd(), imgPath);
         return newPath;
       }
-      // console.log('>>> imgPath', imgPath);
       return imgPath;
     },
   });

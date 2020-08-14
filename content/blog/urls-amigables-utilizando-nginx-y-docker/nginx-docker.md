@@ -31,24 +31,6 @@ El flujo general — el que al final de esta publicación deberías entender mej
 
 ![Diagrama de flujo](/assets/blog/urls-amigables-utilizando-nginx-y-docker/diagrama-de-flujo.png)
 
-<!--
-```mermaid
-sequenceDiagram
-    participant Usuario
-    participant Navegador
-    participant nginx
-    participant App
-
-    Usuario->>Navegador: http://my-node-app.com
-    Note over Navegador: Se resuelve la ip de<br/>my-node-app.com<br/>desde el archivo<br/>hosts
-    Navegador->>nginx: 127.0.0.1:80
-    Note over Navegador,nginx: Se envía el header<br>Host: my-node-app.com
-    Note over nginx: Mediante el header<br/>Host determina el<br/>host y puerto a<br/>redireccionar
-    nginx->>App: http://localhost:3618/
-    App-- >>Navegador: Envía la respuesta HTTP al navegador
-```
--->
-
 # Sofware necesario
 
 Utilizaremos un ambiente linux para la demostración del ejemplo, [ubuntu][ubuntu] `v18.04.2 LTS` será el sistema operativo y necesitaremos la instalación de los siguientes programas:
@@ -165,7 +147,7 @@ Ahora bien, podemos sacar ventaja de esto para dejar de acceder a las aplicacion
 
 Probemos acceder a cualquiera de los hostnames que definimos en el archivo anterior con el navegador web, veremos que de igual manera aparece lo mismo que al ingresar a http://localhost/ y si agregamos los puertos de los servicios también funcionará.
 
-## Proxy Pass — o redireccionando el tráfico —
+## Proxy Pass --- o redireccionando el tráfico ---
 
 [nginx][nginx] permite redireccionar el tráfico de una URL hacia otra utilizando la directiva [proxy_pass][proxy-pass] del módulo `ngx_http_proxy_module`, es muy común utilizar está directiva para colocar varios servidores en un mismo espacio de URL.
 
@@ -232,7 +214,6 @@ server {
         proxy_pass http://localhost:3618;
     }
 }
-
 ```
 
 # Terminando

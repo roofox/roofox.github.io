@@ -6,6 +6,7 @@
 @import "colors";
 @import "utils/svg-uri";
 @import "components/prism-theme";
+@import "components/gatsby-highlight";
 
 html {
   background-color: $background-color !important;
@@ -31,7 +32,7 @@ button {
 }
 
 // :not(a) > code {
-a {
+a:not(.anchor){
   background: linear-gradient(
     to bottom,
     $primary-color 0%,
@@ -70,6 +71,11 @@ a {
     }
     */
 }
+
+a.anchor {
+    color: white;
+}
+
 table {
   border-color: #545b5e;
 }
