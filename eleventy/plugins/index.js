@@ -35,7 +35,7 @@ function addPlugins(eleventyConfig) {
         {
           resolve: "gatsby-remark-prismjs",
           options: {
-            lineNumbers: true,
+            showLineNumbers: true,
           },
         },
         {
@@ -43,7 +43,7 @@ function addPlugins(eleventyConfig) {
           options: {
             dashes: "oldschool",
           },
-        }
+        },
       ]),
     ],
   });
