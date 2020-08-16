@@ -31,8 +31,13 @@ button {
   color: #e8e6e3;
 }
 
-// :not(a) > code {
-a:not(.anchor){
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+a:not(.anchor):not(.footnote-ref):not(.footnote-backref) {
   background: linear-gradient(
     to bottom,
     $primary-color 0%,
@@ -41,7 +46,6 @@ a:not(.anchor){
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 3px 3px;
-  color: $primary-color;
   text-decoration: none;
   padding-bottom: 0.5rem;
 
@@ -70,6 +74,10 @@ a:not(.anchor){
         }
     }
     */
+}
+
+sup {
+    top: -1em;
 }
 
 a.anchor {
