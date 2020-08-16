@@ -125,9 +125,26 @@ releases de Debian utilizando los nombres de los personajes de
 
 ## Versiones
 
-### Buzz
+### `1.1` Buzz | 17/Jun/1996
 
-Inspirado en el personaje _Buzz Lightyear_
+![](/assets/blog/una-breve-historia-de-debian/buzz.jpg)
+
+<h1>Hey </h1>
+<p style="font-size: 0.9rem;font-style: italic;">
+    <img style="display: block;" src="https://live.staticflickr.com/4128/5037973057_8bc50091c9_b.jpg" alt="Buzz">
+    <a href="https://www.flickr.com/photos/77967821@N00/5037973057">"Buzz"</a>
+    <span> by <a href="https://www.flickr.com/photos/77967821@N00">Attila con la cámara</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC 2.0</a>
+    <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;">
+        <img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg" />
+        <img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" />
+        <img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" />
+    </a>
+</p>
+
+Se migró completamente al formáto `ELF` e implementó el kernel de Linux 2.0
+
+
+Inspirado en el personaje _Buzz Lightyear
 
 | Versión | Code name | Fecha de lanzamiento | Paquetes | Notas |
 |--|--|--|--|--|
@@ -136,9 +153,13 @@ Inspirado en el personaje _Buzz Lightyear_
 | `1.3` | Bo | 5/Jun/1997 | 974 | Esta versión era mantenida por 200 programadores |
 | `2.0` | Hamm | 24/Jul/1998 | 1500 |  |
 
+# Referencias
+
 [1]: https://www.flickr.com/photos/iamurdock/20006308374/
 [2]: https://www.debian.org/doc/manuals/project-history/releases.en.html
-[3]: https://pl.wikipedia.org/wiki/Dselect
+[3]: https://en.wikipedia.org/wiki/Dselect
+
+[^1]: Here is the footnote.
 
 [dselect]: https://wiki.debian.org/dselect
 [synaptic]: https://wiki.debian.org/Synaptic
