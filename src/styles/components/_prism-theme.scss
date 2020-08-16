@@ -78,6 +78,10 @@ pre[class*="language-"] {
   @media (max-width: 700px) {
     font-size: 1.4375rem !important;
   }
+
+  @media (max-width: 700px) {
+    font-size: 1rem !important;
+  }
 }
 
 h1 > code[class*="language-"] {
