@@ -3,11 +3,10 @@ const path = require("path");
 function addPlugins(eleventyConfig) {
   eleventyConfig.addPlugin(require("@roofox/eleventy-plugin-remark"), {
     plugins: [
+      "remark-footnotes",
       {
         plugin: require("@roofox/remark-gatsby-plugins-wrapper"),
         options: {
-          extraOption1: false,
-          extraOption2: false,
           plugins: [
             {
               resolve: "gatsby-remark-prismjs",
@@ -24,42 +23,6 @@ function addPlugins(eleventyConfig) {
           ],
         },
       },
-      // [
-      //   require("@roofox/remark-gatsby-plugins-wrapper"),
-      //   [
-      //     {
-      //       resolve: "gatsby-remark-prismjs",
-      //       options: {
-      //         showLineNumbers: true,
-      //       },
-      //     },
-      //     {
-      //       resolve: "gatsby-remark-smartypants",
-      //       options: {
-      //         dashes: "oldschool",
-      //       },
-      //     },
-      //   ],
-      // ],
-      // {
-      //   plugin: require("@roofox/remark-gatsby-plugins-wrapper"),
-      //   options: {
-      //     plugins: [
-      //       {
-      //         resolve: "gatsby-remark-prismjs",
-      //         options: {
-      //           showLineNumbers: true,
-      //         },
-      //       },
-      //       {
-      //         resolve: "gatsby-remark-smartypants",
-      //         options: {
-      //           dashes: "oldschool",
-      //         },
-      //       },
-      //     ],
-      //   },
-      // },
     ],
   });
 
