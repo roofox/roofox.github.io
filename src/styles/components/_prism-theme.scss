@@ -27,7 +27,7 @@ pre[class*="language-"] {
   hyphens: none;
 
   .line-numbers-rows {
-    border-right-color: #3f51b5;
+    border-right-color: $primary-color;
 
     span::before {
       color: #fff;
@@ -67,16 +67,13 @@ pre[class*="language-"] {
   overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #2d2d2d;
-}
-
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em;
+  padding: 0 0.8rem;
   border-radius: 0.3em;
   white-space: normal;
+  background: #2d2d2d;
+  color: $secondary-color;
 }
 
 .token.comment,
