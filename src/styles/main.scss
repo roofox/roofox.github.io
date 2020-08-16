@@ -297,5 +297,6 @@ blockquote:not([data-name="title"]) {
 
   @media (max-width: 700px) {
     padding: 0 0 0 1rem;
+    border-left-width: 0.5rem;
   }
 }

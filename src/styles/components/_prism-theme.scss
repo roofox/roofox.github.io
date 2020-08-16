@@ -74,6 +74,17 @@ pre[class*="language-"] {
   white-space: normal;
   background: #2d2d2d;
   color: $secondary-color;
+
+  @media (max-width: 700px) {
+    font-size: 1.4375rem !important;
+  }
+}
+
+h1 > code[class*="language-"] {
+
+  @media (max-width: 700px) {
+    font-size: 2rem !important;
+  }
 }
 
 .token.comment,
