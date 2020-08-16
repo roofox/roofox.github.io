@@ -1,50 +1,65 @@
 const path = require("path");
 
-const markdownGatsbyLoader = (plugins) => {
-  if (!Array.isArray(plugins)) {
-    throw new Error("plugins is not an Array");
-  }
-
-  return (_) => async (markdownAST, _, done) => {
-    const promises = plugins.map(async (plugin) => {
-      let instance;
-      let options = {};
-
-      if (typeof plugin === "object" && plugin.resolve) {
-        instance = require(plugin.resolve);
-        options = plugin.options ? plugin.options : {};
-      }
-
-      if (typeof plugin === "string") {
-        instance = require(plugin);
-      }
-
-      return instance({ markdownAST }, options);
-    });
-
-    await Promise.all(promises);
-
-    done();
-  };
-};
-
 function addPlugins(eleventyConfig) {
-  eleventyConfig.addPlugin(require("@fec/eleventy-plugin-remark"), {
+  eleventyConfig.addPlugin(require("@roofox/eleventy-plugin-remark"), {
     plugins: [
-      markdownGatsbyLoader([
-        {
-          resolve: "gatsby-remark-prismjs",
-          options: {
-            showLineNumbers: true,
-          },
+      {
+        plugin: require("@roofox/remark-gatsby-plugins-wrapper"),
+        options: {
+          extraOption1: false,
+          extraOption2: false,
+          plugins: [
+            {
+              resolve: "gatsby-remark-prismjs",
+              options: {
+                showLineNumbers: true,
+              },
+            },
+            {
+              resolve: "gatsby-remark-smartypants",
+              options: {
+                dashes: "oldschool",
+              },
+            },
+          ],
         },
-        {
-          resolve: "gatsby-remark-smartypants",
-          options: {
-            dashes: "oldschool",
-          },
-        },
-      ]),
+      },
+      // [
+      //   require("@roofox/remark-gatsby-plugins-wrapper"),
+      //   [
+      //     {
+      //       resolve: "gatsby-remark-prismjs",
+      //       options: {
+      //         showLineNumbers: true,
+      //       },
+      //     },
+      //     {
+      //       resolve: "gatsby-remark-smartypants",
+      //       options: {
+      //         dashes: "oldschool",
+      //       },
+      //     },
+      //   ],
+      // ],
+      // {
+      //   plugin: require("@roofox/remark-gatsby-plugins-wrapper"),
+      //   options: {
+      //     plugins: [
+      //       {
+      //         resolve: "gatsby-remark-prismjs",
+      //         options: {
+      //           showLineNumbers: true,
+      //         },
+      //       },
+      //       {
+      //         resolve: "gatsby-remark-smartypants",
+      //         options: {
+      //           dashes: "oldschool",
+      //         },
+      //       },
+      //     ],
+      //   },
+      // },
     ],
   });
 
