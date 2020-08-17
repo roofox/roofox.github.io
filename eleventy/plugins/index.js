@@ -1,28 +1,16 @@
 const path = require("path");
 
+const remarkify = (plugin) => (options) => (markdownAST) => {
+  const fn = require(plugin);
+  fn({ markdownAST }, options);
+};
+
 function addPlugins(eleventyConfig) {
-  eleventyConfig.addPlugin(require("@roofox/eleventy-plugin-remark"), {
+  eleventyConfig.addPlugin(require("@fec/eleventy-plugin-remark"), {
     plugins: [
-      "remark-footnotes",
-      {
-        plugin: require("@roofox/remark-gatsby-plugins-wrapper"),
-        options: {
-          plugins: [
-            {
-              resolve: "gatsby-remark-prismjs",
-              options: {
-                showLineNumbers: true,
-              },
-            },
-            {
-              resolve: "gatsby-remark-smartypants",
-              options: {
-                dashes: "oldschool",
-              },
-            },
-          ],
-        },
-      },
+      require("remark-footnotes"),
+      [remarkify("gatsby-remark-prismjs"), { showLineNumbers: true }],
+      [remarkify("gatsby-remark-smartypants"), { dashes: "oldschool" }],
     ],
   });
 
