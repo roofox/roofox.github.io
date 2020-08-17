@@ -37,6 +37,11 @@ a {
     color: $primary-color;
 }
 
+.footnotes a {
+    text-decoration: none!important;
+    background: none!important;
+}
+
 a:not(.anchor):not(.footnote-ref):not(.footnote-backref) {
   background: linear-gradient(
     to bottom,
