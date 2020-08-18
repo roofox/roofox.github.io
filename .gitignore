@@ -1,3 +1,7 @@
+
+/**/*.Identifier
+/**/*.bak
+/**/*.original
 # Logs
 logs
 *.log
