@@ -28,21 +28,16 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Noto Serif JP',
+            family: "Merriweather:ital,wght@",
+            variants: ["0,400", "1,300", "0,900"],
           },
           {
-            family: 'Merriweather:ital,wght@',
-            variants: [
-              '0,400',
-              '0,900',
-              '1,300'
-            ]
+            family: "Kanit",
+            variants: ["700"],
           },
           {
-            family: 'Kanit',
-            variants: [
-              '700',
-            ]
+            family: "Space+Mono:ital,wght",
+            variants: ["0,400", "0,700", "1,400", "1,700"],
           },
         ],
       },
@@ -66,14 +61,14 @@ module.exports = {
               aliases: {
                 shell: "bash",
                 hosts: "bash",
-              }
-            }
-          }
+              },
+            },
+          },
         ],
       },
     },
     `gatsby-transformer-sharp`,
-    'gatsby-plugin-sharp',
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

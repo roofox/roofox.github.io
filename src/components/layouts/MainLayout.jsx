@@ -2,7 +2,7 @@ import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import Heading from '../../components/Heading'
 import Footer from "../../components/Footer"
-import theme from "../../theme"
+import theme from "../../styles/theme"
 import GlobalStyle from "../../components/GlobalStyle"
 
 const Main = styled.main`
