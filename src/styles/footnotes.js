@@ -1,8 +1,7 @@
-export default (p) => `
-.footnotes  {
-  // text-decoration: underline;
-  // background: none;
+import { css } from 'styled-components';
 
+export default css`
+.footnotes  {
   font-size: 1rem;
 
   p {
@@ -12,13 +11,28 @@ export default (p) => `
 
   a.footnote-backref {
     text-decoration: none;
-    color: ${p.theme.bodyColor};
-    // background-color: ${p.theme.primaryColor2};
+    color: ${(p) => p.theme.bodyColor};
     padding: 0.3125rem;
 
     &:hover{
-      background-color: ${p.theme.primaryColor2};
+      background-color: ${(x) => x.theme.primaryColor2};
     }
   }
 }
-`
+
+sup {
+    top: -0.5em;
+
+    .footnote-ref {
+      color: ${(x) => x.theme.primaryColor2};
+      text-decoration: none;
+
+      &:before {
+        content: "["
+      }
+      &:after {
+        content: "]"
+      }
+    }
+}
+`;

@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   1.0000rem    	16px
   */
 
-  ${(p) => styles.map(x => x(p))}
+  ${() => styles.map(x => x)}
 `
 
 export default GlobalStyle

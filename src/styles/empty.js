@@ -1,3 +1,3 @@
-export default (p) => `
+import { css } from "styled-components"
 
-`
+export default css``;
