@@ -188,7 +188,14 @@ _Toy Story_, comenzando con Buzz Lightyear[^toy-story].
 
 [!["Toy Story Bullseye" by Alan / Falcon is licensed under CC BY 2.0.](./bullseye.jpg)](https://www.flickr.com/photos/dafalcon/5213593610/in/album-72157625482417016/)
 
-# Referencias
+
+
+
+
+# Enlaces externos
+
+- Cover inspirado de https://codepen.io/nathantaylor/pen/wrBQWd
+
 
 [1]: https://www.flickr.com/photos/iamurdock/20006308374/
 [2]: https://www.debian.org/doc/manuals/project-history/releases.en.html
@@ -204,7 +211,6 @@ _Toy Story_, comenzando con Buzz Lightyear[^toy-story].
 [^logos]: Debian logos -- [About the Debian logos](https://www.debian.org/logos/)
 [^debian-logo]: [Debian Logo](https://wiki.debian.org/DebianLogo)
 [^toy-story]: [Toy Story](https://wiki.debian.org/ToyStory)
-
 
 [dselect]: https://wiki.debian.org/dselect
 [synaptic]: https://wiki.debian.org/Synaptic
