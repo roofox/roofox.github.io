@@ -44,37 +44,39 @@ const Container = styled.div`
   background: ${backgroundColor};
 `
 
-const Paragraph = styled.h1`
+const Paragraph = styled.span`
   font-family: Futura, sans-serif;
   font-weight: 900;
   font-size: 5rem;
   padding: 5rem;
+  text-align: center;
+  display: inline-block;
 
   @media (max-width: 449.999999px) {
     font-size: 2rem;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   @media (min-width: 450px) and (max-width: 767.999999px) {
     font-size: 3rem;
-    padding: 3rem;
+    padding: 2rem;
   }
 
   @media (min-width: 768px) and (max-width: 1169.999999px) {
     font-size: 4rem;
-    padding: 4rem;
+    padding: 3rem;
   }
 
   @media (min-width: 1170px) and (max-width: 1439.999999px) {
     font-size: 5rem;
-    padding: 5rem;
+    padding: 4rem;
   }
 `
 
 const Letter = styled.span`
   position: relative;
-  display: inline-block;
   animation: ${effect} ${time}s infinite alternate ${e};
+  text-transform: uppercase;
 
   ${[...Array(n).keys()].map(
     (i) =>
@@ -91,8 +93,7 @@ const Covercc9a = ({ text }) => (
     <Paragraph>
       {text
         .split("")
-        .map((letter) => (letter === " " ? <br /> : <Letter>{letter}</Letter>))
-        // .map((letter) => (<Letter>{letter}</Letter>))
+        .map((letter, index) => (<Letter key={`${letter}-${index}`}>{letter}</Letter>))
         }
     </Paragraph>
   </Container>
