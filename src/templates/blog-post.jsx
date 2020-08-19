@@ -99,9 +99,7 @@ class BlogPostTemplate extends React.Component {
           <PostMeta>
             <Cover text={post.frontmatter.title} />
             <Hr />
-            <DateTime format="MMMM d, yyyy">
-              {post.frontmatter.date}
-            </DateTime>
+            <DateTime format="MMMM d, yyyy">{post.frontmatter.date}</DateTime>
           </PostMeta>
           <PostContent
             /* eslint react/no-danger: 0 */
