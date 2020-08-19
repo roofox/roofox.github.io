@@ -10,8 +10,8 @@ const Time = styled.time`
   font-weight: 100;
   width: 100%;
   display: block;
-  text-align: ${p => p.align};
-  color: #616161;
+  text-align: ${(p) => p.align};
+  color: ${(p) => p.theme.bodyColor};
   padding: 0.25rem 0;
 `
 
