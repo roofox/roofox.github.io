@@ -64,6 +64,20 @@ module.exports = {
               },
             },
           },
+          {
+            resolve: "gatsby-remark-smartypants",
+            options: {
+              dashes: "oldschool",
+            },
+          },
+          "gatsby-remark-numbered-footnotes",
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow noopener noreferrer",
+            },
+          },
         ],
       },
     },
