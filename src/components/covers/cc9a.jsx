@@ -23,7 +23,7 @@ const shadow = (color, depth) => {
 const Container = styled.section`
   width: 100%;
   max-width: ${p => p.theme.contentMaxWidth};
-  background: #fff;
+  background: transparent;
   margin: 0;
   padding-bottom: 130px;
   display: flex;
