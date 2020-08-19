@@ -13,7 +13,7 @@ const Text = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Space+Mono:700');
 
   position: relative;
-  color: #262626;
+  color: #CE0058;
   padding: 20px 50px;
   font-family: "Space Mono";
   font-size: 5rem;
@@ -28,9 +28,9 @@ const Text = styled.div`
   }
 
   &:before {
-    background: #262626;
+    background: #CE0058;
     color: white;
-    content: '${p => p.children}';
+    content: '${(p) => p.children}';
     overflow: hidden;
     position: absolute;  
     top: 0;  
