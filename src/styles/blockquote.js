@@ -1,4 +1,5 @@
 import { css } from "styled-components"
+import media from "../utils/media-query"
 
 export default css`
   blockquote:not([data-name="title"]) {
@@ -7,10 +8,11 @@ export default css`
     margin: 0;
     padding: 0 0 0 2rem;
     position: relative;
+    font-size: 0.8rem;
 
-    @media (max-width: 700px) {
+    ${media.lessThan("md")`
       padding: 0 0 0 1rem;
       border-left-width: 0.5rem;
-    }
+    `}
   }
-`;
+`

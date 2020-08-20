@@ -1,4 +1,5 @@
 import { css } from "styled-components"
+import media from "../utils/media-query"
 
 export default css`
   code {

@@ -1,17 +1,18 @@
 import { css } from "styled-components"
+import media from "../utils/media-query"
 
 export default css`
   html {
     font-size: 16px;
+    background-color: ${(p) => p.theme.bodyBackgroundColor};
 
-    @media (max-width: 700px) {
-      font-size: 15px;
-    }
+    ${media.lessThan("md")`
+      font-size: 14px;
+    `}
   }
 
   body {
     font-family: ${(p) => p.theme.bodyFontFamily};
-    background-color: ${(p) => p.theme.bodyBackgroundColor};
     color: ${(p) => p.theme.bodyColor};
   }
 
@@ -32,4 +33,4 @@ export default css`
     background-color: #ffd166 !important;
     color: #e8e6e3 !important;
   }
-`;
+`
