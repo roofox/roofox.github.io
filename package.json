@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "roofox.dev",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "roofox.dev website",
+  "version": "0.3.0",
+  "author": "Sergio Flores <byoigres@gmail.com>",
   "dependencies": {
     "date-fns": "^2.15.0",
     "disqus-react": "^1.0.5",
@@ -53,7 +53,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deplay": "gatsby build && cp ./CNAME public/ && gh-pages -d public --branch master",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && cp ./CNAME public/ && gh-pages -d public -b master",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
