@@ -13,7 +13,7 @@ export default css`
       font-size: 1rem;
     }
 
-    & + .gatsby-resp-image-figcaption {
+    & + .gatsby-resp-image-figcaption p {
       text-align: center;
       display: block;
       font-size: 1rem;

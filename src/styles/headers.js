@@ -17,6 +17,7 @@ export default css`
     @media (max-width: 700px) {
       font-size: 2rem;
       padding: 1rem 0;
+      line-height: 1.4;
     }
   }
-`;
+`
