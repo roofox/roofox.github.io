@@ -13,28 +13,31 @@ draft: false
 
 Debian es una distribución Linux compuesta de software libre y código abierto,
 esta distribución es desarrollada por una comunidad llamada **Proyecto Debian**,
-Debian es una distribución Linux compuesta de software libre y código abierto,
 que son un conjunto de voluntarios a nivel mundial cuyo esfuerzo es el de
 producir una distribución de un sistema operativo que sea compuesto enteramente
-por software libre, de todos los productos en los que la comunidad trabaja, el
+por software libre, y de todos los productos en los que la comunidad trabaja, el
 principal es la distribución de software Debian GNU/Linux, la cual incluye el
-kernel del sistema operativo Linux y miles de aplicaciones pre-empaquetadas[^debian-project].
+kernel del sistema operativo Linux y miles de aplicaciones pre-empaquetadas
+[^debian-project].
 
 ## Los inicios
 
 Todo se remonta al año de 1993, año en el que la _Softlanding Linux System_
 (SLS) era la _"distribución"_ de linux más utilizada, ya que fué una de las
 primeras en realmente existir como distribución, fué fundada en Mayo de 1992 por
-Peter MacDonald y se ganó la fama de ser muy problemática ya que contenia una
-gran cantidad de bugs reportados por sus usuarios. Tiempo después, Patrick
-Volkerdin tomó _SLS_ como sistema operativo base para comenzar las primeras
-versiones de lo que hoy es la distribución de _Linux Slackware_[^SLS].
+Peter MacDonald y se ganó la fama de ser muy problemática, ya que contenia una
+gran cantidad de bugs reportados por sus usuarios. SLS no duró mucho, ya que
+tiempo después, Patrick Volkerdin tomó _SLS_ como sistema operativo base para
+comenzar las primeras versiones de lo que hoy es la distribución de _Linux
+Slackware_[^SLS].
 
 En el mismo año de 1993, un estudiante de ingeniería de nombre Ian Murdock,
 frustrado por todos los problemas presentados en _SLS_ descidió crear su propio
 sistema operativo _desde cero_. Ian anunció Debian[^debian-release] el 16 de agosto de 1993
 donde lo nombró como _The Debian Linux Release_, ya que por aquellos tiempos el
 concepto de distribución era prácticamente nuevo.
+
+![Anuncio de debian](./debian-announcement.png)
 
 ## Un nombre creativo
 
@@ -48,11 +51,11 @@ así formar el icónico nombre del sistema operativo[^debra-ian].
 
 ## Antes de la versión 1.0
 
-Durante Agosto y Diciembre de 1993 se lanzaron diferentes _releases_ internos
-que pasaron desde la versión **0.01** hasta la **0.90**, en ellas se
-implementaron mejoras  al sistema operativo pero no fué hasta en Enero de 1994
-en la versión **0.91** donde se implementó un manejador de paquetes sencillo que
-podía instalar y desinstalar paquetes.
+Durante Agosto y Diciembre de 1993 se lanzaron diferentes _releases_ internos de
+Debian que pasaron desde la versión **0.01** hasta la **0.90**, en ellas se
+implementaron las bases y mejoras al sistema operativo pero no fué hasta en
+Enero de 1994 en la versión **0.91** donde se implementó un manejador de
+paquetes sencillo que podía instalar y desinstalar paquetes.
 
 Más de un año después, en Marzo de 1995 la versión **0.93R5** fué lanzada, en
 ella la responsabilidad del desarrollo de cada paquete era asignado a un
@@ -62,11 +65,11 @@ la instalación del sistema operativo base. En Noviembre de 1995 se libera la
 versión **0.93R6** que fué la última en utilizar el formáto de archivos
 [a.out][a.out] optando por utilizar [ELF][elf], además se implementa
 [dselect][dselect], que fué una herramienta _"gráfica"_ basada en texto para
-instalar, remover y administrar los paquetes de Debian. Posiblemente la
-nombraron por **D**ebian **Select**, no lo sé. Actualmente _dselect_ se
-encuentra deprecada debido a que existen mejores herramientas como
-[Synaptic][synaptic] que proporciona una interfáz gráfica real y es actualizada
-frecuentemente.[^debian-releases]
+instalar, remover y administrar los paquetes de Debian (posiblemente fué
+nombrada así por **D**ebian **Select**). Actualmente _dselect_ se encuentra
+deprecada debido a que existen mejores herramientas como [Synaptic][synaptic]
+que proporciona una interfáz gráfica real y es actualizada frecuentemente.
+[^debian-releases]
 
 ![Interfáz de dselect](./dselect.png)
 
