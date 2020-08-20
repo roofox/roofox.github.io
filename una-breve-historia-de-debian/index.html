@@ -1,1 +1,921 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Una breve historia de Debian</title><script>!function(e,a,t,n,g,c){e.GoogleAnalyticsObject=n,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=+new Date,g=a.createElement(t),c=a.getElementsByTagName(t)[0],g.async=1,g.src="https://www.google-analytics.com/analytics.js",c.parentNode.insertBefore(g,c)}(window,document,"script","ga"),ga("create","UA-98315944-2","auto"),ga("send","pageview")</script><link rel="stylesheet" href="/main.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet"></head><body><header class="header"><div class="header-container"><h1 class="title"><a href="/">ROOFOX.dev</a></h1></div></header><main><article class="post"><section class="post-meta"><h1 class="post-title">Una breve historia de Debian</h1><time class="post-list-time">julio 4, 2020</time></section><section class="post-content"><p>Debian<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup> es una distribuci&#xF3;n<sup id="fnref-2"><a href="#fn-2" class="footnote-ref">2</a></sup> Linux<sup id="fnref-3"><a href="#fn-3" class="footnote-ref">3</a></sup> compuesta de software<sup id="fnref-4"><a href="#fn-4" class="footnote-ref">4</a></sup> libre y c&#xF3;digo abierto<sup id="fnref-5"><a href="#fn-5" class="footnote-ref">5</a></sup>, esta distribuci&#xF3;n es desarrollada por una comunidad llamada <strong>Proyecto Debian</strong>, que son un conjunto de voluntarios a nivel mundial cuyo esfuerzo es el de producir una distribuci&#xF3;n de un sistema operativo que sea compuesto enteramente por software libre, de todos los productos en los que la comunidad trabaja, el principal es la distribuci&#xF3;n de software Debian GNU/Linux, la cual incluye el kernel del sistema operativo Linux y miles de aplicaciones pre-empaquetadas.</p><h2>Los inicios</h2><p>Todo se remonta al a&#xF1;o de 1993, a&#xF1;o en el que la <em>Softlanding Linux System</em> (SLS) era la <em>&#x201C;distribuci&#xF3;n&#x201D;</em> de linux m&#xE1;s utilizada, ya que fu&#xE9; una de las primeras en realmente existir como distribuci&#xF3;n, fu&#xE9; fundada en Mayo de 1992 por Peter MacDonald y se gan&#xF3; la fama de ser muy problem&#xE1;tica ya que contenia una gran cantidad de bugs reportados por sus usuarios. Tiempo despu&#xE9;s, otros programadores tomaron <em>SLS</em> como sistema operativo base para comenzar las primeras versiones de lo que hoy es la distribuci&#xF3;n de <em>Linux Slackware</em>.</p><p>En el mismo a&#xF1;o de 1993, un estudiante de ingenier&#xED;a de nombre Ian Murdock, frustrado por todos los problemas presentados en <em>SLS</em> descidi&#xF3; crear su propio sistema operativo <em>desde cero</em>. Ian anunci&#xF3; Debian<sup id="fnref-6"><a href="#fn-6" class="footnote-ref">6</a></sup> el 16 de agosto de 1993 donde lo nombr&#xF3; como <em>The Debian Linux Release</em>, ya que por aquellos tiempos el concepto de distribuci&#xF3;n era pr&#xE1;cticamente nuevo.</p><h2>Un nombre creativo</h2><p>En su momento Ian ten&#xED;a una novia de nombre <em>Debra Lynn</em> con la que tiempo despu&#xE9;s se cas&#xF3;. Ian descidi&#xF3; tomar las primeras silabas de ambos nombres para as&#xED; formar el ic&#xF3;nico nombre del sistema operativo.</p><blockquote><p><strong>Deb</strong>ra Lyyn + <strong>Ian</strong> Murdock<br><strong>Deb</strong> + <strong>Ian</strong><br><strong>DebIan</strong></p></blockquote><h2>Antes de la versi&#xF3;n 1.0</h2><p>Durante Agosto y Diciembre de 1993 se lanzaron diferentes <em>releases</em> internos que pasaron desde la versi&#xF3;n <strong>0.01</strong> hasta la <strong>0.90</strong>, en ellas se implementaron mejoras al sistema operativo pero no fu&#xE9; hasta en Enero de 1994 en la versi&#xF3;n <strong>0.91</strong> donde se implement&#xF3; un manejador de paquetes sencillo que pod&#xED;a instalar y desinstalar paquetes.</p><p>M&#xE1;s de un a&#xF1;o despu&#xE9;s, en Marzo de 1995 la versi&#xF3;n <strong>0.93R5</strong> fu&#xE9; lanzada, en ella la responsabilidad del desarrollo de cada paquete era asignado a un programador y para este entonces ya se hab&#xED;a comenzado a utilizar el manejador de paquetes (que termin&#xF3; siendo <em>dpkg</em>) para instalar estos paquetes despu&#xE9;s de la instalaci&#xF3;n del sistema operativo base. En Noviembre de 1995 se libera la versi&#xF3;n <strong>0.93R6</strong> que fu&#xE9; la &#xFA;ltima en utilizar el form&#xE1;to de archivos <a href="https://www.freebsd.org/cgi/man.cgi?query=a.out&amp;sektion=5" target="_blank" rel="noopener noreferrer">a.out</a> optando por utilizar <a href="https://www.freebsd.org/cgi/man.cgi?query=elf&amp;sektion=5" target="_blank" rel="noopener noreferrer">ELF</a>, adem&#xE1;s se implementa <a href="https://wiki.debian.org/dselect" target="_blank" rel="noopener noreferrer">dselect</a>, que fu&#xE9; una herramienta <em>&#x201C;gr&#xE1;fica&#x201D;</em> basada en texto para instalar, remover y administrar los paquetes de Debian. Posiblemente la nombraron por <strong>D</strong>ebian <strong>Select</strong>, no lo s&#xE9;. Actualmente <em>dselect</em> se encuentra deprecada debido a que existen mejores herramientas como <a href="https://wiki.debian.org/Synaptic" target="_blank" rel="noopener noreferrer">Synaptic</a> que proporciona una interf&#xE1;z gr&#xE1;fica real y es actualizada frecuentemente.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAABJ0lEQVR4ATXBa04bMRSA0c/2vZ6MMkOCUiSkroEVsBDWQ9fU7gYJKQo/STVxyrx8bVAlznHPT7/q+vcDF5VSHMUqhUD0K9Ma2LaF2QQhs6yC/Hn9jfeew+EADmqopJSY55lpmjAzvqkqcjqdMDOOxyMiQt/3DMOAmTGOI13XcT6f6fueWivClxgjKSWapiGlxDRN7Pd7rtcrbdtSSkFEUFXk9vYBMyGEf8yzcHPTABfMFJGflLLD+0QIPxBRpNaBy2XAe49zhZwdbVsxM+7uIvM8oLrw9vaCqiK1DuT8TikFVSUEYRxHYowsi5HzitlCCAtmFR9jRFXZbrc45yilsNlscM4RQiDGSNd1fJP7+0dSutA0G3I2xvGDWvmvViMEDzh2uwURzye1w5WjVD+XRgAAAABJRU5ErkJggg==" alt="Interf&#xE1;z de dselect" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/dselect.png" class="lazyload" width="591" height="420"></p><h2>La versi&#xF3;n que nunca exist&#xED;o</h2><p><strong>Deb&#xED;an 1.0 nunca sal&#xED;o a la luz</strong>, el 11 de Diciembre de 1995, Bruce Perens, l&#xED;der del Proyecto Debian que en su momento suced&#xED;o a Ian Murdock, en conjunto con <em>InfoMagic</em>, un distribuidor de Discos Compactos, anunciaron que accidentalmente hab&#xED;an enviado una versi&#xF3;n equivocada de Debian etiquetada como <strong>versi&#xF3;n 1.0</strong>, esta era una versi&#xF3;n de desarrollo que a&#xFA;n estaba parcialmente migrada al formato <em>ELF</em>, lo cual posiblemente pudiera tener problemas en el proceso de <em>boot</em> o para ejecutarse de manera correcta, esta versi&#xF3;n no representaba en terminos de calidad lo que un release de Debian deber&#xED;a de ser y para evitar confusiones entre la versi&#xF3;n prematura del CD y la del verdadero release se descidi&#xF3; nombrar el siguiente release como <em>&#x201C;Debian 1.1&#x201D;</em> el cual fu&#xE9; lanzado el 17 de Junio de 1996 y era completamente en formato <em>ELF</em>, utilizaba el kernel de Linux 2.0 y conten&#xED;a 474 paquetes disponibles.</p><p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAwADAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/ALfhhL6DxOsMgxE+8k7wSo2tg4+vtXi4R0p1INb/APAPUxDp+xaW56BEromJJDI2epAH8q9o8s878MuZvFFo8gDNJ5m4kdRsPH0rycJFRqKK2X/BPaxcUqckvL8z0SKKOFNkSBV9AK9Y8U//2Q==" alt="La versi&#xF3;n 1.0 de Debian no es lo que parece" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/1.1-not-1.0.jpg" class="lazyload" width="500" height="500"></p><h2>Logotipo</h2><p>El 26 de Agosto de 1999, como resultado de un concurso realizado por GIMP, Debian obtubo su logotipo oficial despu&#xE9;s de la selecci&#xF3;n de las siguientes propuestas:</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAA6ElEQVR4AV3BwUqDYADA8b/xiUNwF5knYT2AGazTgmmja7hL7AFGt5DeYfQSsdg7tBjhbhPard08NWhnp6fv4kFcCgXR76cUZXGM1zGe7xGvYzzfo6oqsiyjLEs0TcM0TX6dUNt97hjfjtm8b2hIKVlFK9I0Zf+1Z/m6REpJQyRJQngfYts2i5cF/cs+/pWPoijMnmbMn+eEDyGqqjK8HiKoDbwBje5pFyEEjWAUoOs67rmLZVkENwHTxylKURZHatuPLb2LHn8d0gN5nmO0DaK3CMd1EPxwzhz+61gdWq0WRttgcjeh8Q37BEx13vIyNAAAAABJRU5ErkJggg==" alt="Ants" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/logo_ants_jeannette-0.png" class="lazyload" width="488" height="242"></p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAFCAYAAABxeg0vAAAAzElEQVR4ATXBMU6EQABA0c/I4DrKQCGFnUtJoVbchna9wcbS63AB7sABNDGSmCyFcSew0ZFEYmZUCt8L9uP+x3uPEALvPUopoihiYa3lyxyQaczHpyVJEoTWGv+wQ7weSNOUruto25ZFHMeExnJ2vMIYw0LwJ9SK1cU5CykleZ7z7zmYCE9P8M6jtUYMw8Dj+xtPuxeccxhj6PueaZoYx5Gqqmiahs3thrquOdrebe+/nYMgQCnFPM9IKcmyDOccN1fXXK7XlGVJURT8AgXTURAYFEOFAAAAAElFTkSuQmCC" alt="Swirl" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/logo_swirl_raul-0.png" class="lazyload" width="568" height="236"></p><p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAcADAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AN+2PlmSJY327iwJIP4da5JWdmaIlhkdky8TAjg9Of1pNK+g1c//2Q==" alt="Seal" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/logo_seal_villate.jpg" class="lazyload" width="496" height="298"></p><p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAwACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AO4uo033F1OxXyiFQhiCAADgY9SSPfj0rN9Wzqpt2jCPX/htfRGkDkA4xVnIYjMJbkXDoDKjYVsnjHoM1lu7nopOMORPRl9bqQqCQvI9KvmOZ0opn//Z" alt="Old Logo" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/logo_old_logo_debianlogo-3.jpg" class="lazyload" width="129" height="156"></p><p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAwACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOk0CK9hkvGfUVuQhk2+WN7OR6Enk5PTp09a6a1SlJR5I2a3/r9R663dyxbahqL20TOl3uZATusyDnHfmsW430X4hcxvAukW1jrWqLC85FvcPGgaQ4wMYyOhPzHmoEd0qhVCjOAMDJzQB//Z" alt="Fixed Chicken" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/logo_fixed_chicken_fixed_chicken.jpg" class="lazyload" width="662" height="786"></p><p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAsADAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOh8Z22vSXdk+kS3JiY7WjhO3a3UMT6Y4544ralKKvzEyT6HUWgmW0hFywacRqJCOhbHP61lK19CkDQxk528+xpAOWNFUAKMUAf/2Q==" alt="DG" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/logo_DG_dg.jpg" class="lazyload" width="267" height="250"></p><p>Y como ya lo saben, el ganador del concurso fu&#xE9; el logotipo de nombre <a href="https://wiki.debian.org/DebianLogo" target="_blank" rel="noopener noreferrer"><em>Swirl</em></a> creado por <a href="http://www.silva.com/" target="_blank" rel="noopener noreferrer">Raul M. Silva</a></p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAYAAABbayygAAABWUlEQVR4AV3BP2gaUQDA4d/7c6dna3qBCqktUh0iIXFvh4zSqXOhGdy6FDp1Lu2WMdBiIWQVQjBLwElohm6CUgIOLRmFxIoSKBe80/PFBzYkfp8wc1jGcPn1iGH9B8nCU9TKA5583CGRW8PSLFzsHYIxbDS/IRMO12fnnO98YvPnPpZmbhZGTPojcrvvCX79QUhJspgj/bKEmcYIrZBYscEr5rCmgyu8jeeYyRTlpxFaYWnmZNJlMrjCmo1DRsenCEfx+O0r/tNYUhD1/hL/u2b19TazMEK6LghuSRaefXlH//sxJpogEy4I7pEs6NU0ax/eEHR+MxuHLNPcIZMuD19sgTEs02EYUq1WqVQqtNttHMdhPXJxSwWE6xDHMUopVCaT+TwcDmk2mzQaDYIg4OCkTtp/RK1Wo9Vq0e12kUoper0evu9TLpex8vk8nU4Hz/PIZrOkUiluABjAdlla5krWAAAAAElFTkSuQmCC" alt="Logotipo oficial de Debian" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/debian-openlogo-smal.png" class="lazyload" width="100" height="123"></p><p>El logotipo utiliza una fuente comercial de nombre <em>Poppl Laudatio Condensed</em> donde el punto de la letra <strong>i</strong> fu&#xE9; reemplazado por un diamante color rojo. Adem&#xE1;s de que el texto fu&#xE9; condensado horizontalmente y estrechado verticalmente lo cual hace que luzca un poco diferente a la fuente original.</p><h2>Una tradici&#xF3;n para toda la vida</h2><p><em>Toy Story</em> fu&#xE9; lanzado por Pixar el 22 de Noviembre de 1995. Un a&#xF1;o despu&#xE9;s Debian 1.1 fu&#xE9; lanzado. Bruce Perens era el l&#xED;der del proyecto Debian en su momento y tambi&#xE9;n trabajaba para Pixar, el comenz&#xF3; la tradici&#xF3;n de nombrar los releases de Debian utilizando los nombres de los personajes de <a href="https://wiki.debian.org/ToyStory" target="_blank" rel="noopener noreferrer">Toy Story</a>, comenzando con Buzz Lightyear.</p><h2>Versiones</h2><h3><code class="language-text">1.1</code> Buzz | 17/Jun/1996</h3><p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAgADAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AMTT4bWzvYLpVVZEbK5OBmsZ3kmhyioq6dmaN9cWt3ctNc6d50jfxpMVBHbj6VhCHIrR0+RrH3leWp//2Q==" alt="Hola" loading="lazy" data-src="/assets/blog/una-breve-historia-de-debian/buzz.jpg" class="lazyload" width="800" height="531"></p><p style="font-size:.9rem;font-style:italic"><img style="display:block" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAAgADAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AMTT4bWzvYLpVVZEbK5OBmsZ3kmhyioq6dmaN9cWt3ctNc6f50jfxpMVBHbj6VhCHIrR0+RrD3leWp//2Q==" alt="Buzz" loading="lazy" data-src="https://live.staticflickr.com/4128/5037973057_8bc50091c9_b.jpg" class="lazyload" width="1024" height="680"> <a href="https://www.flickr.com/photos/77967821@N00/5037973057" target="_blank" rel="noopener noreferrer">&quot;Buzz&quot;</a> <span>by <a href="https://www.flickr.com/photos/77967821@N00" target="_blank" rel="noopener noreferrer">Attila con la c&#xE1;mara</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&amp;atype=html" style="margin-right:5px" target="_blank" rel="noopener noreferrer">CC BY-NC 2.0</a> <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&amp;atype=html" target="_blank" rel="noopener noreferrer noopener noreferrer" style="display:inline-block;white-space:none;margin-top:2px;margin-left:3px;height:22px!important"><img style="height:inherit;margin-right:3px;display:inline-block" src="https://search.creativecommons.org/static/img/cc_icon.svg" loading="lazy" data-src="https://search.creativecommons.org/static/img/cc_icon.svg" class="lazyload"> <img style="height:inherit;margin-right:3px;display:inline-block" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" loading="lazy" data-src="https://search.creativecommons.org/static/img/cc-by_icon.svg" class="lazyload"> <img style="height:inherit;margin-right:3px;display:inline-block" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" loading="lazy" data-src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" class="lazyload"></a></p><p>Se migr&#xF3; completamente al form&#xE1;to <code class="language-text">ELF</code> e implement&#xF3; el kernel de Linux 2.0</p><p>Inspirado en el personaje _Buzz Lightyear</p><table><thead><tr><th>Versi&#xF3;n</th><th>Code name</th><th>Fecha de lanzamiento</th><th>Paquetes</th><th>Notas</th></tr></thead><tbody><tr><td><code class="language-text">1.1</code></td><td>Buzz</td><td>17/Jun/1996</td><td>474</td><td>Se migr&#xF3; completamente al form&#xE1;to <code class="language-text">ELF</code> e implement&#xF3; el kernel de Linux 2.0</td></tr><tr><td><code class="language-text">1.2</code></td><td>Rex</td><td>12/Dic/1996</td><td>848</td><td>Esta versi&#xF3;n era mantenida por 120 programadores</td></tr><tr><td><code class="language-text">1.3</code></td><td>Bo</td><td>5/Jun/1997</td><td>974</td><td>Esta versi&#xF3;n era mantenida por 200 programadores</td></tr><tr><td><code class="language-text">2.0</code></td><td>Hamm</td><td>24/Jul/1998</td><td>1500</td><td></td></tr></tbody></table><h1>Referencias</h1><div class="footnotes"><hr><ol><li id="fn-1">Here is the footnote.<a href="#fnref-1" class="footnote-backref">&#x21A9;</a></li><li id="fn-2">Here is the footnote 2.<a href="#fnref-2" class="footnote-backref">&#x21A9;</a></li><li id="fn-3">Here is the footnote 3.<a href="#fnref-3" class="footnote-backref">&#x21A9;</a></li><li id="fn-4">Here is the footnote 4.<a href="#fnref-4" class="footnote-backref">&#x21A9;</a></li><li id="fn-5">Here is the footnote 5.<a href="#fnref-5" class="footnote-backref">&#x21A9;</a></li></ol></div><div id="disqus_thread"></div></section><script>var disqus_config=function(){this.page.url="https://roofox.dev/una-breve-historia-de-debian/index.html",this.page.identifier="https://roofox.dev/una-breve-historia-de-debian/index.html"},isDisqusAdded=!1</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript><script src="/js/waypoints.min.js"></script></article><script>var waypoint=new Waypoint({element:document.getElementById("disqus_thread"),handler:function(e){var t,d;isDisqusAdded||(console.log("Disqus added"),isDisqusAdded=!0,(d=(t=document).createElement("script")).src="https://byoigres.disqus.com/embed.js",d.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(d))},offset:"bottom-in-view"})</script><footer><div><p>Blog escrito por&#xA0; <a href="https://byoigr.es/" target="_blank" rel="noopener noreferrer noopener noreferrer">Sergio Flores</a></p></div></footer></main><script>!function(){if("loading"in HTMLImageElement.prototype){var e=document.querySelectorAll("img"),t=e.length;if(0<t)for(var s=0;s<t;s++)"dataset"in e[s]&&"src"in e[s].dataset&&(e[s].src=e[s].dataset.src),"srcset"in e[s].dataset&&(e[s].srcset=e[s].dataset.srcset)}else{var a=document.createElement("script");a.async=!0,a.src="https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js",document.body.appendChild(a)}}()</script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.24bf1742e3764eb5de3c.css">/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}</style><meta name="generator" content="Gatsby 2.24.47"/><title data-react-helmet="true">ROOFOX.dev</title><link data-react-helmet="true" rel="canonical" href="https://roofox.dev/una-breve-historia-de-debian/"/><meta data-react-helmet="true" name="docsearch:version" content="2.0"/><meta data-react-helmet="true" name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,user-scalable=0"/><meta data-react-helmet="true" name="description" content="roofox.dev"/><meta data-react-helmet="true" property="og:url" content="https://roofox.dev"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:locale" content="en"/><meta data-react-helmet="true" property="og:site_name" content="ROOFOX.dev"/><meta data-react-helmet="true" property="og:image:width" content="512"/><meta data-react-helmet="true" property="og:image:height" content="512"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:site" content="http://t.co/roofoxdev"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/kanit/v6/nKKU-Go6G5tXcr4uPhWnVaE.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZM.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/merriweather/v21/u-4m0qyriQwlOrhSvowK_l5-eRZOf-I.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l521wRZWMf6.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l52_wFZWMf6.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/spacemono/v5/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/spacemono/v5/i7dNIFZifjKcF5UAWdDRYERMR3K_.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/spacemono/v5/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2"/><style type="text/css">@font-face{font-family:Merriweather;font-style:italic;font-weight:400;src:local('Merriweather Italic'),local('Merriweather-Italic'),url(/google-fonts/s/merriweather/v21/u-4m0qyriQwlOrhSvowK_l5-eRZOf-I.woff2) format('woff2'),url(/google-fonts/s/merriweather/v21/u-4m0qyriQwlOrhSvowK_l5-eRZOf-Q.woff) format('woff');font-display: swap;}@font-face{font-family:Merriweather;font-style:normal;font-weight:300;src:local('Merriweather Light'),local('Merriweather-Light'),url(/google-fonts/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l521wRZWMf6.woff2) format('woff2'),url(/google-fonts/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l521wRZWMf8.woff) format('woff');font-display: swap;}@font-face{font-family:Merriweather;font-style:normal;font-weight:400;src:local('Merriweather Regular'),local('Merriweather-Regular'),url(/google-fonts/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZM.woff2) format('woff2'),url(/google-fonts/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZK.woff) format('woff');font-display: swap;}@font-face{font-family:Merriweather;font-style:normal;font-weight:900;src:local('Merriweather Black'),local('Merriweather-Black'),url(/google-fonts/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l52_wFZWMf6.woff2) format('woff2'),url(/google-fonts/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l52_wFZWMf8.woff) format('woff');font-display: swap;}@font-face{font-family:Kanit;font-style:normal;font-weight:700;src:local('Kanit Bold'),local('Kanit-Bold'),url(/google-fonts/s/kanit/v6/nKKU-Go6G5tXcr4uPhWnVaE.woff2) format('woff2'),url(/google-fonts/s/kanit/v6/nKKU-Go6G5tXcr4uPhWnVac.woff) format('woff');font-display: swap;}@font-face{font-family:'Space Mono';font-style:italic;font-weight:400;src:local('Space Mono Italic'),local('SpaceMono-Italic'),url(/google-fonts/s/spacemono/v5/i7dNIFZifjKcF5UAWdDRYERMR3K_.woff2) format('woff2'),url(/google-fonts/s/spacemono/v5/i7dNIFZifjKcF5UAWdDRYERMR3K5.woff) format('woff');font-display: swap;}@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;src:local('Space Mono'),local('SpaceMono-Regular'),url(/google-fonts/s/spacemono/v5/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2'),url(/google-fonts/s/spacemono/v5/i7dPIFZifjKcF5UAWdDRYEF8Qw.woff) format('woff');font-display: swap;}@font-face{font-family:'Space Mono';font-style:normal;font-weight:700;src:local('Space Mono Bold'),local('SpaceMono-Bold'),url(/google-fonts/s/spacemono/v5/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2) format('woff2'),url(/google-fonts/s/spacemono/v5/i7dMIFZifjKcF5UAWdDRaPpZUFWaGA.woff) format('woff');font-display: swap;}</style><link rel="icon" href="/favicon-32x32.png?v=4a9773549091c227cd2eb82ccd9c5e3a" type="image/png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#1E88E5"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><style data-styled="" data-styled-version="5.1.1">.crUtTv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+data-styled.g1[id="Heading__Header-oevk8d-0"]{content:"crUtTv,"}/*!sc*/
+.kFbdgh{max-width:76rem;-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+data-styled.g2[id="Heading__HeaderContainer-oevk8d-1"]{content:"kFbdgh,"}/*!sc*/
+.crJZTG{text-align:center;}/*!sc*/
+data-styled.g3[id="Heading__Title-oevk8d-2"]{content:"crJZTG,"}/*!sc*/
+.jPMQdz{background-image:none !important;font-size:3rem;}/*!sc*/
+data-styled.g4[id="Heading__Link-oevk8d-3"]{content:"jPMQdz,"}/*!sc*/
+.jxhXVE{width:100%;height:4rem;padding:0 2rem;overflow:hidden;margin-top:0rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g5[id="Footer__Container-yaqjpg-0"]{content:"jxhXVE,"}/*!sc*/
+.grECAX{-webkit-flex:1 0 100%;-ms-flex:1 0 100%;flex:1 0 100%;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;padding:0;margin:0;width:100%;max-width:calc(75rem - 16rem);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g6[id="Footer__Content-yaqjpg-1"]{content:"grECAX,"}/*!sc*/
+.huaztJ{padding:0 2rem;overflow:hidden;margin-top:0rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g7[id="MainLayout__Main-sc-1klidi6-0"]{content:"huaztJ,"}/*!sc*/
+.bfeMiZ{font-size:0.9rem;font-style:italic;font-weight:100;width:100%;display:block;text-align:center;color:#e8e6e3;padding:0.25rem 0;}/*!sc*/
+data-styled.g8[id="DateTime__Time-qtjf09-0"]{content:"bfeMiZ,"}/*!sc*/
+.daBoon{-webkit-flex:1 0 100%;-ms-flex:1 0 100%;flex:1 0 100%;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;padding:0;margin:0;width:100%;max-width:calc(75rem - 16rem);}/*!sc*/
+.daBoon p,.daBoon ul{font-size:1.4375rem;line-height:2.5875rem;text-align:justify;}/*!sc*/
+@media only screen and (max-width:61.999rem){.daBoon{max-width:100%;}}/*!sc*/
+@media only screen and (max-width:29.999rem){.daBoon{max-width:100%;}.daBoon p,.daBoon ul{font-size:1rem;line-height:2rem;}}/*!sc*/
+data-styled.g11[id="blog-post__Post-bnlzlx-0"]{content:"daBoon,"}/*!sc*/
+.cXTdjO{position:relative;}/*!sc*/
+data-styled.g12[id="blog-post__PostMeta-bnlzlx-1"]{content:"cXTdjO,"}/*!sc*/
+.dImAwi{border:0;margin-top:1rem;width:100%;border-color:#4dc1ff;border-style:solid;border-top-width:0.25rem;}/*!sc*/
+@media only screen and (max-width:29.999rem){.dImAwi{width:100%;}}/*!sc*/
+data-styled.g13[id="blog-post__Hr-bnlzlx-2"]{content:"dImAwi,"}/*!sc*/
+.kAxAsm{width:100%;}/*!sc*/
+data-styled.g15[id="blog-post__PostComments-bnlzlx-4"]{content:"kAxAsm,"}/*!sc*/
+.DcvKR::before{content:"Cargando comentarios...";}/*!sc*/
+data-styled.g16[id="blog-post__LoadingComments-bnlzlx-5"]{content:"DcvKR,"}/*!sc*/
+.kveyDr{background:#fff;}/*!sc*/
+data-styled.g17[id="sc-18c7__Container-eqqziq-0"]{content:"kveyDr,"}/*!sc*/
+.iBIGzP{font-family:Futura,sans-serif;font-weight:900;font-size:5rem;padding:5rem;text-align:center;display:inline-block;}/*!sc*/
+@media (max-width:449.999999px){.iBIGzP{font-size:2rem;padding:1rem;}}/*!sc*/
+@media (min-width:450px) and (max-width:767.999999px){.iBIGzP{font-size:3rem;padding:2rem;}}/*!sc*/
+@media (min-width:768px) and (max-width:1169.999999px){.iBIGzP{font-size:4rem;padding:3rem;}}/*!sc*/
+@media (min-width:1170px) and (max-width:1439.999999px){.iBIGzP{font-size:5rem;padding:4rem;}}/*!sc*/
+data-styled.g18[id="sc-18c7__Paragraph-eqqziq-1"]{content:"iBIGzP,"}/*!sc*/
+.gtSDVs{position:relative;-webkit-animation:eQCbpK 1s infinite alternate cubic-bezier(0.860,0.000,0.070,1.000);animation:eQCbpK 1s infinite alternate cubic-bezier(0.860,0.000,0.070,1.000);text-transform:uppercase;}/*!sc*/
+.gtSDVs:nth-last-child(1n){-webkit-animation-delay:-0.16666666666666666s;animation-delay:-0.16666666666666666s;}/*!sc*/
+.gtSDVs:nth-last-child(2n){-webkit-animation-delay:-0.3333333333333333s;animation-delay:-0.3333333333333333s;}/*!sc*/
+.gtSDVs:nth-last-child(3n){-webkit-animation-delay:-0.5s;animation-delay:-0.5s;}/*!sc*/
+data-styled.g19[id="sc-18c7__Letter-eqqziq-2"]{content:"gtSDVs,"}/*!sc*/
+html{font-size:16px;}/*!sc*/
+@media (max-width:700px){html{font-size:15px;}}/*!sc*/
+body{font-family:Merriweather;background-color:#242423;color:#e8e6e3;}/*!sc*/
+::-webkit-scrollbar{background-color:#242423;}/*!sc*/
+::-webkit-scrollbar-thumb{background-color:#4dc1ff;}/*!sc*/
+::selection{background-color:#ffd166 !important;color:#e8e6e3 !important;}/*!sc*/
+::-moz-selection{background-color:#ffd166 !important;color:#e8e6e3 !important;}/*!sc*/
+h1,h2{font-family:Kanit;color:#e8e6e3;font-size:3rem;line-height:1.15;margin:0;padding:2rem 0;}/*!sc*/
+h1 a,h2 a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+@media (max-width:700px){h1,h2{font-size:2rem;padding:1rem 0;line-height:1.4;}}/*!sc*/
+a:not(.gatsby-resp-image-link):not(.anchor):not(.footnote-ref):not(.footnote-backref){background:linear-gradient(to bottom,#4dc1ff 0%,#4dc1ff 100%);background-position:0 100%;background-repeat:repeat-x;background-size:3px 3px;color:#e8e6e3;-webkit-text-decoration:none;text-decoration:none;padding-bottom:0.5000rem;}/*!sc*/
+a:not(.gatsby-resp-image-link):not(.anchor):not(.footnote-ref):not(.footnote-backref):hover{background-image:url("data: image/svg+xml;base64,PHN2ZyBpZD0nc3F1aWdnbGUtbGluaycgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgeG1sbnM6ZXY9J2h0dHA6Ly93d3cudzMub3JnLzIwMDEveG1sLWV2ZW50cycgdmlld0JveD0nMCAwIDIwIDQnPjxzdHlsZSB0eXBlPSd0ZXh0L2Nzcyc+LnNxdWlnZ2xle2FuaW1hdGlvbjpzaGlmdCAuM3MgbGluZWFyIGluZmluaXRlO31Aa2V5ZnJhbWVzIHNoaWZ0IHtmcm9tIHt0cmFuc2Zvcm06dHJhbnNsYXRlWCgwKTt9dG8ge3RyYW5zZm9ybTp0cmFuc2xhdGVYKC0yMHB4KTt9fTwvc3R5bGU+PHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjNGRjMWZmJyBzdHJva2Utd2lkdGg9JzInIGNsYXNzPSdzcXVpZ2dsZScgZD0nTTAsMy41IGMgNSwwLDUsLTMsMTAsLTMgcyA1LDMsMTAsMyBjIDUsMCw1LC0zLDEwLC0zIHMgNSwzLDEwLDMnLz48L3N2Zz4=");background-position:0 100%;background-size:auto 6px;background-repeat:repeat-x;-webkit-text-decoration:none;text-decoration:none;z-index:99;}/*!sc*/
+blockquote:not([data-name="title"]){border-left:1rem solid #4dc1ff;font-style:italic;margin:0;padding:0 0 0 2rem;position:relative;}/*!sc*/
+@media (max-width:700px){blockquote:not([data-name="title"]){padding:0 0 0 1rem;border-left-width:0.5rem;}}/*!sc*/
+code{font-family:"Space Mono",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;}/*!sc*/
+:not(pre) > code[class*="language-"]{padding:0 0.8rem;border-radius:0.3em;white-space:normal;background:#2d2d2d;color:#ef476f;}/*!sc*/
+@media (max-width:700px){:not(pre) > code[class*="language-"]{font-size:1.4375rem !important;}}/*!sc*/
+@media (max-width:700px){:not(pre) > code[class*="language-"]{font-size:1rem !important;}}/*!sc*/
+h1 > code[class*="language-"]{font-size:2.5rem;}/*!sc*/
+@media (max-width:700px){h1 > code[class*="language-"]{font-size:2rem !important;}}/*!sc*/
+.line-numbers-rows{border-right-color:#e8e6e3;}/*!sc*/
+.line-numbers-rows span::before{color:#fff;}/*!sc*/
+.gatsby-highlight{background:#2d2d2d;margin:0.5em 0;overflow:auto;position:relative;}/*!sc*/
+.gatsby-highlight:before{content:attr(data-language);border-bottom-left-radius:0.25rem;font-family:"Space Mono",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;color:#fff;font-size:0.75rem;-webkit-letter-spacing:0.075em;-moz-letter-spacing:0.075em;-ms-letter-spacing:0.075em;letter-spacing:0.075em;line-height:1;position:absolute;right:0px;text-align:right;text-transform:uppercase;top:0px;z-index:5;background:#4dc1ff;padding:0.25rem 0.5rem;}/*!sc*/
+.gatsby-highlight > pre[class*="language-"]{color:#ccc;background:transparent;font-family:"Space Mono",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;margin:0;padding:0;overflow:initial;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;}/*!sc*/
+.gatsby-highlight > pre[class*="language-"].line-numbers{padding-left:2.8em;overflow:auto;position:relative;}/*!sc*/
+.gatsby-highlight > pre[class*="language-"].line-numbers counter-reset:linenumber > code{position:relative;white-space:inherit;}/*!sc*/
+.gatsby-highlight > pre[class*="language-"].line-numbers .line-numbers-rows{position:absolute;border-right:0.125rem solid #4dc1ff;top:0;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}/*!sc*/
+.gatsby-highlight > pre[class*="language-"].line-numbers .line-numbers-rows > span{display:block;counter-increment:linenumber;}/*!sc*/
+.gatsby-highlight > pre[class*="language-"].line-numbers .line-numbers-rows > span:before{content:counter(linenumber);color:#fff;display:block;padding-right:0.8em;text-align:right;}/*!sc*/
+@media (max-width:700px){.gatsby-highlight > pre[class*="language-"]{font-size:0.8rem !important;}}/*!sc*/
+.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999;}/*!sc*/
+.token.punctuation{color:#ccc;}/*!sc*/
+.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a;}/*!sc*/
+.token.function-name{color:#6196cc;}/*!sc*/
+.token.boolean,.token.number,.token.function{color:#0077b6;}/*!sc*/
+.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555;}/*!sc*/
+.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#ef476f;}/*!sc*/
+.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699;}/*!sc*/
+.token.operator,.token.entity,.token.url{color:#67cdcc;}/*!sc*/
+.token.important,.token.bold{font-weight:bold;}/*!sc*/
+.token.italic{font-style:italic;}/*!sc*/
+.token.entity{cursor:help;}/*!sc*/
+.token.inserted{color:green;}/*!sc*/
+.footnotes{font-size:1rem;}/*!sc*/
+.footnotes:before{content:"Referencias";font-family:Kanit;color:#e8e6e3;font-size:3rem;line-height:1.15;margin:0;padding:2rem 0;}/*!sc*/
+.footnotes p{display:inline;font-size:1rem !important;}/*!sc*/
+.footnotes a.footnote-backref{-webkit-text-decoration:none;text-decoration:none;color:#e8e6e3;padding:0.3125rem;}/*!sc*/
+.footnotes a.footnote-backref:hover{background-color:#ef476f;}/*!sc*/
+sup{top:-0.5em;}/*!sc*/
+sup .footnote-ref{color:#ef476f;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+sup .footnote-ref:before{content:"[";}/*!sc*/
+sup .footnote-ref:after{content:"]";}/*!sc*/
+.gatsby-resp-image-wrapper + em{text-align:center;display:block;font-size:1rem;}/*!sc*/
+.gatsby-resp-image-wrapper + .gatsby-resp-image-figcaption p{text-align:center;display:block;font-size:1rem;font-style:italic;margin-top:10px;}/*!sc*/
+data-styled.g20[id="sc-global-gGCWhp1"]{content:"sc-global-gGCWhp1,"}/*!sc*/
+@-webkit-keyframes eQCbpK{0%{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);text-shadow:0em 0em 0 lightblue;color:#CE0058;}30%{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);text-shadow:0em 0em 0 lightblue;color:#000;}70%{-webkit-transform:translate3d(0.08em,-0.08em,0);-ms-transform:translate3d(0.08em,-0.08em,0);transform:translate3d(0.08em,-0.08em,0);text-shadow:-0.08em 0.08em lightblue;color:#CE0058;}100%{-webkit-transform:translate3d(0.08em,-0.08em,0);-ms-transform:translate3d(0.08em,-0.08em,0);transform:translate3d(0.08em,-0.08em,0);text-shadow:-0.08em 0.08em lightblue;color:#000;}}/*!sc*/
+@keyframes eQCbpK{0%{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);text-shadow:0em 0em 0 lightblue;color:#CE0058;}30%{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);text-shadow:0em 0em 0 lightblue;color:#000;}70%{-webkit-transform:translate3d(0.08em,-0.08em,0);-ms-transform:translate3d(0.08em,-0.08em,0);transform:translate3d(0.08em,-0.08em,0);text-shadow:-0.08em 0.08em lightblue;color:#CE0058;}100%{-webkit-transform:translate3d(0.08em,-0.08em,0);-ms-transform:translate3d(0.08em,-0.08em,0);transform:translate3d(0.08em,-0.08em,0);text-shadow:-0.08em 0.08em lightblue;color:#000;}}/*!sc*/
+data-styled.g21[id="sc-keyframes-eQCbpK"]{content:"eQCbpK,"}/*!sc*/
+</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link as="script" rel="preload" href="/webpack-runtime-0096d24f4c8a6d9fc68f.js"/><link as="script" rel="preload" href="/framework-a576ae5ab153fa4a7c27.js"/><link as="script" rel="preload" href="/styles-cd63080e784be7b7e7cf.js"/><link as="script" rel="preload" href="/app-5485495f51e6f54f82a5.js"/><link as="script" rel="preload" href="/483389fb3301b8b9730ed11bd3d927cb163a605b-f527cc7ed90ce7838031.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-jsx-bd3559b39cb0950b823b.js"/><link as="fetch" rel="preload" href="/page-data/una-breve-historia-de-debian/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1053719541.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/4008364368.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="Heading__Header-oevk8d-0 crUtTv"><div class="Heading__HeaderContainer-oevk8d-1 kFbdgh"><h1 class="Heading__Title-oevk8d-2 crJZTG"><a class="Heading__Link-oevk8d-3 jPMQdz" href="/">ROOFOX.dev</a></h1></div></header><main class="MainLayout__Main-sc-1klidi6-0 huaztJ"><article class="blog-post__Post-bnlzlx-0 daBoon"><section class="blog-post__PostMeta-bnlzlx-1 cXTdjO"><div class="sc-18c7__Container-eqqziq-0 kveyDr"><span class="sc-18c7__Paragraph-eqqziq-1 iBIGzP"><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">U</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">n</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">a</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs"> </span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">b</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">r</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">e</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">v</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">e</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs"> </span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">h</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">i</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">s</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">t</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">o</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">r</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">i</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">a</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs"> </span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">d</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">e</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs"> </span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">D</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">e</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">b</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">i</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">a</span><span class="sc-18c7__Letter-eqqziq-2 gtSDVs">n</span></span></div><hr class="blog-post__Hr-bnlzlx-2 dImAwi"/><time class="DateTime__Time-qtjf09-0 bfeMiZ">julio 4, 2020</time></section><section class="blog-post__PostContent-bnlzlx-3 SDucs"><p>Debian es una distribución Linux compuesta de software libre y código abierto,
+esta distribución es desarrollada por una comunidad llamada <strong>Proyecto Debian</strong>,
+que son un conjunto de voluntarios a nivel mundial cuyo esfuerzo es el de
+producir una distribución de un sistema operativo que sea compuesto enteramente
+por software libre, y de todos los productos en los que la comunidad trabaja, el
+principal es la distribución de software Debian GNU/Linux, la cual incluye el
+kernel del sistema operativo Linux y miles de aplicaciones pre-empaquetadas
+<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup>.</p>
+<h2>Los inicios</h2>
+<p>Todo se remonta al año de 1993, año en el que la <em>Softlanding Linux System</em>
+(SLS) era la <em>“distribución”</em> de linux más utilizada, ya que fué una de las
+primeras en realmente existir como distribución, fué fundada en Mayo de 1992 por
+Peter MacDonald y se ganó la fama de ser muy problemática, ya que contenia una
+gran cantidad de bugs reportados por sus usuarios. SLS no duró mucho, ya que
+tiempo después, Patrick Volkerdin tomó <em>SLS</em> como sistema operativo base para
+comenzar las primeras versiones de lo que hoy es la distribución de <em>Linux
+Slackware</em><sup id="fnref-2"><a href="#fn-2" class="footnote-ref">2</a></sup>.</p>
+<p>En el mismo año de 1993, un estudiante de ingeniería de nombre Ian Murdock,
+frustrado por todos los problemas presentados en <em>SLS</em> descidió crear su propio
+sistema operativo <em>desde cero</em>. Ian anunció Debian<sup id="fnref-3"><a href="#fn-3" class="footnote-ref">3</a></sup> el 16 de agosto de 1993
+donde lo nombró como <em>The Debian Linux Release</em>, ya que por aquellos tiempos el
+concepto de distribución era prácticamente nuevo.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 129.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC4klEQVRIx42V63KiQBCFff/n2h9bZZmK0SigYkQUxEs0XiPR3v7ajOu64C5V7YwDc+ac091QOZ9Psl6vpdMJJIpCCcNAsslIkvFAJpNIlstU8nwv7jqfzw+jwkOr1Yc8PVWl3f4pLy8/FLwq3W5Vwl5N0rQlm3Umu91e9vvfwPcHuHklz3P5+ADwSXy/I71eX7x2IEHQk2gQ62EbVbCV9/d32Ww2pmaxWNge5vesK6fTST4/P2U+m+nmpRwOB/t/UDZ5fvzecLqycABfX18CmULJgAyHQ5WXqm8T9TCzeZqkkiSJ+riU+Xwu4/HY1uM4lv1uX+ipAe52O6nVaupbVyX31MOO+tm2CIJA3t7ebPR9XxqNht2HXSkgZvuebxthyjgYDGwjQMzDMLQDGWGLVYVJcZL7YV/iYSwz9ZJAHiOSE51nWWY+mxUa+FzI0BlM1qbTqT0cRZGBw5aRdViRaeZkuawmK7fZwxdYIHE0GhkgI4cwkiwYc/i9h1fJ/ODHdru1gIkx1EwimyDzqQK5Q3juYaeQFMxOvjchizm+IW8xX5hc1mIF5P695CtD2AFIuSDNkqBh/ilLDiBgyhojCkrLhh8HCBDyptn0WkJujYw75hR6KUOXZUBnugE21i0q18B1zfXxarnS9lyZz5RaYVKQ7BbpGFjREV7bM5bIdkmi0PGaQ4/HY3mWXaZ5CEme51mL9ft9A2J03YM1gHL4Q0CC6uf0TnDp5dfXVwn8QNle5kT9+dkA7xn+VdiMvN9gAkMHADDyXR+3Wi2rQ7fnfvwDkMQgy0AUlM1IZs15CSg+k6R/SuaiFgFsNpr6OXixBLnggHq9bsxvWZYmhQsPLzLb8qx+OSCCLPOa49CiXuaqUIMOEBm8xtiMTCQiL9K5a0Vq032sCgubkwBzwUZKBmnNZvMiV1k5T7GBxJW23m1hUwpkemYfrNXlpapdAaPrx0vH7WZbXja3gLde/M9V9Pr6BcRNvOLEHT6yAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Anuncio de debian"
+        title="Anuncio de debian"
+        src="/static/0ff58bf6050f0262efe39d4be327385c/d9199/debian-announcement.png"
+        srcset="/static/0ff58bf6050f0262efe39d4be327385c/8ff5a/debian-announcement.png 240w,
+/static/0ff58bf6050f0262efe39d4be327385c/e85cb/debian-announcement.png 480w,
+/static/0ff58bf6050f0262efe39d4be327385c/d9199/debian-announcement.png 960w,
+/static/0ff58bf6050f0262efe39d4be327385c/07a9c/debian-announcement.png 1440w,
+/static/0ff58bf6050f0262efe39d4be327385c/29114/debian-announcement.png 1920w,
+/static/0ff58bf6050f0262efe39d4be327385c/6f969/debian-announcement.png 2518w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Anuncio de debian</p></figcaption>
+  </figure></p>
+<h2>Un nombre creativo</h2>
+<p>En su momento Ian tenía una novia de nombre <em>Debra Lynn</em> con la que tiempo
+después se casó. Ian descidió tomar las primeras silabas de ambos nombres para
+así formar el icónico nombre del sistema operativo<sup id="fnref-4"><a href="#fn-4" class="footnote-ref">4</a></sup>.</p>
+<blockquote>
+<p><strong>Deb</strong>ra Lyyn + <strong>Ian</strong> Murdock<br>
+<strong>Deb</strong> + <strong>Ian</strong><br>
+<strong>DebIan</strong></p>
+</blockquote>
+<h2>Antes de la versión 1.0</h2>
+<p>Durante Agosto y Diciembre de 1993 se lanzaron diferentes <em>releases</em> internos de
+Debian que pasaron desde la versión <strong>0.01</strong> hasta la <strong>0.90</strong>, en ellas se
+implementaron las bases y mejoras al sistema operativo pero no fué hasta en
+Enero de 1994 en la versión <strong>0.91</strong> donde se implementó un manejador de
+paquetes sencillo que podía instalar y desinstalar paquetes.</p>
+<p>Más de un año después, en Marzo de 1995 la versión <strong>0.93R5</strong> fué lanzada, en
+ella la responsabilidad del desarrollo de cada paquete era asignado a un
+programador y para este entonces ya se había comenzado a utilizar el manejador
+de paquetes (que terminó siendo <em>dpkg</em>) para instalar estos paquetes después de
+la instalación del sistema operativo base. En Noviembre de 1995 se libera la
+versión <strong>0.93R6</strong> que fué la última en utilizar el formáto de archivos
+<a href="https://www.freebsd.org/cgi/man.cgi?query=a.out&#x26;sektion=5" target="_blank" rel="nofollow noopener noreferrer">a.out</a> optando por utilizar <a href="https://www.freebsd.org/cgi/man.cgi?query=elf&#x26;sektion=5" target="_blank" rel="nofollow noopener noreferrer">ELF</a>, además se implementa
+<a href="https://wiki.debian.org/dselect" target="_blank" rel="nofollow noopener noreferrer">dselect</a>, que fué una herramienta <em>“gráfica”</em> basada en texto para
+instalar, remover y administrar los paquetes de Debian (posiblemente fué
+nombrada así por <strong>D</strong>ebian <strong>Select</strong>). Actualmente <em>dselect</em> se encuentra
+deprecada debido a que existen mejores herramientas como <a href="https://wiki.debian.org/Synaptic" target="_blank" rel="nofollow noopener noreferrer">Synaptic</a>
+que proporciona una interfáz gráfica real y es actualizada frecuentemente.
+<sup id="fnref-5"><a href="#fn-5" class="footnote-ref">5</a></sup></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 591px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 71.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8klEQVQ4y1VSy1ITURC9JBBqQh5kMo9kkplAEkhAlERgggmWbF2hW1Ce4REBwVKrfGywEGHhNygmH3o8t9GyXJy6faf7nj59etT352e46ezjan4d160tfA33cPnoEDcrXVwubOMiPMRVm/fmBi7Drty/hTu4Wd7B1eMevoQHuA635LxobEN9/vgT569/4bj3A+/f9XF6coujw1vGtzh51cfebh+9o1u8e/sLp8d9dPf6OD8b4NOHAd6+GeDwoM/aAWsGOOj2oWZmysiYBsqVPDori3jUbiBs3ceT1WUsLM5iaspDrR5gcjIPx0nCzSVhZg1kMnFks3HYzhhjA5YVF6h83kMsNopEIoVCoYh7s3MkqaHZfIiVzmPMzT1ArTaDB/fnSWDDtl2pc9087xaUiiCZTCMaGcHwcAyqXq8z6QqCIEA0GiV5Ar4f8GEBnudhbGwMpmnCMAwSKCqxSGwjEolQTAyVSkXqJiYmoKrVKSYdIajV6hgZiUnH6ek60ukMGwwjHk+wWYmPihgaimB83ES5XJFT15fLVRSLPm0pQ01Pl6kuQ+iioigYHVUkL6FUcqlqiIQR+pcSr3TeNOPI5zMkUxxT8Z1HQTZJbahWq0fJ+6jXe5idPSHJJnK5XSp6TZxy7Fck2GHDAxJuU/0LiW27ywk2mdum8p7UFYvHUO32UxIuU27ITi36sMjkIpMtniHPkA+WJHacJhu2qWaZ5HNyTyRqVO3RT1+glpaaLMgJgiDPUSySONx0IBboMQoFi02LVG6yoYdq1edikvTQIOK0JSpWCBqNBruZlJ5lMsMxxuV3cN2cQOcsy6Ya9892HbkbRlwWoqEXd0c4BDU/f0eoH+RynpCYpoVUKi3b1v+bhv6m/0NNpmPHuavT0KRCxn9SdTotjubTJ1PG0tsNAkc2HAQuR/dlZN93aIcp23bdNJUmpc62U//G1VhdPcHCwiaT6/Rrg8vZEpRKL6l8jTasyalhms94PvsvzmafS/wXvwEq85gigjiVhgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Interfáz de dselect"
+        title="Interfáz de dselect"
+        src="/static/4a75d7a8a40779c5ffbe9ff8159da0e0/e4c9a/dselect.png"
+        srcset="/static/4a75d7a8a40779c5ffbe9ff8159da0e0/8ff5a/dselect.png 240w,
+/static/4a75d7a8a40779c5ffbe9ff8159da0e0/e85cb/dselect.png 480w,
+/static/4a75d7a8a40779c5ffbe9ff8159da0e0/e4c9a/dselect.png 591w"
+        sizes="(max-width: 591px) 100vw, 591px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Interfáz de dselect</p></figcaption>
+  </figure></p>
+<h2>La versión que nunca existío</h2>
+<p><strong>Debían 1.0 nunca salío a la luz</strong>, el 11 de Diciembre de 1995, Bruce Perens,
+líder del Proyecto Debian que en su momento sucedío a Ian Murdock, en conjunto
+con <em>InfoMagic</em>, un distribuidor de Discos Compactos, anunciaron que
+accidentalmente habían enviado una versión equivocada de Debian etiquetada como
+<strong>versión 1.0</strong>, esta era una versión de desarrollo que aún estaba parcialmente
+migrada al formato <em>ELF</em>, lo cual posiblemente pudiera tener problemas en el
+proceso de <em>boot</em> o para ejecutarse de manera correcta, esta versión no
+representaba en terminos de calidad lo que un release de Debian debería de ser y
+para evitar confusiones entre la versión prematura del CD y la del verdadero
+release se descidió nombrar el siguiente release como <em>“Debian 1.1”</em> el cual fué
+lanzado el 17 de Junio de 1996 y era completamente en formato <em>ELF</em>, utilizaba
+el kernel de Linux 2.0 y contenía 474 paquetes disponibles<sup id="fnref-6"><a href="#fn-6" class="footnote-ref">6</a></sup>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUEBv/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/9oADAMBAAIQAxAAAAHPdkVjX1BMOath06wg3//EAB0QAAIBBAMAAAAAAAAAAAAAAAEDAgAREiEEMTP/2gAIAQEAAQUCztNciVDpuAKSIpG6vrjeFf/EABcRAAMBAAAAAAAAAAAAAAAAAAMQMTL/2gAIAQMBAT8BJlGi/8QAGBEAAwEBAAAAAAAAAAAAAAAAAQMQETH/2gAIAQIBAT8BThOxfZ//xAAaEAACAgMAAAAAAAAAAAAAAAAAAQIQESEx/9oACAEBAAY/AukXE2c2RwnimRr/xAAfEAACAgEEAwAAAAAAAAAAAAAAAREhQRAxUYFhseH/2gAIAQEAAT8hbOtCdWKKUPkl5BMrlBcYbUNCb7G0ufpfu96f/9oADAMBAAIAAwAAABCTz7z/xAAXEQADAQAAAAAAAAAAAAAAAAABEBGx/9oACAEDAQE/EIiBaDF//8QAGhEBAAEFAAAAAAAAAAAAAAAAARAhQVHR8P/aAAgBAgEBPxBABbUGvsR//8QAHBABAQACAwEBAAAAAAAAAAAAAREAITFBYVFx/9oACAEBAAE/EN2tMcju47YDSrz5jYQC5DDEL7+B7g5AKBM33giAD0I5W2ore8AGl9frDRDP/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="La versión 1.0 de Debian no es lo que parece"
+        title="La versión 1.0 de Debian no es lo que parece"
+        src="/static/cde7c1ca4f214f4d744120613ce1be21/41099/1.1-not-1.0.jpg"
+        srcset="/static/cde7c1ca4f214f4d744120613ce1be21/09b79/1.1-not-1.0.jpg 240w,
+/static/cde7c1ca4f214f4d744120613ce1be21/7cc5e/1.1-not-1.0.jpg 480w,
+/static/cde7c1ca4f214f4d744120613ce1be21/41099/1.1-not-1.0.jpg 500w"
+        sizes="(max-width: 500px) 100vw, 500px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>La versión 1.0 de Debian no es lo que parece</p></figcaption>
+  </figure></p>
+<h2>Logotipo</h2>
+<p>El 26 de Agosto de 1999, como resultado de un concurso realizado por GIMP, Debian
+obtubo su logotipo oficial después de la selección de las siguientes propuestas<sup id="fnref-7"><a href="#fn-7" class="footnote-ref">7</a></sup>:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 488px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB+ElEQVQoz11STUtbURC9q0A22WRnf4AppmDX1u5MkfQPSKUrdWd/gDZ0J0oXUkUtBaFSkBCVSGqINBCJBgNRo10oqaa0i0BqeCQxHy/Ji3r6ztQnNjNc5t47Z+bOPTOqddNCqVpCJpvBrak3ppZrZZz/PIdxa0A3dFybSskX8sj9ycleb+lom0pMo91A87opVnFTa9Yw/mYcq/5VCR4ZG0EwFJRAns9+nOHo5AihcEhsMpXEwfEBtJKGYqUoGCupqrfqEhiLx9Dj7sGAZwCD3kG5a99p9ncW/oAfy5+XcfHrQpKeZk6xFdmSRwrFgiSUChlIh81mg8PhQLerG0opeF54hAp+mbK3vyf3/c/7MTU9BfcTN5Y+LWE9uC7VCg0mVhIymGCn04nep72y51rbWBMgKSF40jeJuYU5dD3quscENgKSOJFMyNcVm+B96RWn67ELQ6+G/gNTKnpFbCqdQjwRx+yHWYyOjWLx4yJ873yCtdvtklQZMKTkyLcIJt5OoO9ZH1a+rGA7ui1dZRfJMx9mQDgSRjQWxc7uDrSyhvmF+fsCZt7PQJFIS9gxiw9K50jwXG1Ukf6exuHxoUwCH9r8uonh18O41C7/jQ35YRUE5/I5OZO3h8ksy65f1a8ER84YYwl9ymp35+pM9NDycU4A99aZg07/Xx3Ni8A8dEswAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Ants"
+        title="Ants"
+        src="/static/3e34888c8ea032000dbe9d2aafc7eec0/bd48c/logo_ants_jeannette-0.png"
+        srcset="/static/3e34888c8ea032000dbe9d2aafc7eec0/8ff5a/logo_ants_jeannette-0.png 240w,
+/static/3e34888c8ea032000dbe9d2aafc7eec0/e85cb/logo_ants_jeannette-0.png 480w,
+/static/3e34888c8ea032000dbe9d2aafc7eec0/bd48c/logo_ants_jeannette-0.png 488w"
+        sizes="(max-width: 488px) 100vw, 488px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Ants</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 568px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB7UlEQVQozzWRzU4TURzFZ+EzsPARjJGFCxY+BAvfgYUPwMItC1kgTTSQQEwxRpuIhoUk1kahIeXDtqGoUOjHtNNOW+jQmdLv6Uw/ft57E+7Nyfxz77n/c85/tJpVo1AuULoxKdcrlKolimZRoTPoINdwPFToe33KtTLmTQVD3JdEXRV1tV5V5427BtpAkHr+gJZVp3ldw50M6Q176rH8SoGu28WbeAwEr+v1sPI62e3v2KZJe9gl8itC+GdYiWoeI7qWhfE1gvHlB062gMeY0dQnGosS2g6xG97FHbkMBXxxZ59nsPbjDBwHp3fH/sEeiVRCdBrJhmOsP2nsjE4jncXRi+IEGs1bYicxFf0keaIcSwfe1MNxbjmI7qlkE7GP4kdkC1lVi4Y+fdvG+XuF2+soB64gSrWz8zOMioEv3ErIyMK7aOqz9fE990smSaaSqtakaqPtYOg5nIZFq99S8eTczGuTvJGn3W8r3M9x4cUC2gONwNsA8dM4Mw9nmH06q7iaJKxtrLG8sszrwAqbwU2lJGMuvVpi9c2qwnHimKnYUmzx5SKPnzwi+CFI6l+KuWdzzD+fVz9Qk4RcMUc6m+ZKz6hZ1O26cneZu+Qic6GUpWMZu9lp8ulziODWOw5/Hyqh9Y11dr7toBs6/wHhpjM/GxaC0gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Swirl"
+        title="Swirl"
+        src="/static/54b11536460ca293729508cddf6ad3a8/10e91/logo_swirl_raul-0.png"
+        srcset="/static/54b11536460ca293729508cddf6ad3a8/8ff5a/logo_swirl_raul-0.png 240w,
+/static/54b11536460ca293729508cddf6ad3a8/e85cb/logo_swirl_raul-0.png 480w,
+/static/54b11536460ca293729508cddf6ad3a8/10e91/logo_swirl_raul-0.png 568w"
+        sizes="(max-width: 568px) 100vw, 568px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Swirl</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 496px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgADBP/EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAHsebkuMP8A/8QAGBABAAMBAAAAAAAAAAAAAAAAAQIRIRD/2gAIAQEAAQUCjklrjG1LAz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAYEAACAwAAAAAAAAAAAAAAAAABEAAxQf/aAAgBAQAGPwIvVZn/xAAbEAEAAgIDAAAAAAAAAAAAAAABABEQMSGRsf/aAAgBAQABPyENtW9ShrAcj2mxWVj0n//aAAwDAQACAAMAAAAQbC//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAn/8QAFhEBAQEAAAAAAAAAAAAAAAAAAREQ/9oACAECAQE/EGUz/8QAHBABAQACAgMAAAAAAAAAAAAAAREAIRBBMWHh/9oACAEBAAE/EBYSWnR9yAqSxnXDFE26jNLp9j5wTEPdZ//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Seal"
+        title="Seal"
+        src="/static/5ea05c43b9217ac957e9a55139316a4b/6a372/logo_seal_villate.jpg"
+        srcset="/static/5ea05c43b9217ac957e9a55139316a4b/09b79/logo_seal_villate.jpg 240w,
+/static/5ea05c43b9217ac957e9a55139316a4b/7cc5e/logo_seal_villate.jpg 480w,
+/static/5ea05c43b9217ac957e9a55139316a4b/6a372/logo_seal_villate.jpg 496w"
+        sizes="(max-width: 496px) 100vw, 496px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Seal</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 129px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 120.93023255813955%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAEF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIB/9oADAMBAAIQAxAAAAH14WwlNDjSorJfUKL/xAAcEAACAgIDAAAAAAAAAAAAAAABAgADERIQIzH/2gAIAQEAAQUCt81K8Y7bCFWOS0QaEHM//8QAGBEBAAMBAAAAAAAAAAAAAAAAAQAQQRH/2gAIAQMBAT8BMCs5En//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAfEAEAAQQBBQAAAAAAAAAAAAABIQACEBExIjJhcoL/2gAIAQEABj8CLTm6uhA3gfFId13BjRHzUEes4//EAB4QAQACAQUBAQAAAAAAAAAAAAEAESExQVFhkRCB/9oACAEBAAE/IUqdJV8G8KvV5t38clyCGFeAN2F0XrMgttbtDwh6v2ANHyf/2gAMAwEAAgADAAAAEL/3/f/EABkRAAIDAQAAAAAAAAAAAAAAAAERADHwEP/aAAgBAwEBPxAzllyk1AAqf//EABgRAQADAQAAAAAAAAAAAAAAAAEAEEER/9oACAECAQE/EHVrewZ//8QAHxABAAEDBQEBAAAAAAAAAAAAAREAITFBUYGRsRBx/9oACAEBAAE/EHmWOzkXXtQiABMMITczrbPzaI/ckfCjpSMgmvGVognICXdoMB2SFwyRUoMWWQHK/VSgG8XRX//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Old Logo"
+        title="Old Logo"
+        src="/static/f25f8bf962901907c6a2d443014774c6/861d8/logo_old_logo_debianlogo-3.jpg"
+        srcset="/static/f25f8bf962901907c6a2d443014774c6/861d8/logo_old_logo_debianlogo-3.jpg 129w"
+        sizes="(max-width: 129px) 100vw, 129px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Old Logo</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 662px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 118.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQb/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAWrVvWhQJYHTmLQP/8QAHBAAAwACAwEAAAAAAAAAAAAAAQIDBBIREzEU/9oACAEBAAEFAu9t505muQGU9Rv7KX06GVFvjhwo8//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABkRAAIDAQAAAAAAAAAAAAAAAAECABAhMf/aAAgBAgEBPwFip4Jl/wD/xAAgEAACAQQBBQAAAAAAAAAAAAAAARECEiFhURMiMTJS/9oACAEBAAY/Am6oemipqcEwzs9lxA+n53yKVTJY8P6Y73M6Mn//xAAeEAEAAwEAAQUAAAAAAAAAAAABABEhMUFhcYHB0f/aAAgBAQABPyEyIv8ABBBM5HvIQ6vSB7ptF17MOly19kAqnlbFVSuY/NxyvrHF5Cmltz//2gAMAwEAAgADAAAAEEzYAP/EABkRAQACAwAAAAAAAAAAAAAAAAERIQAQUf/aAAgBAwEBPxC7lnBOb//EABcRAQEBAQAAAAAAAAAAAAAAAAEhABD/2gAIAQIBAT8QMIOVMO//xAAfEAEBAAIBBQEBAAAAAAAAAAABEQAhQTFhcYGRUcH/2gAIAQEAAT8QSbYdzVkPEMtlJCk7TfXzkk/Y0+hvEkXNa/UTaducToSFdR5ObhFxJB9wT5guOrIAbPp/MO+e7UAKneZPbY2cLo+Z/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Fixed Chicken"
+        title="Fixed Chicken"
+        src="/static/d7c4414927f95d5ebfb9589804e93e92/7bfef/logo_fixed_chicken_fixed_chicken.jpg"
+        srcset="/static/d7c4414927f95d5ebfb9589804e93e92/09b79/logo_fixed_chicken_fixed_chicken.jpg 240w,
+/static/d7c4414927f95d5ebfb9589804e93e92/7cc5e/logo_fixed_chicken_fixed_chicken.jpg 480w,
+/static/d7c4414927f95d5ebfb9589804e93e92/7bfef/logo_fixed_chicken_fixed_chicken.jpg 662w"
+        sizes="(max-width: 662px) 100vw, 662px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Fixed Chicken</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 267px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 93.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAEFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB08zb4dTSRm2BQf/EABwQAAEFAAMAAAAAAAAAAAAAAAMBAgQQEQASE//aAAgBAQABBQKUR4xAkE9eO6uQEcYl2sr/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAgEBPwESP//EABsQAQACAgMAAAAAAAAAAAAAAAEAEgIRECBB/9oACAEBAAY/ArYQFsLw4vstvb1//8QAHBABAAEFAQEAAAAAAAAAAAAAAREAECExQVHB/9oACAEBAAE/IUYCzleFTFwTPy3BODihCR6XlAdWh5b/2gAMAwEAAgADAAAAEPPIPP/EABYRAQEBAAAAAAAAAAAAAAAAAAERIP/aAAgBAwEBPxBG4//EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAECAQE/EACMf//EAB0QAQACAQUBAAAAAAAAAAAAAAEAERAhMUFRcYH/2gAIAQEAAT8QBPAEu7mpUFf27PQwtUCSVFQ/pELdH2H2lPGIJTA0TY3j/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="DG"
+        title="DG"
+        src="/static/b177bd66837425a1d8c907cb82bc8398/05876/logo_DG_dg.jpg"
+        srcset="/static/b177bd66837425a1d8c907cb82bc8398/09b79/logo_DG_dg.jpg 240w,
+/static/b177bd66837425a1d8c907cb82bc8398/05876/logo_DG_dg.jpg 267w"
+        sizes="(max-width: 267px) 100vw, 267px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>DG</p></figcaption>
+  </figure></p>
+<p>Y como ya lo saben, el ganador del concurso fué el logotipo de nombre
+<a href="https://wiki.debian.org/DebianLogo" target="_blank" rel="nofollow noopener noreferrer"><em>Swirl</em></a> creado por <a href="http://www.silva.com/" target="_blank" rel="nofollow noopener noreferrer">Raul M. Silva</a><sup id="fnref-8"><a href="#fn-8" class="footnote-ref">8</a></sup></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 100px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 123%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsSAAALEgHS3X78AAADfElEQVQ4y41TWUwTQRjeN1991CdNvCIaEjCBCE0qEgg3SEuhJGiMHIJcNgUa5RUSTAjWENEATRCSVlLB9kUhqEAQixzblJ4iAlWEAi2lF+3udvHf3QYKLIn7MDv/zHf8/8w/yN6RL0jCQLh9a1KF9mr+fMx9S27DZt9HzOagdkkyHIuEByQRhHFnZHr2XPoYch69eMeY+Gj+ZvH307cnkRsrDe2M9B55jMwwnUNT48iFuUvZjsExEsdD2ewGflU++4KcXSxpCvcPcyZJfMuJXsu18OoAvQ8iwY2eWASSCeS6e8qw74QwIDJIBSsSqS7+Lr1HwAr2d2u945397YjPuAyLrq+6mTOpXtRCK4aRmUq01wRb8iFGmMSJtecK7/xPyALboE6LcHrQyzz3tIGFHPT5dTH3AqsbTBE7o3OO92MMDoQItxcA6BWeZ87MQsa3XXC2xI6HITvU45vyYUrUjwV+24AJWRhulYUANOWATHh8Bm4Ztm5nyB7UsiBsBE8QDXr9ZABbKGh0DIyynTYd6zkPXBMoE4KV9clLc5bYrvy0IVP/yH9qV36m7y14tEnAAcZlUZuB+zBczvlhcrXljb1/BLc792/oGJnW2zWvTJ6Kdn/ThXDhzUge8mTvsKXaNnO2mAoxHNDMnVF5He5qlg5j/qa0x9bGV6GVIAuH/WHsX/hicdNK3QumN1g92cihVqWPalhjez3oMy5Bq/43meEzpwo63l2q7BPMkZNUqbdxsucBmSCIQCCA49DBBIZhMAcrauL3QwK7f2yBLSdBkn6/HwBBeG00BuYISX8gUVpaajAYGEm5XF5bW0sd3t7eqki63Td0vEOARTmbzWapVBoVFWWxWPr7+5VKZW9vb1ZWlkKhMJqM6KRGN4uq1Krm5maTyWS1WlUqVXt7u1arRXw+H4fDaW1tzcjIEIlE9fX1YrE4KSkpPj6+oKAgMzOzpKSkpaVFrVZLJJKcnJyenh6wgbzS09MRnU6XkJAA/kKhMDY2try8vLq6OiIiAqpwuVypqal5fH5nZ6dKra6srARyd3d3RUUFFJicnIxAqtHR0Q6Hg8fjcblcMAchQBQVFdlsNoFAAInk5eVBqNFooJaurq6qqiq9Xp+SkkLVzOfz4+LiIiMjZTJZYmIioGEb0i4sLBwYGIBsa2pqoJC0tDQoraOjA7KbmZkB5D+ahODJQqgH3QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Logotipo oficial de Debian"
+        title="Logotipo oficial de Debian"
+        src="/static/50f4c6e25277d535b7a1290d238ef946/7e516/debian-openlogo-smal.png"
+        srcset="/static/50f4c6e25277d535b7a1290d238ef946/7e516/debian-openlogo-smal.png 100w"
+        sizes="(max-width: 100px) 100vw, 100px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Logotipo oficial de Debian</p></figcaption>
+  </figure></p>
+<p>El logotipo utiliza una fuente comercial de nombre <em>Poppl Laudatio Condensed</em>
+donde el punto de la letra <strong>i</strong> fué reemplazado por un diamante color rojo.
+Además de que el texto fué condensado horizontalmente y estrechado verticalmente
+lo cual hace que luzca un poco diferente a la fuente original<sup id="fnref-9"><a href="#fn-9" class="footnote-ref">9</a></sup>.</p>
+<h2>Una tradición para toda la vida</h2>
+<p><em>Toy Story</em> fué lanzado por Pixar el 22 de Noviembre de 1995. Un año después
+Debian 1.1 fué lanzado. Bruce Perens era el líder del proyecto Debian en su
+momento y también trabajaba para Pixar, el comenzó la tradición de nombrar los
+releases de Debian utilizando los nombres de los personajes de
+<em>Toy Story</em>, comenzando con Buzz Lightyear<sup id="fnref-10"><a href="#fn-10" class="footnote-ref">10</a></sup>.</p>
+<h2>Versiones</h2>
+<h3><code class="language-text">1.1</code> <em>Buzz</em> (Junio 17 de 1996)</h3>
+<p><a href="https://www.flickr.com/photos/77967821@N00/5037973057" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAVAQEBAAAAAAAAAAAAAAAAAAACAP/aAAwDAQACEAMQAAABnUeTRPEhf//EABgQAAMBAQAAAAAAAAAAAAAAAAABAgMT/9oACAEBAAEFAuaMKnKHGdMmxo//xAAWEQADAAAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8BMX//xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BTZ//xAAZEAACAwEAAAAAAAAAAAAAAAAAEQEQE3H/2gAIAQEABj8CFI9E6jtf/8QAGxABAAMBAAMAAAAAAAAAAAAAAQARMSFBYYH/2gAIAQEAAT8hu9T6GbNjtvSqyGRvA7ALb1n/2gAMAwEAAgADAAAAEGDv/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERIVH/2gAIAQMBAT8QiZjElw//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQIBAT8QljghB3//xAAbEAEAAwADAQAAAAAAAAAAAAABABEhMXGBof/aAAgBAQABPxCriqMWEFeiiFV1sYJLEutqKvEeB0r6Cq+xaNnK8s//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Buzz&quot; by Attila con la cámara is licensed under CC BY-NC 2.0."
+        title="&quot;Buzz&quot; by Attila con la cámara is licensed under CC BY-NC 2.0."
+        src="/static/b5ffb629a63d5138906f2651e3d50b06/6a068/buzz.jpg"
+        srcset="/static/b5ffb629a63d5138906f2651e3d50b06/09b79/buzz.jpg 240w,
+/static/b5ffb629a63d5138906f2651e3d50b06/7cc5e/buzz.jpg 480w,
+/static/b5ffb629a63d5138906f2651e3d50b06/6a068/buzz.jpg 960w,
+/static/b5ffb629a63d5138906f2651e3d50b06/644c5/buzz.jpg 1440w,
+/static/b5ffb629a63d5138906f2651e3d50b06/0f98f/buzz.jpg 1920w,
+/static/b5ffb629a63d5138906f2651e3d50b06/89513/buzz.jpg 4288w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Buzz” by Attila con la cámara is licensed under CC BY-NC 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">1.2</code> <em>Rex</em> (Diciembre 12 de 1996)</h3>
+<p><a href="https://www.flickr.com/photos/77967821@N00/5037973057" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABdoTmHRERj//EABoQAAIDAQEAAAAAAAAAAAAAAAECAAMSETL/2gAIAQEAAQUCdsguHAPZvUfxXaVH/8QAGBEAAgMAAAAAAAAAAAAAAAAAABIBESH/2gAIAQMBAT8BWtgU/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAC/9oACAECAQE/AXbGr//EABgQAAMBAQAAAAAAAAAAAAAAAAABESFB/9oACAEBAAY/AiWGF0T6ySn/xAAbEAADAAIDAAAAAAAAAAAAAAAAAREhMUFRYf/aAAgBAQABPyFD3t9DphS0StyRSQ0oiyvQeeVun//aAAwDAQACAAMAAAAQg+//xAAWEQEBAQAAAAAAAAAAAAAAAAAhAQD/2gAIAQMBAT8QlIZk7//EABkRAAMAAwAAAAAAAAAAAAAAAAABIRExUf/aAAgBAgEBPxDKa7ohWf/EABwQAQEAAgMBAQAAAAAAAAAAAAERACExQVFhcf/aAAgBAQABPxA4wmRufvmBtcGEabmBb+2Ox5Vj33gUUV5CTIszSvgz/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Rex&quot; by h&amp;b { Lea } is licensed under CC BY-NC-ND 2.0."
+        title="&quot;Rex&quot; by h&amp;b { Lea } is licensed under CC BY-NC-ND 2.0."
+        src="/static/eabbd4b23405bc91945c1aae2a0f52f9/6a068/rex.jpg"
+        srcset="/static/eabbd4b23405bc91945c1aae2a0f52f9/09b79/rex.jpg 240w,
+/static/eabbd4b23405bc91945c1aae2a0f52f9/7cc5e/rex.jpg 480w,
+/static/eabbd4b23405bc91945c1aae2a0f52f9/6a068/rex.jpg 960w,
+/static/eabbd4b23405bc91945c1aae2a0f52f9/644c5/rex.jpg 1440w,
+/static/eabbd4b23405bc91945c1aae2a0f52f9/0f98f/rex.jpg 1920w,
+/static/eabbd4b23405bc91945c1aae2a0f52f9/4d3c3/rex.jpg 2177w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Rex” by h&#x26;b { Lea } is licensed under CC BY-NC-ND 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">1.3</code> <em>Bo</em> (Junio 5 de 1997)</h3>
+<p><a href="https://www.flickr.com/photos/66478195@N00/5861344455" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABT2UFgjAz/8QAHBAAAwABBQAAAAAAAAAAAAAAAQIDABESEyEx/9oACAEBAAEFAuQsHltkR3GYbKDRD7//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQMBAT8BUH//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGH/8QAGxAAAgEFAAAAAAAAAAAAAAAAAAECEBExQXH/2gAIAQEABj8CaIvZkVzlP//EABoQAAMBAQEBAAAAAAAAAAAAAAABESExQWH/2gAIAQEAAT8h+iou3XpqoUo2Ss5rzwyaxH//2gAMAwEAAgADAAAAECT/AP/EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPxAUX//EABcRAQADAAAAAAAAAAAAAAAAAAARITH/2gAIAQIBAT8QtqH/xAAbEAEBAAMBAQEAAAAAAAAAAAABEQAhMVFBYf/aAAgBAQABPxBklZFdn6+uTy2rGpLMEDcOoLrFDXF6rO4nV0gUTKN2fhn/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Bo Peep looking for her sheep at Disney&#39;s Dine with the PIXAR Stars&quot; by Castles, Capes &amp; Clones is licensed under CC BY-ND 2.0."
+        title="&quot;Bo Peep looking for her sheep at Disney&#39;s Dine with the PIXAR Stars&quot; by Castles, Capes &amp; Clones is licensed under CC BY-ND 2.0."
+        src="/static/722d348d09f3ad6696a63119a8f9cdca/6a068/bo.jpg"
+        srcset="/static/722d348d09f3ad6696a63119a8f9cdca/09b79/bo.jpg 240w,
+/static/722d348d09f3ad6696a63119a8f9cdca/7cc5e/bo.jpg 480w,
+/static/722d348d09f3ad6696a63119a8f9cdca/6a068/bo.jpg 960w,
+/static/722d348d09f3ad6696a63119a8f9cdca/644c5/bo.jpg 1440w,
+/static/722d348d09f3ad6696a63119a8f9cdca/0f98f/bo.jpg 1920w,
+/static/722d348d09f3ad6696a63119a8f9cdca/c83bb/bo.jpg 4608w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Bo Peep looking for her sheep at Disney’s Dine with the PIXAR Stars” by Castles, Capes &#x26; Clones is licensed under CC BY-ND 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">2.0</code> <em>Hamm</em> (Julio 24 de 1998)</h3>
+<p><a href="https://www.flickr.com/photos/46635911@N00/7302287102" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAFd6WxNUjET/8QAGhABAQACAwAAAAAAAAAAAAAAAQIAAxESIf/aAAgBAQABBQIkmjXnWsbQjb4b3j//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BV//EABwQAAEDBQAAAAAAAAAAAAAAAAABAhEQITGRof/aAAgBAQAGPwKHFo3RFJM8P//EABsQAQACAwEBAAAAAAAAAAAAAAEAESExUUGB/9oACAEBAAE/IWYGMz0C5cFWCoyMXzcQAWuxmj7H/9oADAMBAAIAAwAAABAP3//EABYRAQEBAAAAAAAAAAAAAAAAAAARQf/aAAgBAwEBPxDIp//EABcRAQADAAAAAAAAAAAAAAAAAAARITH/2gAIAQIBAT8Qy0H/xAAeEAEBAAIBBQEAAAAAAAAAAAABEQAhYTFBcYGhsf/aAAgBAQABPxBgIRAaRysuHTR4JgxHgxnvOge0VY5wMGrCfjgRre+345//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Hamm!&quot; by jonolist is licensed under CC BY-SA 2.0."
+        title="&quot;Hamm!&quot; by jonolist is licensed under CC BY-SA 2.0."
+        src="/static/8e7771d3d43c9f6ec9b31d27d10fba74/6a068/hamm.jpg"
+        srcset="/static/8e7771d3d43c9f6ec9b31d27d10fba74/09b79/hamm.jpg 240w,
+/static/8e7771d3d43c9f6ec9b31d27d10fba74/7cc5e/hamm.jpg 480w,
+/static/8e7771d3d43c9f6ec9b31d27d10fba74/6a068/hamm.jpg 960w,
+/static/8e7771d3d43c9f6ec9b31d27d10fba74/644c5/hamm.jpg 1440w,
+/static/8e7771d3d43c9f6ec9b31d27d10fba74/0f98f/hamm.jpg 1920w,
+/static/8e7771d3d43c9f6ec9b31d27d10fba74/e1596/hamm.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Hamm!” by jonolist is licensed under CC BY-SA 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">2.1</code> <em>Slink</em> (Marzo 9 de 1999)</h3>
+<p><a href="https://www.flickr.com/photos/76151808@N00/4246256797" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 80%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAABx30KNZCgmv/EABkQAAMBAQEAAAAAAAAAAAAAAAABAhIDEf/aAAgBAQABBQIuGm5ZNLHX1vR//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAECEkH/2gAIAQMBAT8BUdKH/8QAFhEBAQEAAAAAAAAAAAAAAAAAEQAB/9oACAECAQE/AVnb/8QAHBAAAgEFAQAAAAAAAAAAAAAAAEERARASIjFR/9oACAEBAAY/AuM2tjDkleVGf//EABsQAQACAgMAAAAAAAAAAAAAAAEAESExQVFx/9oACAEBAAE/IQRE6JeTUtYiSxwTCL0BNQdbHk//2gAMAwEAAgADAAAAEBPf/8QAGBEAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQMBAT8QXoSbZ//EABcRAQADAAAAAAAAAAAAAAAAAAABEWH/2gAIAQIBAT8QvJm//8QAHRABAAICAgMAAAAAAAAAAAAAAREhADFBYVGRsf/aAAgBAQABPxB+BNPdUYFY4AB0PPvJXY4cYoeJCyxvzkSkVhotrrCEoEWr5n//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Toy Story Musical - Slinky Dog&quot; by Peter E. Lee is licensed under CC BY-NC 2.0."
+        title="&quot;Toy Story Musical - Slinky Dog&quot; by Peter E. Lee is licensed under CC BY-NC 2.0."
+        src="/static/46ded2e4f78cd3eaa37e0217cdaf95f3/6a068/slink.jpg"
+        srcset="/static/46ded2e4f78cd3eaa37e0217cdaf95f3/09b79/slink.jpg 240w,
+/static/46ded2e4f78cd3eaa37e0217cdaf95f3/7cc5e/slink.jpg 480w,
+/static/46ded2e4f78cd3eaa37e0217cdaf95f3/6a068/slink.jpg 960w,
+/static/46ded2e4f78cd3eaa37e0217cdaf95f3/644c5/slink.jpg 1440w,
+/static/46ded2e4f78cd3eaa37e0217cdaf95f3/0f98f/slink.jpg 1920w,
+/static/46ded2e4f78cd3eaa37e0217cdaf95f3/e1596/slink.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Toy Story Musical - Slinky Dog” by Peter E. Lee is licensed under CC BY-NC 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">2.2</code> <em>Potato</em> (Agosto 15 del 2000)</h3>
+<p><a href="https://www.flickr.com/photos/60054626@N00/3663398251" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABRvKrmohgn//EABsQAAICAwEAAAAAAAAAAAAAAAECAzEABBES/9oACAEBAAEFAo3WYbEY8Yp4bU3/AP/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/ASf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwFJ/8QAGxAAAgIDAQAAAAAAAAAAAAAAABECIQEQEmH/2gAIAQEABj8CUlFD6vG3b9KP/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFBUf/aAAgBAQABPyECHoou4wkfBAyVHyUYJkZ7bKldcM//2gAMAwEAAgADAAAAELvf/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/EEYjP//EABYRAQEBAAAAAAAAAAAAAAAAAAEQIf/aAAgBAgEBPxBMSf/EABwQAQADAQADAQAAAAAAAAAAAAEAESExQVGRsf/aAAgBAQABPxAoqbVwFYHbisLoNPn8juPFBgjyNKGcFqdzbvxL2FbB6J//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Disney Hollywood Studios Toy Story Potato Head&quot; by marada is licensed under CC BY-ND 2.0."
+        title="&quot;Disney Hollywood Studios Toy Story Potato Head&quot; by marada is licensed under CC BY-ND 2.0."
+        src="/static/75875f5249d3d51224b38ecd99f8f642/6a068/potato.jpg"
+        srcset="/static/75875f5249d3d51224b38ecd99f8f642/09b79/potato.jpg 240w,
+/static/75875f5249d3d51224b38ecd99f8f642/7cc5e/potato.jpg 480w,
+/static/75875f5249d3d51224b38ecd99f8f642/6a068/potato.jpg 960w,
+/static/75875f5249d3d51224b38ecd99f8f642/644c5/potato.jpg 1440w,
+/static/75875f5249d3d51224b38ecd99f8f642/0f98f/potato.jpg 1920w,
+/static/75875f5249d3d51224b38ecd99f8f642/e1596/potato.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Disney Hollywood Studios Toy Story Potato Head” by marada is licensed under CC BY-ND 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">3.0</code> <em>Woody</em> (Julio 19 del 2002)</h3>
+<p><a href="https://www.flickr.com/photos/23460063@N06/4644356316" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 685px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 149.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEFAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/2gAMAwEAAhADEAAAAZioqLkgUZ68XnAzH//EAB0QAAIBBAMAAAAAAAAAAAAAAAACAQMREjEEEBP/2gAIAQEAAQUCfjtB4yStha5XnEZ8iNs826nR/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARIf/aAAgBAwEBPwEDFF//xAAXEQADAQAAAAAAAAAAAAAAAAABAhEg/9oACAECAQE/ASwsx//EABoQAAIDAQEAAAAAAAAAAAAAAAABEDFBIXL/2gAIAQEABj8CwWc0XUXg/M3cqP/EAB4QAQACAgEFAAAAAAAAAAAAAAEAERBBMSFhcZGh/9oACAEBAAE/Idj4RNDytHdAuAqUAlWBuq8dKjMXRUVBid1KfeCfBj//2gAMAwEAAgADAAAAEPQxcf/EABcRAQEBAQAAAAAAAAAAAAAAAAERABD/2gAIAQMBAT8QSl5S3Tf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QIRNAyf/EAB0QAQADAAMAAwAAAAAAAAAAAAEAESExQWFRgfD/2gAIAQEAAT8QW25BBrpcdiyOtGfDKybjponkIeTPKqB3BwPBTRCz22FaCefJaHTCIpK7rRYL+iPMpdpfkSg/lxJ//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Woody.&quot; by Tom Newby Photography is licensed under CC BY 2.0."
+        title="&quot;Woody.&quot; by Tom Newby Photography is licensed under CC BY 2.0."
+        src="/static/7df6d42a704d42079c2fd86a31ebfa8a/0a2b8/woody.jpg"
+        srcset="/static/7df6d42a704d42079c2fd86a31ebfa8a/09b79/woody.jpg 240w,
+/static/7df6d42a704d42079c2fd86a31ebfa8a/7cc5e/woody.jpg 480w,
+/static/7df6d42a704d42079c2fd86a31ebfa8a/0a2b8/woody.jpg 685w"
+        sizes="(max-width: 685px) 100vw, 685px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Woody.” by Tom Newby Photography is licensed under CC BY 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">3.1</code> <em>Sarge</em> (Junio 6 del 2005)</h3>
+<p><a href="https://www.flickr.com/photos/68928263@N00/10531420096" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABAv/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAABNi+gYUyy/8QAGhABAQACAwAAAAAAAAAAAAAAAQACEwMhIv/aAAgBAQABBQLuFys/LoLSA8d//8QAFxEBAAMAAAAAAAAAAAAAAAAAAAECIf/aAAgBAwEBPwGatf/EABcRAAMBAAAAAAAAAAAAAAAAAAABAhH/2gAIAQIBAT8BVGo//8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITEi/9oACAEBAAY/AuBxT02P/8QAGRABAQADAQAAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/IRVJh3e8hKE1hiV55kSIesO8d3CU35n/2gAMAwEAAgADAAAAEIAv/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERMf/aAAgBAwEBPxBlUwg//8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAECAQE/EBNl/8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUWGB/9oACAEBAAE/EKyGy3JvZ+wi2IQ2ctZns1nULSwfIvgs1q3vWONDYptx8aJTDn7P/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Toy Story Andy&#39;s Room on the Disney Magic&quot; by insidethemagic is licensed under CC BY-NC-ND 2.0."
+        title="&quot;Toy Story Andy&#39;s Room on the Disney Magic&quot; by insidethemagic is licensed under CC BY-NC-ND 2.0."
+        src="/static/4ed77c1d5a30cac5ea38ecec1232ce65/6a068/sarge.jpg"
+        srcset="/static/4ed77c1d5a30cac5ea38ecec1232ce65/09b79/sarge.jpg 240w,
+/static/4ed77c1d5a30cac5ea38ecec1232ce65/7cc5e/sarge.jpg 480w,
+/static/4ed77c1d5a30cac5ea38ecec1232ce65/6a068/sarge.jpg 960w,
+/static/4ed77c1d5a30cac5ea38ecec1232ce65/644c5/sarge.jpg 1440w,
+/static/4ed77c1d5a30cac5ea38ecec1232ce65/0f98f/sarge.jpg 1920w,
+/static/4ed77c1d5a30cac5ea38ecec1232ce65/e1596/sarge.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Toy Story Andy’s Room on the Disney Magic” by insidethemagic is licensed under CC BY-NC-ND 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">4.0</code> <em>Etch</em> (Abril 8 del 2007)</h3>
+<p><a href="https://www.flickr.com/photos/35468142462@N01/3448265440" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECAwX/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/2gAMAwEAAhADEAAAASLryumIp//EABoQAAMAAwEAAAAAAAAAAAAAAAECEQADEiL/2gAIAQEAAQUC7cs1iGo/hqxzWIn/xAAXEQADAQAAAAAAAAAAAAAAAAAAASEx/9oACAEDAQE/AbqGf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAQEAAgMAAAAAAAAAAAAAAAEAERIhMlH/2gAIAQEABj8CTbGLuwy+3BBf/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRYXGB/9oACAEBAAE/IUaoVYQN2r7nnol2THkBY/WARx3P/9oADAMBAAIAAwAAABCTD//EABgRAAMBAQAAAAAAAAAAAAAAAAABESGB/9oACAEDAQE/EJiCXCK4f//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEUH/2gAIAQIBAT8Q07Df/8QAGhABAQEBAQEBAAAAAAAAAAAAAREAITFBkf/aAAgBAQABPxAZDIBs+ZJhmeTdP8V/N2Mml7Q7vLB0TyAkV3//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Walt wrote profanity on a public etch-a-sketch&quot; by thatgirl is licensed under CC BY-NC 2.0."
+        title="&quot;Walt wrote profanity on a public etch-a-sketch&quot; by thatgirl is licensed under CC BY-NC 2.0."
+        src="/static/917709d99c606088027c8cebfa5d30b5/6a068/etch.jpg"
+        srcset="/static/917709d99c606088027c8cebfa5d30b5/09b79/etch.jpg 240w,
+/static/917709d99c606088027c8cebfa5d30b5/7cc5e/etch.jpg 480w,
+/static/917709d99c606088027c8cebfa5d30b5/6a068/etch.jpg 960w,
+/static/917709d99c606088027c8cebfa5d30b5/644c5/etch.jpg 1440w,
+/static/917709d99c606088027c8cebfa5d30b5/0f98f/etch.jpg 1920w,
+/static/917709d99c606088027c8cebfa5d30b5/e1596/etch.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Walt wrote profanity on a public etch-a-sketch” by thatgirl is licensed under CC BY-NC 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">5.0</code> <em>Lenny</em> (Febrero del 2009)</h3>
+<p><a href="https://www.flickr.com/photos/8872109@N08/8004747057" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAD/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABw0HcEeYk/8QAGhAAAgMBAQAAAAAAAAAAAAAAAQIAAxIEEf/aAAgBAQABBQJGQTot1UqEgEyhAas+T//EABYRAAMAAAAAAAAAAAAAAAAAAAEQIf/aAAgBAwEBPwEVf//EABYRAAMAAAAAAAAAAAAAAAAAAAEQIf/aAAgBAgEBPwExf//EABkQAQACAwAAAAAAAAAAAAAAAAEQIQACEf/aAAgBAQAGPwIQO46oTdx//8QAGxABAAMBAAMAAAAAAAAAAAAAAQARMSFBUZH/2gAIAQEAAT8hQojzUIpListHPs9rYGe166RCQWf/2gAMAwEAAgADAAAAECPf/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhUf/aAAgBAwEBPxBGLh//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFB/9oACAECAQE/EGVEen//xAAbEAEAAwEAAwAAAAAAAAAAAAABABFBIVGB0f/aAAgBAQABPxAedxKLGUGApFEc8S8t85gFChw1pBYVVN6BlbUOh8n/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;lenny the binoculars&quot; by Neetle is licensed under CC BY-NC-ND 2.0."
+        title="&quot;lenny the binoculars&quot; by Neetle is licensed under CC BY-NC-ND 2.0."
+        src="/static/1c92e54b652ea004d3b8c68301eb8a7c/6a068/lenny.jpg"
+        srcset="/static/1c92e54b652ea004d3b8c68301eb8a7c/09b79/lenny.jpg 240w,
+/static/1c92e54b652ea004d3b8c68301eb8a7c/7cc5e/lenny.jpg 480w,
+/static/1c92e54b652ea004d3b8c68301eb8a7c/6a068/lenny.jpg 960w,
+/static/1c92e54b652ea004d3b8c68301eb8a7c/644c5/lenny.jpg 1440w,
+/static/1c92e54b652ea004d3b8c68301eb8a7c/0f98f/lenny.jpg 1920w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“lenny the binoculars” by Neetle is licensed under CC BY-NC-ND 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">6.0</code> <em>Squeeze</em> (Febrero del 2011)</h3>
+<p><a href="https://www.flickr.com/photos/83346641@N00/7794522402" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAAB2zpXUi0FAP8A/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAECEQMQIf/aAAgBAQABBQI5qmxylazNH//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEkH/2gAIAQMBAT8BE7Ob/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECERMiMf/aAAgBAgEBPwGam1qLJXD/xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIhMRD/2gAIAQEABj8CN5UmjWXZ/8QAGhABAAIDAQAAAAAAAAAAAAAAAQARITFBcf/aAAgBAQABPyEYWId8iCkHpCUzXsgdD2s//9oADAMBAAIAAwAAABDMP//EABgRAQEBAQEAAAAAAAAAAAAAAAERAJHh/9oACAEDAQE/ECoC3AMrz3f/xAAZEQEAAwEBAAAAAAAAAAAAAAABABFRkdH/2gAIAQIBAT8QWKCtyNBp18n/xAAdEAEBAAIBBQAAAAAAAAAAAAABEQAhUUFhcYHw/9oACAEBAAE/EAn1zYIHjNUCjnCxEJDXpxjNQUgvjGTFbQdO2f/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Greetings!&quot; by JD Hancock is licensed under CC BY 2.0."
+        title="&quot;Greetings!&quot; by JD Hancock is licensed under CC BY 2.0."
+        src="/static/4742d07b2d8789dcb5f521acb9dbd134/6a068/squeeze.jpg"
+        srcset="/static/4742d07b2d8789dcb5f521acb9dbd134/09b79/squeeze.jpg 240w,
+/static/4742d07b2d8789dcb5f521acb9dbd134/7cc5e/squeeze.jpg 480w,
+/static/4742d07b2d8789dcb5f521acb9dbd134/6a068/squeeze.jpg 960w,
+/static/4742d07b2d8789dcb5f521acb9dbd134/644c5/squeeze.jpg 1440w,
+/static/4742d07b2d8789dcb5f521acb9dbd134/0f98f/squeeze.jpg 1920w,
+/static/4742d07b2d8789dcb5f521acb9dbd134/e1596/squeeze.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Greetings!” by JD Hancock is licensed under CC BY 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">7.0</code> <em>Wheezy</em> (Mayo del 2013)</h3>
+<p><a href="https://www.flickr.com/photos/52059686@N00/5213000383" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 133.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIDBQQG/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDAv/aAAwDAQACEAMQAAABEi83yFDQ77F5nnzeGv/EABoQAAMBAQEBAAAAAAAAAAAAAAABEQISAyH/2gAIAQEAAQUCXJtZkMuN/MmZpREPNKcoh//EABkRAAEFAAAAAAAAAAAAAAAAAAEAEBESIf/aAAgBAwEBPwGpOvC//8QAGhEAAQUBAAAAAAAAAAAAAAAAAAECEBESIf/aAAgBAgEBPwFX1yNmz//EABkQAAIDAQAAAAAAAAAAAAAAABAxAAEhMv/aAAgBAQAGPwJRaebKKH//xAAdEAACAwADAQEAAAAAAAAAAAAAAREhMUFRYXHw/9oACAEBAAE/IZo1VyP8P0O2kL70pHSHZHK/ej+4JY3ojdupyh3pMSwYvSwaTh//2gAMAwEAAgADAAAAEDgrDP/EABcRAQEBAQAAAAAAAAAAAAAAAAERABD/2gAIAQMBAT8QG5dUJXj/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARUSH/2gAIAQIBAT8Qs8Qmwvh//8QAHBABAQACAwEBAAAAAAAAAAAAAREAITFBUWHw/9oACAEBAAE/EK3MfBc0YUtOmTc0xUclCD0dx8wYcyvaFLXexa1NYHQiCGsGNNahzUCCu01yL+5y3ATxwaBiZuihF4fM6pn/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Toy Story Wheezy&quot; by Alan / Falcon is licensed under CC BY 2.0."
+        title="&quot;Toy Story Wheezy&quot; by Alan / Falcon is licensed under CC BY 2.0."
+        src="/static/4b3ce6fae0f1d1dc966c047209ff4be6/6a068/wheezy.jpg"
+        srcset="/static/4b3ce6fae0f1d1dc966c047209ff4be6/09b79/wheezy.jpg 240w,
+/static/4b3ce6fae0f1d1dc966c047209ff4be6/7cc5e/wheezy.jpg 480w,
+/static/4b3ce6fae0f1d1dc966c047209ff4be6/6a068/wheezy.jpg 960w,
+/static/4b3ce6fae0f1d1dc966c047209ff4be6/644c5/wheezy.jpg 1440w,
+/static/4b3ce6fae0f1d1dc966c047209ff4be6/89c09/wheezy.jpg 1530w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Toy Story Wheezy” by Alan / Falcon is licensed under CC BY 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">8</code> <em>Jessie</em> (Abril del 2015)</h3>
+<p><a href="https://www.flickr.com/photos/66478195@N00/4719667371" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAADAAL/2gAMAwEAAhADEAAAAUXeC2Qks//EABoQAQACAwEAAAAAAAAAAAAAAAEAAgMREjP/2gAIAQEAAQUC23Vp1PNpjrkOEn//xAAXEQEBAQEAAAAAAAAAAAAAAAABABEh/9oACAEDAQE/AehhF//EABcRAAMBAAAAAAAAAAAAAAAAAAABETH/2gAIAQIBAT8BtY9P/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACECERIjGB/9oACAEBAAY/AtQuZg1TUSw+R//EABsQAAICAwEAAAAAAAAAAAAAAAERADEhQVFh/9oACAEBAAE/IVDbgOAYVowEHKAfIwQGv9PYUaiE2pSU/9oADAMBAAIAAwAAABBkH//EABgRAQADAQAAAAAAAAAAAAAAAAEAESEx/9oACAEDAQE/ELsGQIcn/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EEQdV//EABsQAQACAwEBAAAAAAAAAAAAAAERIQAxYUGx/9oACAEBAAE/EEfSgqleTzeIK4u01zfcpJLBocwjLxIAUfHNfMBlkBteg42+tbM//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Toy Story 3 Book End at the Honolulu Disney Store&quot; by Castles, Capes &amp; Clones is licensed under CC BY-ND 2.0."
+        title="&quot;Toy Story 3 Book End at the Honolulu Disney Store&quot; by Castles, Capes &amp; Clones is licensed under CC BY-ND 2.0."
+        src="/static/d66dd260dc56a17b2d75fba0aa0d4daa/6a068/jessie.jpg"
+        srcset="/static/d66dd260dc56a17b2d75fba0aa0d4daa/09b79/jessie.jpg 240w,
+/static/d66dd260dc56a17b2d75fba0aa0d4daa/7cc5e/jessie.jpg 480w,
+/static/d66dd260dc56a17b2d75fba0aa0d4daa/6a068/jessie.jpg 960w,
+/static/d66dd260dc56a17b2d75fba0aa0d4daa/644c5/jessie.jpg 1440w,
+/static/d66dd260dc56a17b2d75fba0aa0d4daa/0f98f/jessie.jpg 1920w,
+/static/d66dd260dc56a17b2d75fba0aa0d4daa/e1596/jessie.jpg 2048w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Toy Story 3 Book End at the Honolulu Disney Store” by Castles, Capes &#x26; Clones is licensed under CC BY-ND 2.0.</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">9</code> <em>Stretch</em> (Junio del 2017)</h3>
+<p><a href="https://www.flickr.com/photos/25728552@N06/4556753665" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 691px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 148.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAIDAQQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAHixKEzIXtpvpUFM5//xAAaEAADAQADAAAAAAAAAAAAAAAAAQIQERMh/9oACAEBAAEFAqc9e1Dka4FGNCZ4s//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABcRAAMBAAAAAAAAAAAAAAAAAAECEBH/2gAIAQIBAT8ByBhP/8QAHRABAAEDBQAAAAAAAAAAAAAAAQAQIUECESAiMf/aAAgBAQAGPwLSBfPG8EYbYZ7TqtP/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMRBRQWGB/9oACAEBAAE/IVAQ7d8grRuUV+eoioVCfrShydkyasQxaDuLku+zj//aAAwDAQACAAMAAAAQLAAy/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAx/9oACAEDAQE/ENgz/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAEP/aAAgBAgEBPxAUpwBJrv/EAB8QAQADAAIBBQAAAAAAAAAAAAEAESEQQTFRYZGx8P/aAAgBAQABPxBevNJo6/e3JsLTQQVkTJa99JZgquklRbWh8jAKsbKHcA+T2YpgYh5pNoPpeP/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;TOY STORY 3&quot; by Sasha &amp; Tai is licensed under CC BY-NC-ND 2.0"
+        title="&quot;TOY STORY 3&quot; by Sasha &amp; Tai is licensed under CC BY-NC-ND 2.0"
+        src="/static/252a7a264ec25b4772f21b380894d5d5/f9df6/stretch.jpg"
+        srcset="/static/252a7a264ec25b4772f21b380894d5d5/09b79/stretch.jpg 240w,
+/static/252a7a264ec25b4772f21b380894d5d5/7cc5e/stretch.jpg 480w,
+/static/252a7a264ec25b4772f21b380894d5d5/f9df6/stretch.jpg 691w"
+        sizes="(max-width: 691px) 100vw, 691px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“TOY STORY 3” by Sasha &#x26; Tai is licensed under CC BY-NC-ND 2.0</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">10</code> <em>Buster</em> (Julio del 2019)</h3>
+<p><a href="https://disney.fandom.com/wiki/Buster_(Toy_Story)?file=Buster%26amp%3BWoody.png" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAC50lEQVQozwHcAiP9AGBIL6mSg8nBv8nAvM3IxdfNy9zSz+HY1ube3Oni4PPu7NbPzGZVT15gVlpzanVwVWpyX1V1b1h1b1V1cQB2VjlvWEdTSkNkUUd5UkFzVkpyWlB5XVN8YFZ/YleDZVmBZFp3Wk92XlJldGh5dldtdmBad3Fdd3FaeHMAc1M3bmtWW2pcam1ZtG4rfXFRZ3NhcnNccXNddXVeeHtjcHRhcHBfcXVkb3xqZ3pvZHpvYnluYHhxXnlzAHNSNnFuVWt0XHN2XHd8Xp96SpV+U4CDY4iGY395WWNNNH1vUYKJan2DaXmBa3WAa3J+bHR7aWd7cGB7dQB5UzZ6dFiCeVWgfk2ChWWrhUqmjFeSjGWalWmDcU2AQCiRe1iTkGyPiGeJiGp+hm+HgmSjfkprf3N0fGoAf1Q0hXpYiIReinhSkYJanZhqlYldqZZjso1brJdkwIJUpopfoJlv2o45ro5XiI1xholtf4ZtdYJyhH9jAINWN5aEWpyTZIp0TZ+JWbyIVZBCJo5mP3UqEY1nQLWGRLaIS7eeZKxoLbWdZZyXcZWSb4qNcoGJcnWFdwCKWDiIeFeGfVqKgluobUOWKQ9/LhqWSB9DEgKrdkS/h0SKbkLTm0SKNhmnWTOWj22Mh2mDg2p4gG1wfW0Allo2gVpGeFRDflI/kzIYSxEGPxYMfyILaRkGkysRwEomoFQykz8fojEQp0Yqh2JTgV9SeF5UcF1Va15XAKJdNoJXQoVaRYZRO3AoE08hFjYEAGQPBHwZB44bCLoqD4EaBF0NAHsiC5hZQZpnUo9hT4leUH9bUHNSSADTZjjPYzrVcEDbi0uhaDPdnlXCfkCUSyKWRB6qSyWxSSOXPhmNPBebPxrihEbqrV3qsF7uvmXrv2bktF0AzF81yV01yFw1y2M3yWQ20HdB3YtJ5aBQ8blc+c9j8s1j9dFm+ttp+dJm9MVj9slm+M9p/+Z0/+h1/+l2r3JFdDaxXMoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Buster &amp; Woody"
+        title="Buster &amp; Woody"
+        src="/static/843d92a06cdfb0ff047851a11629d625/d9199/buster.png"
+        srcset="/static/843d92a06cdfb0ff047851a11629d625/8ff5a/buster.png 240w,
+/static/843d92a06cdfb0ff047851a11629d625/e85cb/buster.png 480w,
+/static/843d92a06cdfb0ff047851a11629d625/d9199/buster.png 960w,
+/static/843d92a06cdfb0ff047851a11629d625/00d43/buster.png 1000w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>Buster &#x26; Woody</p></figcaption>
+  </figure></a></p>
+<h3><code class="language-text">11</code> <em>Bullseye</em> (Aún sin lanzar en Agosto de 2020)</h3>
+<p><a href="https://www.flickr.com/photos/dafalcon/5213593610/in/album-72157625482417016/" target="_blank" rel="nofollow noopener noreferrer"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 133.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDAP/aAAwDAQACEAMQAAABswRKRpjR8zu0TOKbwyf/xAAbEAADAAIDAAAAAAAAAAAAAAAAAQIREgMTIv/aAAgBAQABBQJanJMNNCrDbSknWl4MEpY642P/xAAZEQADAAMAAAAAAAAAAAAAAAAAAREQEiH/2gAIAQMBAT8B1b7ikP/EABoRAAEFAQAAAAAAAAAAAAAAAAABAhESIRD/2gAIAQIBAT8BV9c5M6WP/8QAHBAAAQMFAAAAAAAAAAAAAAAAEAAhMQEREiAy/9oACAEBAAY/AoUOeah9L4uP/8QAHhAAAgICAgMAAAAAAAAAAAAAAAERITFBUZFhcfD/2gAIAQEAAT8hnjKtmgeUltMidzwpFB2Rcr7yP3gWR0Gskl1Q54TFKoSoUEH/2gAMAwEAAgADAAAAEI/Sv//EABgRAQADAQAAAAAAAAAAAAAAAAEAEBFh/9oACAEDAQE/EBsb2CBNaf/EABkRAAMAAwAAAAAAAAAAAAAAAAABESFRgf/aAAgBAgEBPxCrA4JoQrR//8QAHRABAQADAAIDAAAAAAAAAAAAAREAITFRcUFhkf/aAAgBAQABPxAK5jb4XGEHSI1kXwxmtFCDGncfGCSW1xQpa72LWprA6IghTBeyNq894k7W/oVAPzLBETw4YBBMdE1p8ejmIvM//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="&quot;Toy Story Bullseye&quot; by Alan / Falcon is licensed under CC BY 2.0."
+        title="&quot;Toy Story Bullseye&quot; by Alan / Falcon is licensed under CC BY 2.0."
+        src="/static/29136e8c466eb381d7140b3e9a019454/6a068/bullseye.jpg"
+        srcset="/static/29136e8c466eb381d7140b3e9a019454/09b79/bullseye.jpg 240w,
+/static/29136e8c466eb381d7140b3e9a019454/7cc5e/bullseye.jpg 480w,
+/static/29136e8c466eb381d7140b3e9a019454/6a068/bullseye.jpg 960w,
+/static/29136e8c466eb381d7140b3e9a019454/644c5/bullseye.jpg 1440w,
+/static/29136e8c466eb381d7140b3e9a019454/89c09/bullseye.jpg 1530w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>“Toy Story Bullseye” by Alan / Falcon is licensed under CC BY 2.0.</p></figcaption>
+  </figure></a></p>
+<h1>Enlaces externos</h1>
+<ul>
+<li>Cover inspirado de <a href="https://codepen.io/nathantaylor/pen/wrBQWd" target="_blank" rel="nofollow noopener noreferrer">https://codepen.io/nathantaylor/pen/wrBQWd</a></li>
+</ul>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn-1">
+<p>A Brief History of Debian – <a href="https://www.debian.org/doc/manuals/project-history/intro.en.html" target="_blank" rel="nofollow noopener noreferrer">Chapter 1. Introduction – What is the Debian Project?</a></p>
+<a href="#fnref-1" class="footnote-backref">↩</a>
+</li>
+<li id="fn-2">
+<p><a href="https://archiveos.org/sls/" target="_blank" rel="nofollow noopener noreferrer">Softlanding Linux System</a></p>
+<a href="#fnref-2" class="footnote-backref">↩</a>
+</li>
+<li id="fn-3">
+<p><a href="https://groups.google.com/forum/message/raw?msg=comp.os.linux.development/Md3Modzg5TU/xty88y5OLaMJ" target="_blank" rel="nofollow noopener noreferrer">New release under development; suggestions requested (Aug 16, 1993, 7:05:37 AM)</a></p>
+<a href="#fnref-3" class="footnote-backref">↩</a>
+</li>
+<li id="fn-4">
+<p><a href="https://www.debian.org/doc/manuals/project-history/intro.en.html" target="_blank" rel="nofollow noopener noreferrer">Chapter 1. Introduction – What is the Debian Project? – 1.2. Pronouncing Debian</a></p>
+<a href="#fnref-4" class="footnote-backref">↩</a>
+</li>
+<li id="fn-5">
+<p>A Brief History of Debian – <a href="https://www.debian.org/doc/manuals/project-history/releases.en.html" target="_blank" rel="nofollow noopener noreferrer">Chapter 3. Debian Releases</a></p>
+<a href="#fnref-5" class="footnote-backref">↩</a>
+</li>
+<li id="fn-6">
+<p><a href="https://lists.debian.org/debian-announce/1995/msg00010.html" target="_blank" rel="nofollow noopener noreferrer">Wrong version of Debian on InfoMagic CD</a></p>
+<a href="#fnref-6" class="footnote-backref">↩</a>
+</li>
+<li id="fn-7">
+<p><a href="https://www.debian.org/vote/1999/vote_0004" target="_blank" rel="nofollow noopener noreferrer">New Logo</a></p>
+<a href="#fnref-7" class="footnote-backref">↩</a>
+</li>
+<li id="fn-8">
+<p>Debian logos – <a href="https://www.debian.org/logos/" target="_blank" rel="nofollow noopener noreferrer">About the Debian logos</a></p>
+<a href="#fnref-8" class="footnote-backref">↩</a>
+</li>
+<li id="fn-9">
+<p><a href="https://wiki.debian.org/DebianLogo" target="_blank" rel="nofollow noopener noreferrer">Debian Logo</a></p>
+<a href="#fnref-9" class="footnote-backref">↩</a>
+</li>
+<li id="fn-10">
+<p><a href="https://wiki.debian.org/ToyStory" target="_blank" rel="nofollow noopener noreferrer">Toy Story</a></p>
+<a href="#fnref-10" class="footnote-backref">↩</a>
+</li>
+</ol>
+</div></section><section class="blog-post__PostComments-bnlzlx-4 kAxAsm"><div class="blog-post__LoadingComments-bnlzlx-5 DcvKR"></div></section></article><footer class="Footer__Container-yaqjpg-0 jxhXVE"><div class="Footer__Content-yaqjpg-1 grECAX"><p>Blog escrito por <a href="https://byoigr.es/" target="_blank" rel="noopener noreferrer">Sergio Flores</a></p></div></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-98315944-2', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/una-breve-historia-de-debian/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-5050040b1751bf5c4742.js"],"app":["/app-5485495f51e6f54f82a5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-264292b60169fa70492b.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-3fa0f9ceea0622a5309b.js"],"component---src-templates-blog-post-jsx":["/component---src-templates-blog-post-jsx-bd3559b39cb0950b823b.js"]};/*]]>*/</script><script src="/polyfill-5050040b1751bf5c4742.js" nomodule=""></script><script src="/component---src-templates-blog-post-jsx-bd3559b39cb0950b823b.js" async=""></script><script src="/483389fb3301b8b9730ed11bd3d927cb163a605b-f527cc7ed90ce7838031.js" async=""></script><script src="/app-5485495f51e6f54f82a5.js" async=""></script><script src="/styles-cd63080e784be7b7e7cf.js" async=""></script><script src="/framework-a576ae5ab153fa4a7c27.js" async=""></script><script src="/webpack-runtime-0096d24f4c8a6d9fc68f.js" async=""></script></body></html>
