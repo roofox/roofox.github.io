@@ -42,6 +42,8 @@ const effect = keyframes`
 
 const Container = styled.div`
   background: ${backgroundColor};
+  user-select: none;
+  overflow: hidden;
 `
 
 const Paragraph = styled.span`
