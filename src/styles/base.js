@@ -9,6 +9,10 @@ export default css`
     ${media.lessThan("md")`
       font-size: 14px;
     `}
+
+    ${media.lessThan("sm")`
+      font-size: 10px;
+    `}
   }
 
   body {
