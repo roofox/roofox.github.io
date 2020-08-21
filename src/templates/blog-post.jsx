@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import MainLayout from '../components/layouts/MainLayout';
 import DateTime from '../components/DateTime'
 import SiteMetadata from "../components/SiteMetadata"
+import media from '../utils/media-query';
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -13,26 +14,21 @@ const Post = styled.article`
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: ${p => p.theme.contentMaxWidth};
+  max-width: ${(p) => p.theme.contentMaxWidth};
 
-  p, ul {
+  p,
+  ul {
     font-size: 1.4375rem;
     line-height: 2.5875rem;
     text-align: justify;
   }
 
-  @media only screen and (max-width: 61.999rem) {
+  ${media.lessThan("md")`
     max-width: 100%;
-  }
-
-  @media only screen and (max-width: 29.999rem) {
-    max-width: 100%;
-
-    p, ul  {
-      font-size: 1rem;
-      line-height: 2rem;
+    p, ul {
+      
     }
-  }
+  `}
 `
 
 const PostMeta = styled.section`

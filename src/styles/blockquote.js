@@ -6,13 +6,21 @@ export default css`
     border-left: 1rem solid ${(p) => p.theme.primaryColor1};
     font-style: italic;
     margin: 0;
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 1rem;
     position: relative;
-    font-size: 0.8rem;
+
+    > p {
+      font-size: 1.25rem;
+    }
 
     ${media.lessThan("md")`
-      padding: 0 0 0 1rem;
+      padding-right: 0.5rem;
       border-left-width: 0.5rem;
+
+      > p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
     `}
   }
 `

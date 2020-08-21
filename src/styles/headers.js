@@ -1,4 +1,5 @@
 import { css } from "styled-components"
+import media from "../utils/media-query"
 
 export default css`
   h1,
@@ -14,10 +15,8 @@ export default css`
       text-decoration: none;
     }
 
-    @media (max-width: 700px) {
-      font-size: 2rem;
+    ${media.lessThan("md")`
       padding: 1rem 0;
-      line-height: 1.4;
-    }
+    `}
   }
 `

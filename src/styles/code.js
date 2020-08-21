@@ -1,5 +1,4 @@
 import { css } from "styled-components"
-import media from "../utils/media-query"
 
 export default css`
   code {
@@ -13,22 +12,6 @@ export default css`
     white-space: normal;
     background: #2d2d2d;
     color: ${(p) => p.theme.primaryColor2};
-
-    @media (max-width: 700px) {
-      font-size: 1.4375rem !important;
-    }
-
-    @media (max-width: 700px) {
-      font-size: 1rem !important;
-    }
-  }
-
-  h1 > code[class*="language-"] {
-    font-size: 2.5rem;
-
-    @media (max-width: 700px) {
-      font-size: 2rem !important;
-    }
   }
 
   .line-numbers-rows {
@@ -122,10 +105,6 @@ export default css`
             }
           }
         }
-      }
-
-      @media (max-width: 700px) {
-        font-size: 0.8rem !important;
       }
     }
   }
