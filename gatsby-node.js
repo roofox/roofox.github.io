@@ -9,15 +9,16 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
+  const { createPage } = actions
 
-    const blogPost = path.resolve(`./src/templates/blog-post.jsx`)
+  const blogPost = path.resolve(`./src/templates/blog-post.jsx`)
+  const quote = path.resolve(`./src/templates/quote.jsx`)
 
-    return graphql(
-        `
+  return graphql(
+    `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: {filter: { frontmatter: {  layout: { eq: "post" } } },  fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
           edges {
@@ -30,6 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
                 date
                 description
                 path
+                layout
                 cover
               }
             }
@@ -37,45 +39,53 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-    ).then(result => {
-        if (result.errors) {
-            throw result.errors
-        }
+  ).then((result) => {
+    if (result.errors) {
+      throw result.errors
+    }
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges
 
-        posts.forEach((post, index) => {
-            const previous = index === posts.length - 1 ? null : posts[index + 1].node
-            const next = index === 0 ? null : posts[index - 1].node
+    posts.forEach((post, index) => {
+      // const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      // const next = index === 0 ? null : posts[index - 1].node
 
-            createPage({
-              path: post.node.fields.slug,
-              slug: post.node.fields.slug,
-              component: blogPost,
-              context: {
-                slug: post.node.fields.slug,
-                previous,
-                next,
-                cover: post.node.frontmatter.cover
-              },
-            })
+      if (post.node.frontmatter.layout === "post") {
+        createPage({
+          path: post.node.fields.slug,
+          slug: post.node.fields.slug,
+          component: blogPost,
+          context: {
+            slug: post.node.fields.slug
+          },
         })
-
-        return null
+      } else if (post.node.frontmatter.layout === "quote") {
+        createPage({
+          path: post.node.fields.slug,
+          slug: post.node.fields.slug,
+          component: quote,
+          context: {
+            page: post.node.frontmatter
+          },
+        })
+      }
     })
+
+    return null
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-    const { createNodeField } = actions
+  const { createNodeField } = actions
 
-    if (node.internal.type === `MarkdownRemark`) {
-        const value = node.frontmatter.path
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = node.frontmatter.path
 
-        createNodeField({
-            name: `slug`,
-            node,
-            value,
-        })
-    }
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

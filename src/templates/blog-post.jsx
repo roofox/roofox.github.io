@@ -26,7 +26,14 @@ const Post = styled.article`
   ${media.lessThan("md")`
     max-width: 100%;
     p, ul {
-      
+      margin: 1rem 0;
+    }
+  `}
+
+  ${media.lessThan("sm")`
+    max-width: 100%;
+    p, ul {
+      margin: 0.5rem 0;
     }
   `}
 `
@@ -76,7 +83,6 @@ class BlogPostTemplate extends React.Component {
           siteMetadata: { disqusShortname },
         },
       },
-      pathContext: { cover },
     } = this.props
 
     const disqusConfig = {
@@ -84,9 +90,9 @@ class BlogPostTemplate extends React.Component {
       title: post.frontmatter.title,
     }
 
-    const Cover = cover ? 
-      require(`../components/covers/${cover}`).default :
-      ({ text }) => (<h1>{text}</h1>);
+    const Cover = post.frontmatter.cover
+      ? require(`../components/covers/${post.frontmatter.cover}`).default
+      : ({ text }) => <h1>{text}</h1>
 
     return (
       <MainLayout>
@@ -140,7 +146,8 @@ export const pageQuery = graphql`
         title
         date
         description
-        path
+        path,
+        cover
       }
     }
   }
