@@ -5,12 +5,17 @@ import styled from 'styled-components'
 import MainLayout from "../components/layouts/MainLayout"
 import SiteMetadata from "../components/SiteMetadata"
 import DateTime from '../components/DateTime';
+import Date from '../components/Date';
 
 const Post = styled.section`
-  flex: 1 0 100%;
+  width: 100%;
+  max-width: ${(p) => p.theme.contentMaxWidth};
+  display: flex;
+  /* flex: 1 0 100%; */
   margin: 1rem 0 2rem;
   font-size: 1.4375rem;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: green;
 
   @media only screen and (max-width: 29.999rem) {
     > a {
@@ -19,28 +24,42 @@ const Post = styled.section`
   }
 `
 
-const PostTitle = styled(Link)``
+const Column = styled.div`
+  font-family: "Amaranth", sans-serif;
+  margin-right: 40px;
+  text-align: center;
+`
+
+const PostTitle = styled(Link)`
+  font-size: 2rem;
+`
 
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges: posts },
   },
 }) => (
-    <MainLayout>
-      <SiteMetadata pathname="/" />
-      <article>
-        <h1>Últimas publicaciones</h1>
-        {posts.map(post => (
-          <Post key={post.node.frontmatter.path}>
-            <DateTime format="MMMM d, yyyy" align="left">{post.node.frontmatter.date}</DateTime>
+  <MainLayout>
+    <SiteMetadata pathname="/" />
+    <article>
+      <h1>Últimas publicaciones</h1>
+      {posts.map((post) => (
+        <Post key={post.node.frontmatter.path}>
+          <Column>
+            <Date format="MMMM d, yyyy" align="left">
+              {post.node.frontmatter.date}
+            </Date>
+          </Column>
+          <Column stlye={{ alignSelf: "center" }}>
             <PostTitle to={post.node.frontmatter.path}>
               {post.node.frontmatter.title}
             </PostTitle>
-          </Post>
-        ))}
-      </article>
-    </MainLayout>
-  )
+          </Column>
+        </Post>
+      ))}
+    </article>
+  </MainLayout>
+)
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -51,7 +70,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
+      filter: { frontmatter: { draft: { ne: true } } }
       sort: { order: DESC, fields: [frontmatter___date, frontmatter___layout] }
     ) {
       edges {
