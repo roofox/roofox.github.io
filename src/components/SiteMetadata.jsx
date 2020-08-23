@@ -42,6 +42,7 @@ const SiteMetadata = ({ pathname }) => (
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={twitter} />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;0,900;1,300&family=Space+Mono&display=swap" rel="stylesheet" />
       </Helmet>
     )}
   />

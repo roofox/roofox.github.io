@@ -23,25 +23,25 @@ module.exports = {
         path: `${__dirname}/content/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: "Merriweather:ital,wght@",
-            variants: ["0,400", "1,300", "0,900"],
-          },
-          {
-            family: "Kanit",
-            variants: ["700"],
-          },
-          {
-            family: "Space+Mono:ital,wght",
-            variants: ["0,400", "0,700", "1,400", "1,700"],
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: "Merriweather",
+    //         variants: ["400", "300", "900"],
+    //       },
+    //       {
+    //         family: "Kanit",
+    //         variants: ["700"],
+    //       },
+    //       {
+    //         family: "Space Mono",
+    //         variants: ["400", "700", "400", "700"],
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -52,7 +52,7 @@ module.exports = {
               maxWidth: 960,
               linkImagesToOriginal: false,
               showCaptions: true,
-              markdownCaptions: true
+              markdownCaptions: true,
             },
           },
           {
