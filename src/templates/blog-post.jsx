@@ -23,6 +23,12 @@ const Post = styled.article`
     text-align: justify;
   }
 
+  p {
+    em {
+      font-weight: 100;
+    }
+  }
+
   ${media.lessThan("md")`
     max-width: 100%;
     p, ul {

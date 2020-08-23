@@ -6,13 +6,13 @@ export default css`
     font-size: 16px;
     background-color: ${(p) => p.theme.bodyBackgroundColor};
 
-    ${media.lessThan("md")`
+    /* ${media.lessThan("md")`
       font-size: 14px;
     `}
 
     ${media.lessThan("sm")`
       font-size: 10px;
-    `}
+    `} */
   }
 
   body {

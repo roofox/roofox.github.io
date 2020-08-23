@@ -16,6 +16,7 @@ theme.greyColor3 = "#9e9e9e"
 theme.headerFontFamily = "Kanit"
 theme.bodyFontFamily = "Merriweather"
 theme.logoFontFamily = "Yellowtail"
+theme.quoteFontFamily = "Merriweather"
 theme.codeFontFamily = `"Space Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace`
 theme.navbarWidth = "16rem"
 theme.sidePadding = "2rem"
