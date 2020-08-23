@@ -18,7 +18,8 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         allMarkdownRemark(
-          sort: {filter: { frontmatter: {  layout: { eq: "post" } } },  fields: [frontmatter___date], order: DESC }
+          # filter: { frontmatter: { layout: { eq: "post" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
           edges {
@@ -57,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           component: blogPost,
           context: {
-            slug: post.node.fields.slug
+            slug: post.node.fields.slug,
           },
         })
       } else if (post.node.frontmatter.layout === "quote") {
@@ -66,7 +67,7 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           component: quote,
           context: {
-            page: post.node.frontmatter
+            page: post.node.frontmatter,
           },
         })
       }
