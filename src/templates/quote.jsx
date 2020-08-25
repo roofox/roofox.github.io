@@ -84,16 +84,10 @@ const Quote = styled.div`
     ${media.lessThan("md")`
       font-size: 8em;
       left: -7rem;
-      background-color: red;
     `}
 
     ${media.lessThan("sm")`
-      top: 0;
-      left: 0;
-      letter-spacing: -16px;
-      font-style: normal;
-      font-wight: normal;
-      font-size: 1rem;
+      content: "";
     `}
   }
 `
