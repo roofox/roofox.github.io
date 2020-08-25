@@ -12,7 +12,6 @@ const Content = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: teal; */
   width: 100%;
   max-width: ${(p) => p.theme.contentMaxWidth};
 `
@@ -31,16 +30,10 @@ const Post = styled(Link)`
   flex: 1 0 100%;
   margin-bottom: 2rem;
   font-size: 1.4375rem;
-
-  /* inline */
-  /* background-color: transparent; */
   background-color: rgb(255, 255, 255, 0.1);
-  color: white;
   box-shadow: 7px 7px 10px #020202;
-
   color: #e8e6e3;
   text-decoration: none;
-
   transition: all 500ms;
 
   &:hover {
@@ -54,21 +47,20 @@ const Post = styled(Link)`
   `}
 `
 
-const PostTitle = styled.div`
-  /* font-size: 1rem; */
-  margin-left: 1rem;
+const PostMeta = styled.div`
   flex: 1;
-  /* background-color: red; */
-  /* inline */
-  /* background-color: rgb(255, 255, 255, 0.1); */
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-left: 0;
   padding: 0 1rem;
   width: 100%;
+`
+
+const PostTitle = styled.div`
+  /* background-color: red; */
 `
 
 const Icon = styled.div`
@@ -90,34 +82,16 @@ const Icon = styled.div`
 `
 
 const QuoteIcon = styled(Icon)`
-  /*
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  width: 80px;
-  height: 80px;
-  */
   background-image: url("data: image/svg+xml;base64,${(p) =>Base64.encode(`<svg viewBox="0 0 1941 1941" xmlns="http://www.w3.org/2000/svg"><path fill='${p.theme.primaryColor2}' d="M906.667 448v704q0 104-40.5 198.5t-109.5 163.5-163.5 109.5-198.5 40.5h-64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h64q106 0 181-75t75-181v-32q0-40-28-68t-68-28h-224q-80 0-136-56t-56-136V448q0-80 56-136t136-56h384q80 0 136 56t56 136zm896 0v704q0 104-40.5 198.5t-109.5 163.5-163.5 109.5-198.5 40.5h-64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h64q106 0 181-75t75-181v-32q0-40-28-68t-68-28h-224q-80 0-136-56t-56-136V448q0-80 56-136t136-56h384q80 0 136 56t56 136z"/></svg>`)}");
-  /* background-color: white; */
 `
 
 const PostIcon = styled(Icon)`
-  /*
-  width: 80px;
-  height: 80px;
-  */
   background-image: url("data: image/svg+xml;base64,${(p) =>Base64.encode(`<svg viewBox="0 0 2091 2091" xmlns="http://www.w3.org/2000/svg"><path fill='${p.theme.primaryColor1}' stroke-width='2' d="M1037.333 1440l116-116-152-152-116 116v56h96v96h56zm440-720q-16-16-33 1l-350 350q-17 17-1 33t33-1l350-350q17-17 1-33zm80 594v190q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5V672q0-119 84.5-203.5t203.5-84.5h832q63 0 117 25 15 7 18 23 3 17-9 29l-49 49q-14 14-32 8-23-6-45-6h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-126q0-13 9-22l64-64q15-15 35-7t20 29zm-96-738l288 288-672 672h-288v-288zm444 132l-92 92-288-288 92-92q28-28 68-28t68 28l152 152q28 28 28 68t-28 68z"/></svg>`)}");
   background-position-x: 5px;
 
   ${media.lessThan("sm")`
     background-position-x: 2px;
   `}
-  /* background-color: white; */
-`
-
-// const PostLink = styled(Link)`
-const PostLink = styled.div`
-  color: #e8e6e3;
-  text-decoration: none;
 `
 
 const IndexPage = ({
@@ -135,27 +109,19 @@ const IndexPage = ({
           className="index-link"
           to={post.node.frontmatter.path}
         >
-          {post.node.frontmatter.layout == "post" ? (
+          {post.node.frontmatter.layout === "post" ? (
             <PostIcon />
           ) : (
             <QuoteIcon />
           )}
-          <PostTitle>
-            {post.node.frontmatter.title}
-          </PostTitle>
+          <PostMeta>
+            <PostTitle>{post.node.frontmatter.title}</PostTitle>
+            <DateTime format="MMMM d, yyyy" align="left">
+              {post.node.frontmatter.date}
+            </DateTime>
+          </PostMeta>
         </Post>
       ))}
-      {/*posts.map((post) => (
-        <Post key={post.node.frontmatter.path}>
-          <Quote />
-          <DateTime format="MMMM d, yyyy">
-            {post.node.frontmatter.date}
-          </DateTime>
-          <PostTitle to={post.node.frontmatter.path}>
-            {post.node.frontmatter.title}
-          </PostTitle>
-        </Post>
-      ))*/}
     </Content>
   </MainLayout>
 )
