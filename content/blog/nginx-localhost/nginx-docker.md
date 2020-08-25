@@ -28,7 +28,7 @@ El flujo general — el que al final de esta publicación deberías entender mej
 
 ![Diagrama de flujo](./diagrama-de-flujo.png)
 
-# Sofware necesario
+## Sofware necesario
 
 Utilizaremos un ambiente linux para la demostración del ejemplo, [ubuntu][ubuntu] `v18.04.2 LTS` será el sistema operativo y necesitaremos la instalación de los siguientes programas:
 
@@ -190,7 +190,7 @@ Listo, ¡ingresa en el navegador web a http://my-node-app.com y verás lo mismo 
 
 ![¡my-node-app.com sin puerto!](my-node-app.png "¡my-node-app.com sin puerto!")
 
-# Funcionamiento de `proxy_pass` y `server_name`
+## Funcionamiento de `proxy_pass` y `server_name`
 
 La mágia que acabas de hacer, es posible gracias a las directivas [proxy_pass][proxy-pass] y [server_name][server-name] las cuales hacen que la configuración sea tan sencilla como hacer un **match** o **if**.
 
@@ -213,7 +213,7 @@ server {
 
 ```
 
-# Terminando
+## Terminando
 
 Para finalizar, realiza exactamente los mismos pasos para los dos servicios restantes, creando dos nuevos archivos de configuración y cambiando los valores de las directivas `proxy_pass` y `server_name`.
 
