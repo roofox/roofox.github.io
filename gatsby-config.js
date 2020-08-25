@@ -1,4 +1,6 @@
-module.exports = {
+const IS_DEV = process.env.NODE_ENV !== 'production';
+
+const config = {
   siteMetadata: {
     title: `ROOFOX.dev`,
     description: `Blog de ROOFOX.dev`,
@@ -101,8 +103,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: true,
-        fileName: true,
+        displayName: IS_DEV,
+        fileName: IS_DEV,
+        pure: !IS_DEV,
       },
     },
     "gatsby-plugin-catch-links",
@@ -115,3 +118,5 @@ module.exports = {
     },
   ],
 }
+
+module.exports = config
