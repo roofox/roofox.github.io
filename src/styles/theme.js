@@ -1,5 +1,41 @@
+import theming from "styled-theming"
+
 const theme = {
   mediaWidth: "62rem",
+  colors: {
+    background: theming("mode", {
+      light: "242423",
+      dark: "#181a1b",
+    }),
+    body: theming("mode", {
+      light: "#000",
+      dark: "#e8e6e3",
+    }),
+    primary: "#4dc1ff",
+    secondary: "#ef476f",
+    selection: {
+      background: theming("mode", {
+        light: "#000",
+        dark: "#ffd166",
+      }),
+      text: theming("mode", {
+        light: "#fff",
+        dark: "#e8e6e3",
+      }),
+    },
+  },
+  fonts: {
+    families: {
+      body: "Merriweather",
+      logo: "Yellowtail",
+      quote: "Merriweather",
+    },
+    sizes: {
+      base: "16px",
+      medium: "14px",
+      small: "12px",
+    },
+  },
 }
 
 theme.bodyBackgroundColor = "#181a1b"

@@ -35,7 +35,8 @@
     "react-helmet": "^6.1.0",
     "react-waypoint": "^9.0.1",
     "styled-components": "^5.1.1",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "styled-theming": "^2.2.0"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1",

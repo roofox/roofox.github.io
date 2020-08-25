@@ -3,38 +3,38 @@ import media from "../utils/media-query"
 
 export default css`
   html {
-    font-size: 16px;
-    background-color: ${(p) => p.theme.bodyBackgroundColor};
+    font-size: ${(p) => p.theme.fonts.sizes.base};
+    background-color: ${(p) => p.theme.colors.background};
 
     ${media.lessThan("md")`
-      font-size: 14px;
+      font-size: ${(p) => p.theme.fonts.sizes.medium};
     `}
 
     ${media.lessThan("sm")`
-      font-size: 12px;
+      font-size: ${(p) => p.theme.fonts.sizes.small};
     `}
   }
 
   body {
-    font-family: ${(p) => p.theme.bodyFontFamily};
-    color: ${(p) => p.theme.bodyColor};
+    font-family: ${(p) => p.theme.fonts.families.body};
+    color: ${(p) => p.theme.colors.body};
   }
 
   ::-webkit-scrollbar {
-    background-color: ${(p) => p.theme.bodyBackgroundColor};
+    background-color: ${(p) => p.theme.colors.background};
     /* color: #aba499; */
   }
   ::-webkit-scrollbar-thumb {
     /* background-color: #454a4d; */
-    background-color: ${(p) => p.theme.primaryColor1};
+    background-color: ${(p) => p.theme.colors.primary};
   }
 
   ::selection {
-    background-color: #ffd166 !important;
-    color: #e8e6e3 !important;
+    background-color: ${(p) => p.theme.colors.selection.background} !important;
+    color: ${(p) => p.theme.colors.selection.text} !important;
   }
   ::-moz-selection {
-    background-color: #ffd166 !important;
-    color: #e8e6e3 !important;
+    background-color: ${(p) => p.theme.colors.selection.background} !important;
+    color: ${(p) => p.theme.colors.selection.text} !important;
   }
 `

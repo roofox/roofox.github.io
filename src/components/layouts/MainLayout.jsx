@@ -14,6 +14,8 @@ const Main = styled.main`
   align-items: center;
 `
 
+theme.mode = "light";
+
 const MainLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
@@ -24,7 +26,13 @@ const MainLayout = ({ children }) => (
         <Footer>
           <p>
             Blog escrito por&nbsp;
-            <a href="https://byoigr.es/" target="_blank" rel="noopener noreferrer">Sergio Flores</a>
+            <a
+              href="https://byoigr.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sergio Flores
+            </a>
           </p>
         </Footer>
       </Main>
