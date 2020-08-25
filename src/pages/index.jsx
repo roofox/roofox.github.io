@@ -13,38 +13,54 @@ const Content = styled.article`
   flex-direction: column;
   align-items: center;
   /* background-color: teal; */
+  width: 100%;
+  max-width: ${(p) => p.theme.contentMaxWidth};
 `
+
+const Title = styled.h1`
+  ${media.lessThan("md")`
+    font-size: 2rem;
+    text-align: center;
+  `}
+`;
 
 const Post = styled(Link)`
   width: 100%;
-  max-width: ${(p) => p.theme.contentMaxWidth};
-
+  max-width: calc(${(p) => p.theme.contentMaxWidth} - 18rem);
   display: flex;
   flex: 1 0 100%;
   margin-bottom: 2rem;
   font-size: 1.4375rem;
 
   /* inline */
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgb(255, 255, 255, 0.1);
   color: white;
-  box-shadow: 0 0.25rem 0.125rem 0 rgba(255, 255, 255, 0.1);
-  box-shadow: 10px 13px 5px #020202;
+  box-shadow: 7px 7px 10px #020202;
 
   color: #e8e6e3;
   text-decoration: none;
 
+  transition: all 500ms;
+
+  &:hover {
+    box-shadow: 7px 7px 20px #020202;
+    background-color: transparent;
+  }
+
   ${media.lessThan("sm")`
     margin-bottom: 1rem;
+    font-size: 1rem;
   `}
 `
 
 const PostTitle = styled.div`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   margin-left: 1rem;
   flex: 1;
-  background-color: red;
+  /* background-color: red; */
   /* inline */
-  background-color: rgb(255, 255, 255, 0.1);
+  /* background-color: rgb(255, 255, 255, 0.1); */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,7 +72,7 @@ const PostTitle = styled.div`
 `
 
 const Icon = styled.div`
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.2);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   width: 80px;
@@ -112,7 +128,7 @@ const IndexPage = ({
   <MainLayout>
     <SiteMetadata pathname="/" />
     <Content>
-      <h1>Últimas publicaciones</h1>
+      <Title>Últimas publicaciones</Title>
       {posts.map((post) => (
         <Post
           key={post.node.frontmatter.path}
