@@ -1,19 +1,8 @@
 import React from "react"
 import MainLayout from "../components/layouts/MainLayout"
-// import DateTime from "../components/DateTime"
 import SiteMetadata from "../components/SiteMetadata"
 import styled from "styled-components"
-import { mix, darken, lighten } from "polished";
 import media from '../utils/media-query'
-/*
-content: "’’";
-pointer-events: none;
-font-size: 8em;
-letter-spacing: -16px;
-font-style: normal;
-font-weight: bold;
-color: rgb(123,154,185);
-*/
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -45,13 +34,10 @@ const Post = styled.article`
   `}
 `
 
-const Container = styled.div`
-  /* background-color: blue; */
-`
+const Container = styled.div``
 
 const Quote = styled.div`
   color: #595959;
-  /* background-color: white; */
   position: relative;
   font-family: "Hoefler Text", Georgia, Garamond, Times, serif;
   letter-spacing: 0.1em;
@@ -91,9 +77,6 @@ const Quote = styled.div`
     `}
   }
 `
-
-const color = "#242423";
-const amount = 0.3;
 
 const Cite = styled.cite`
   color: #e8e6e3;
