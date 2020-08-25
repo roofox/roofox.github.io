@@ -7,7 +7,7 @@ a {
   /* color: ${(p) => p.theme.bodyColor}; */
 }
 
-a:not(.gatsby-resp-image-link):not(.anchor):not(.footnote-ref):not(.footnote-backref) {
+a:not(.gatsby-resp-image-link):not(.anchor):not(.footnote-ref):not(.footnote-backref):not(.index-link) {
   background: linear-gradient(to bottom, ${(p) => p.theme.primaryColor1} 0%, ${(p) => p.theme.primaryColor1} 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;

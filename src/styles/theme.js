@@ -2,7 +2,7 @@ const theme = {
   mediaWidth: "62rem",
 }
 
-theme.bodyBackgroundColor = "#242423"
+theme.bodyBackgroundColor = "#181a1b"
 theme.bodyColor = "#e8e6e3"
 // theme.primaryColor1 = "#3f51b5"
 // theme.primaryColor1 = "#1E88E5"

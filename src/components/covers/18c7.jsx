@@ -41,7 +41,7 @@ const effect = keyframes`
 `
 
 const Container = styled.div`
-  background: ${backgroundColor};
+  background-color: ${backgroundColor};
   user-select: none;
   overflow: hidden;
 `

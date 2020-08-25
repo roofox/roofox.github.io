@@ -78,7 +78,7 @@ const color = "#242423";
 const amount = 0.3;
 
 const Cite = styled.cite`
-  color: #595959;
+  color: #e8e6e3;
   font-family: ${(p) => p.theme.bodyFontFamily};
   font-style: italic;
   font-weight: lighter;
