@@ -27,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
               }
+              html
               frontmatter {
                 title
                 date
@@ -68,6 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: quote,
           context: {
             page: post.node.frontmatter,
+            html: post.node.html
           },
         })
       }

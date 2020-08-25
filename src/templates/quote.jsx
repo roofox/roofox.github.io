@@ -91,7 +91,7 @@ const Cite = styled.cite`
   text-shadow: 10px 13px 5px #020202;
 
   ${media.lessThan("md")`
-    font-size: 2rem;
+    font-size: 2.5rem;
   `}
 
   ${media.lessThan("sm")`
@@ -99,7 +99,7 @@ const Cite = styled.cite`
   `}
 `
 
-const QuoteTemplate = ({ pageContext: { page } }) => (
+const QuoteTemplate = ({ pageContext: { page, html } }) => (
   <MainLayout>
     <SiteMetadata pathname={page.path} />
     <Post>
@@ -109,6 +109,10 @@ const QuoteTemplate = ({ pageContext: { page } }) => (
         </Quote>
       </Container>
     </Post>
+    <div
+      /* eslint react/no-danger: 0 */
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   </MainLayout>
 )
 
