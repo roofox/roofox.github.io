@@ -1,7 +1,7 @@
 import React from "react"
 import MainLayout from "../components/layouts/MainLayout"
 // import DateTime from "../components/DateTime"
-// import SiteMetadata from "../components/SiteMetadata"
+import SiteMetadata from "../components/SiteMetadata"
 import styled from "styled-components"
 import { mix, darken, lighten } from "polished";
 import media from '../utils/media-query'
@@ -60,6 +60,15 @@ const Quote = styled.div`
   font-size: 1.7em;
   margin-left: 10rem;
 
+  ${media.lessThan("md")`
+    margin-left: 6rem;
+  `}
+
+  ${media.lessThan("sm")`
+    margin-left: 0rem;
+    margin-top: 3rem;
+  `}
+
   &:before {
     content: "’’";
     position: absolute;
@@ -71,6 +80,21 @@ const Quote = styled.div`
     font-style: normal;
     font-weight: bold;
     color: rgb(123, 154, 185);
+
+    ${media.lessThan("md")`
+      font-size: 8em;
+      left: -7rem;
+      background-color: red;
+    `}
+
+    ${media.lessThan("sm")`
+      top: 0;
+      left: 0;
+      letter-spacing: -16px;
+      font-style: normal;
+      font-wight: normal;
+      font-size: 1rem;
+    `}
   }
 `
 
@@ -88,10 +112,19 @@ const Cite = styled.cite`
   font-size: 3rem;
   line-height: 1.25;
   text-shadow: 10px 13px 5px #020202;
+
+  ${media.lessThan("md")`
+    font-size: 2rem;
+  `}
+
+  ${media.lessThan("sm")`
+    font-size: 1rem;
+  `}
 `
 
 const QuoteTemplate = ({ pageContext: { page } }) => (
   <MainLayout>
+    <SiteMetadata pathname={page.path} />
     <Post>
       <Container>
         <Quote>

@@ -11,8 +11,9 @@ export default css`
     margin: 0;
     padding: 2rem 0;
 
-    & a {
+    > a {
       text-decoration: none;
+      font-family: ${(p) => p.theme.headerFontFamily};
     }
 
     ${media.lessThan("md")`
