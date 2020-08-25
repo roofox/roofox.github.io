@@ -6,4 +6,7 @@ import code from './code'
 import footnotes from './footnotes'
 import images from './images'
 
-export default [base, headers, links, blockquote, code, footnotes, images]
+export default {
+  base,
+  post: [headers, links, blockquote, code, footnotes, images],
+}

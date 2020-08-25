@@ -7,6 +7,7 @@ import MainLayout from '../components/layouts/MainLayout';
 import DateTime from '../components/DateTime'
 import SiteMetadata from "../components/SiteMetadata"
 import media from '../utils/media-query';
+import styles from "../styles/"
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -15,6 +16,8 @@ const Post = styled.article`
   margin: 0;
   width: 100%;
   max-width: ${(p) => p.theme.contentMaxWidth};
+
+  ${() => styles.post.map((x) => x)}
 
   p,
   ul {

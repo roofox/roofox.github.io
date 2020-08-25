@@ -17,11 +17,14 @@ const Content = styled.article`
 `
 
 const Title = styled.h1`
+  font-family: ${(p) => p.theme.headerFontFamily};
+  font-size: 3rem;
+
   ${media.lessThan("md")`
     font-size: 2rem;
     text-align: center;
   `}
-`;
+`
 
 const Post = styled(Link)`
   width: 100%;
