@@ -1,5 +1,6 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
+import Link from "gatsby-link"
 import Heading from '../../components/Heading'
 import Footer from "../../components/Footer"
 import theme from "../../styles/theme"
@@ -16,9 +17,18 @@ const Main = styled.main`
   overflow: hidden;
 `
 
+const Sergio = styled(Link)`
+  color: ${(p) => p.theme.colors.primary};
+  transition: color 400ms;
+
+  &:hover {
+    color: ${(p) => p.theme.colors.secondary};
+  }
+`
+
 // TODO: Get this value from localStorage
 theme.mode = "light";
-// theme.mode = "dark";
+theme.mode = "dark";
 
 const MainLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -30,13 +40,13 @@ const MainLayout = ({ children }) => (
         <Footer>
           <p>
             Blog escrito por&nbsp;
-            <a
-              href="https://byoigr.es/"
+            <Sergio
+              to="https://byoigr.es/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Sergio Flores
-            </a>
+            </Sergio>
           </p>
         </Footer>
       </Main>
