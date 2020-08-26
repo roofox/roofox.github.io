@@ -7,7 +7,6 @@ export default css`
     &:before {
       content: "Referencias";
       font-family: Kanit;
-      color: #e8e6e3;
       font-size: 3rem;
       line-height: 1.15;
       margin: 0;
