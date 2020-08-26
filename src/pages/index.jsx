@@ -35,7 +35,7 @@ const Post = styled(Link)`
   font-size: 1.4375rem;
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: 7px 7px 10px #020202;
-  color: #e8e6e3;
+  color: ${(p) => p.theme.colors.body};
   text-decoration: none;
   transition: all 500ms;
 
