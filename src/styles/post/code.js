@@ -2,7 +2,7 @@ import { css } from "styled-components"
 
 export default css`
   code {
-    font-family: ${(p) => p.theme.codeFontFamily};
+    font-family: ${(p) => p.theme.fonts.families.code};
   }
 
   /* Inline code */
@@ -11,11 +11,11 @@ export default css`
     border-radius: 0.3em;
     white-space: normal;
     background: #2d2d2d;
-    color: ${(p) => p.theme.primaryColor2};
+    color: ${(p) => p.theme.colors.secondary};
   }
 
   .line-numbers-rows {
-    border-right-color: ${(p) => p.theme.bodyColor};
+    border-right-color: ${(p) => p.theme.colors.body};
 
     span::before {
       color: #fff;
@@ -31,7 +31,7 @@ export default css`
     &:before {
       content: attr(data-language);
       border-bottom-left-radius: 0.25rem;
-      font-family: ${(p) => p.theme.codeFontFamily};
+      font-family: ${(p) => p.theme.fonts.families.code};
       color: #fff;
       font-size: 0.75rem;
       letter-spacing: 0.075em;
@@ -42,14 +42,14 @@ export default css`
       text-transform: uppercase;
       top: 0px;
       z-index: 5;
-      background: ${(p) => p.theme.primaryColor1};
+      background: ${(p) => p.theme.colors.primary};
       padding: 0.25rem 0.5rem;
     }
 
     > pre[class*="language-"] {
       color: #ccc;
       background: transparent;
-      font-family: ${(p) => p.theme.codeFontFamily};
+      font-family: ${(p) => p.theme.fonts.families.code};
       font-size: 1em;
       text-align: left;
       white-space: pre;
@@ -84,7 +84,7 @@ export default css`
 
         .line-numbers-rows {
           position: absolute;
-          border-right: 0.125rem solid ${(p) => p.theme.primaryColor1};
+          border-right: 0.125rem solid ${(p) => p.theme.colors.primary};
           top: 0;
           pointer-events: none;
           -webkit-user-select: none;

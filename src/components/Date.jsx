@@ -14,7 +14,7 @@ const Day = styled.span`
   line-height: 1;
   display: block;
   font-size: 4.333rem;
-  color: ${(p) => p.theme.primaryColor1};
+  color: ${(p) => p.theme.colors.primary};
 `
 
 const MonthYear = styled.span`

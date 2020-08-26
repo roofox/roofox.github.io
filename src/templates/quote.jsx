@@ -10,7 +10,7 @@ const Post = styled.article`
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: ${(p) => p.theme.contentMaxWidth};
+  max-width: ${(p) => p.theme.breakpoints.lg};
 
   p,
   ul {

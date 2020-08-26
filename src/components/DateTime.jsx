@@ -11,7 +11,7 @@ const Time = styled.time`
   width: 100%;
   display: block;
   text-align: ${(p) => p.align};
-  color: ${(p) => p.theme.bodyColor};
+  color: ${(p) => p.theme.colors.body};
   padding: 0.25rem 0;
 `
 

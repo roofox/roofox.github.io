@@ -3,8 +3,8 @@ import media from "../../utils/media-query"
 
 export default css`
   blockquote:not([data-name="title"]) {
-  font-family: "${(p) => p.theme.quoteFontFamily}";
-    border-left: 1rem solid ${(p) => p.theme.primaryColor1};
+    font-family: "${(p) => p.theme.fonts.families.quote}";
+    border-left: 1rem solid ${(p) => p.theme.colors.primary};
     font-style: italic;
     margin: 0;
     padding: 0 0 0 1rem;

@@ -22,7 +22,7 @@ const shadow = (color, depth) => {
 
 const Container = styled.section`
   width: 100%;
-  max-width: ${p => p.theme.contentMaxWidth};
+  max-width: ${p => p.theme.breakpoints.lg};;
   background: transparent;
   margin: 0;
   padding-bottom: 130px;

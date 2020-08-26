@@ -11,13 +11,14 @@ const Main = styled.main`
   align-items: center;
 
   padding: 0 ${(p) => p.theme.gutters.sidePadding};
-  margin-top: 0rem;
+  margin-top: 0;
 
   overflow: hidden;
 `
 
 // TODO: Get this value from localStorage
 theme.mode = "light";
+// theme.mode = "dark";
 
 const MainLayout = ({ children }) => (
   <ThemeProvider theme={theme}>

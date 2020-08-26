@@ -4,8 +4,8 @@ import media from "../../utils/media-query"
 export default css`
   h1,
   h2 {
-    font-family: ${(p) => p.theme.headerFontFamily};
-    color: ${(p) => p.theme.bodyColor};
+    font-family: ${(p) => p.theme.fonts.families.header};
+    color: ${(p) => p.theme.colors.body};
     font-size: 3rem;
     line-height: 1.15;
     margin: 0;
@@ -13,7 +13,7 @@ export default css`
 
     > a {
       text-decoration: none;
-      font-family: ${(p) => p.theme.headerFontFamily};
+      font-family: ${(p) => p.theme.fonts.families.header};
     }
 
     ${media.lessThan("md")`

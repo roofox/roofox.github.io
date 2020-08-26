@@ -53,7 +53,7 @@ const Hr = styled.hr`
   border: 0;
   margin-top: 1rem;
   width: 100%;
-  border-color: ${p => p.theme.primaryColor1};
+  border-color: ${p => p.theme.colors.primary};
   border-style: solid;
   border-top-width: 0.25rem;
 
