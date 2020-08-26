@@ -40,6 +40,7 @@ const theme = {
       body: "Merriweather",
       logo: "Yellowtail",
       quote: "Merriweather",
+      header: "Kanit"
     },
     sizes: {
       base: "16px",
