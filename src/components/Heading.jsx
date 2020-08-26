@@ -15,19 +15,19 @@ const HeaderContainer = styled.div`
 
 const Title = styled.h1`
   text-align: center;
-  font-family: ${(p) => p.theme.headerFontFamily};
+  font-family: ${(p) => p.theme.fonts.families.header};
   font-size: 3rem;
 `
 
 const Link = styled(GatsbyLink)`
   background-image: none !important;
+  color: ${(p) => p.theme.colors.primary};
   text-decoration: none;
-  color: ${(p) => p.theme.primaryColor1};
 
   transition: color 200ms;
 
   &:hover {
-    color: ${(p) => darken(0.1, p.theme.primaryColor1)};
+    color: ${(p) => darken(0.1, p.theme.colors.primary)};
   }
 `
 
