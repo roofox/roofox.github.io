@@ -7,7 +7,7 @@ import MainLayout from '../components/layouts/MainLayout';
 import DateTime from '../components/DateTime'
 import SiteMetadata from "../components/SiteMetadata"
 import media from '../utils/media-query';
-import styles from "../styles/"
+import styles from "../styles"
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -15,7 +15,7 @@ const Post = styled.article`
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: ${(p) => p.theme.contentMaxWidth};
+  max-width: ${(p) => p.theme.breakpoints.lg};
 
   ${() => styles.post.map((x) => x)}
 
@@ -24,6 +24,18 @@ const Post = styled.article`
     font-size: 1.4375rem;
     line-height: 2.5875rem;
     text-align: justify;
+
+    ${media.lessThan("sm")`
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      line-height: 1.8;
+    `}
+
+    ${media.lessThan("xs")`
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.8;
+    `}
   }
 
   p {
@@ -31,20 +43,6 @@ const Post = styled.article`
       font-weight: 100;
     }
   }
-
-  ${media.lessThan("md")`
-    max-width: 100%;
-    p, ul {
-      margin: 1rem 0;
-    }
-  `}
-
-  ${media.lessThan("sm")`
-    max-width: 100%;
-    p, ul {
-      margin: 0.5rem 0;
-    }
-  `}
 `
 
 const PostMeta = styled.section`

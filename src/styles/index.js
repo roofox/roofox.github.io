@@ -1,12 +1,7 @@
 import base from './base'
-import headers from './headers'
-import links from './links'
-import blockquote from './blockquote'
-import code from './code'
-import footnotes from './footnotes'
-import images from './images'
+import post from './post'
 
 export default {
   base,
-  post: [headers, links, blockquote, code, footnotes, images],
+  post
 }

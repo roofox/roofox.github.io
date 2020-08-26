@@ -1,5 +1,5 @@
 import { css } from "styled-components"
-import media from "../utils/media-query"
+import media from "../../utils/media-query"
 
 export default css`
   blockquote:not([data-name="title"]) {
