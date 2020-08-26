@@ -1,11 +1,13 @@
 import { generateMedia } from "styled-media-query"
+import theme from '../styles/theme';
+import { rem } from 'polished'
 
 const media = generateMedia({
-  xs: "249.999999px",
-  sm: "449.999999px",
-  md: "767.999999px",
-  lg: "1169.999999px",
-  xl: "1439.999999px",
+  xs: rem(theme.breakpoints.xs), // 15.625
+  sm: rem(theme.breakpoints.sm), // 28.125
+  md: rem(theme.breakpoints.md), // 48
+  lg: rem(theme.breakpoints.lg), // 73.125
+  xl: rem(theme.breakpoints.xl), // 90
 })
 
 export default media

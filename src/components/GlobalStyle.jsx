@@ -1,21 +1,21 @@
 import { createGlobalStyle } from "styled-components"
 import styles from "../styles/"
+/**
+ * Order:
+ *  Layout Properties (position, float, clear, display)
+ *  Box Model Properties (width, height, margin, padding)
+ *  Visual Properties (color, background, border, box-shadow)
+ *  Typography Properties (font-size, font-family, text-align, text-transform)
+ *  Misc Properties (cursor, overflow, z-index)
+ * 
+ */
 
 const GlobalStyle = createGlobalStyle`
-
-  /*
-  header,
-  article,
-  main,
-  div {
-    outline: 1px dashed grey;
-  }
-  //*/
-
+  
   /*
   base: 16px
 
-  0.0625rem   	 1px
+  0.0625rem   	 1px  
   0.1250rem    	 2px
   0.1875rem   	 3px
   0.2500rem   	 4px

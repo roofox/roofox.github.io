@@ -6,14 +6,17 @@ import theme from "../../styles/theme"
 import GlobalStyle from "../../components/GlobalStyle"
 
 const Main = styled.main`
-  padding: 0 ${p => p.theme.sidePadding};
-  overflow: hidden;
-  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 0 ${(p) => p.theme.gutters.sidePadding};
+  margin-top: 0rem;
+
+  overflow: hidden;
 `
 
+// TODO: Get this value from localStorage
 theme.mode = "light";
 
 const MainLayout = ({ children }) => (
