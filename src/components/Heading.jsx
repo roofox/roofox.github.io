@@ -9,8 +9,8 @@ const Header = styled.header`
 `;
 
 const HeaderContainer = styled.div`
-  max-width: 76rem;
   flex: 1;
+  max-width: ${p => p.theme.breakpoints.lg};
 `
 
 const Title = styled.h1`

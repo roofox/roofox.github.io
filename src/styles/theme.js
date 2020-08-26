@@ -1,4 +1,5 @@
 import theming from "styled-theming"
+import { rem } from "polished"
 
 const theme = {
   mediaWidth: "62rem",
@@ -6,11 +7,11 @@ const theme = {
     sidePadding: "2rem",
   },
   breakpoints: {
-    xs: "249.999999px", // 15.625
-    sm: "449.999999px",
-    md: "767.999999px",
-    lg: "1169.999999px",
-    xl: "1439.999999px",
+    xs: rem("249.999999px"),
+    sm: rem("449.999999px"),
+    md: rem("767.999999px"),
+    lg: rem("1169.999999px"),
+    xl: rem("1439.999999px"),
   },
   colors: {
     background: theming("mode", {
