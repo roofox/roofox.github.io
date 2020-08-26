@@ -3,6 +3,7 @@
  */
 import React from "react"
 import styled, { keyframes, css } from "styled-components"
+import media from '../../utils/media-query'
 
 const metric = "s"
 const time = 1;
@@ -49,30 +50,35 @@ const Container = styled.div`
 const Paragraph = styled.span`
   font-family: Futura, sans-serif;
   font-weight: 900;
-  font-size: 5rem;
-  padding: 5rem;
+  font-size: 6rem;
+  padding: 6rem;
   text-align: center;
   display: inline-block;
 
-  @media (max-width: 449.999999px) {
-    font-size: 2rem;
+  ${media.lessThan("xs")`
+    font-size: 1rem;
     padding: 1rem;
-  }
+  `}
 
-  @media (min-width: 450px) and (max-width: 767.999999px) {
-    font-size: 3rem;
+  ${media.between("xs", "sm")`
+    font-size: 2rem;
     padding: 2rem;
-  }
+  `}
 
-  @media (min-width: 768px) and (max-width: 1169.999999px) {
-    font-size: 4rem;
+  ${media.between("sm", "md")`
+    font-size: 3rem;
     padding: 3rem;
-  }
+  `}
 
-  @media (min-width: 1170px) and (max-width: 1439.999999px) {
-    font-size: 5rem;
+  ${media.between("md", "lg")`
+    font-size: 4rem;
     padding: 4rem;
-  }
+  `}
+
+  ${media.between("lg", "xl")`
+    font-size: 5rem;
+    padding: 5rem;
+  `}
 `
 
 const Letter = styled.span`
