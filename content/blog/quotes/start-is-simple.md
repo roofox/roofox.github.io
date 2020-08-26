@@ -1,7 +1,7 @@
 ---
 layout: quote
-title: "Todo comienzo es difícil. Empezar es fácil... la perseverancia es un arte"
-date: "2020-07-04T12:48:00.00Z"
+title: Todo comienzo es difícil...
+date: "2020-08-26T12:34:00.00Z"
 description: Mr. Robot
 categories: mr-robot
 author: sergio
