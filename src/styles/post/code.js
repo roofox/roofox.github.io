@@ -6,11 +6,13 @@ export default css`
   }
 
   /* Inline code */
-  :not(pre) > code[class*="language-"] {
+  h1 code[class*="language-"],
+  h2 code[class*="language-"],
+  p code[class*="language-"] {
     padding: 0 0.8rem;
     border-radius: 0.3em;
     white-space: normal;
-    background: #2d2d2d;
+    background: ${(p) => p.theme.colors.backgroundSecondary};
     color: ${(p) => p.theme.colors.secondary};
   }
 
@@ -60,6 +62,7 @@ export default css`
       margin: 0;
       padding: 0;
       overflow: initial;
+      margin: 1rem;
 
       -moz-tab-size: 4;
       -o-tab-size: 4;
@@ -184,4 +187,4 @@ export default css`
   .token.inserted {
     color: green;
   }
-`;
+`

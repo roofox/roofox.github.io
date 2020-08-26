@@ -15,8 +15,12 @@ const theme = {
   },
   colors: {
     background: theming("mode", {
-      light: "242423",
+      light: "#fff",
       dark: "#181a1b",
+    }),
+    backgroundSecondary: theming("mode", {
+      light: "#f5f5f5",
+      dark: "#2d2d2d",
     }),
     body: theming("mode", {
       light: "#000",
@@ -41,7 +45,7 @@ const theme = {
       logo: "Yellowtail",
       quote: "Merriweather",
       header: "Kanit",
-      code: `"Space Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace`
+      code: `"Space Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace`,
     },
     sizes: {
       base: "16px",
