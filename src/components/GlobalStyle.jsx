@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import styles from "../styles/"
+import styles from "../styles"
 /**
  * Order:
  *  Layout Properties (position, float, clear, display)
