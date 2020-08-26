@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, Link as GatsbyLink, graphql } from "gatsby"
 import styled from 'styled-components';
 import { darken } from 'polished';
+import media from '../utils/media-query'
 
 const Header = styled.header`
   display: flex;
@@ -14,9 +15,18 @@ const HeaderContainer = styled.div`
 `
 
 const Title = styled.h1`
+  margin: 1rem 0;
   text-align: center;
   font-family: ${(p) => p.theme.fonts.families.header};
-  font-size: 3rem;
+  font-size: 4rem;
+
+  ${media.lessThan("xs")`
+    font-size: 2rem;
+  `}
+
+  ${media.between("xs", "sm")`
+    font-size: 3rem;
+  `}
 `
 
 const Link = styled(GatsbyLink)`
