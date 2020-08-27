@@ -19,5 +19,10 @@ export default css`
     ${media.lessThan("md")`
       padding: 1rem 0;
     `}
+
+    ${media.lessThan("xs")`
+      padding: 1rem 0;
+      font-size: 2rem;
+    `}
   }
 `
