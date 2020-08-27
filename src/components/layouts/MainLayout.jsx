@@ -1,10 +1,10 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
-import Link from "gatsby-link"
 import Heading from '../../components/Heading'
 import Footer from "../../components/Footer"
 import theme from "../../styles/theme"
 import GlobalStyle from "../../components/GlobalStyle"
+import media from '../../utils/media-query'
 
 const Main = styled.main`
   display: flex;
@@ -15,9 +15,13 @@ const Main = styled.main`
   margin-top: 0;
 
   overflow: hidden;
+
+  ${media.lessThan("sm")`
+    padding: 0 ${(p) => p.theme.gutters.smallSidePadding};
+  `}
 `
 
-const Sergio = styled(Link)`
+const Sergio = styled.a`
   color: ${(p) => p.theme.colors.primary};
   transition: color 400ms;
 
@@ -41,7 +45,7 @@ const MainLayout = ({ children }) => (
           <p>
             Blog escrito por&nbsp;
             <Sergio
-              to="https://byoigr.es/"
+              href="https://byoigr.es/"
               target="_blank"
               rel="noopener noreferrer"
             >

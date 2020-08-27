@@ -5,6 +5,7 @@ const theme = {
   mediaWidth: "62rem",
   gutters: {
     sidePadding: "2rem",
+    smallSidePadding: "1rem",
   },
   breakpoints: {
     xs: rem("249.999999px"),
