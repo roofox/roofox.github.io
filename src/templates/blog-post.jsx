@@ -21,12 +21,13 @@ const Post = styled.article`
 
   p,
   ul {
+    margin: 1.5rem;
     font-size: 1.4375rem;
     line-height: 2.5875rem;
     text-align: justify;
 
     ${media.lessThan("sm")`
-      margin: 0.5rem 0;
+      margin: 1rem 0;
       font-size: 1.3rem;
       line-height: 1.8;
     `}
