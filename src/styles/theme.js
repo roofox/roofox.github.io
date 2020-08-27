@@ -14,7 +14,7 @@ const theme = {
     xl: rem("1439.999999px"),
   },
   colors: {
-    background: theming("mode", {
+    backgroundPrimary: theming("mode", {
       light: "#fff",
       dark: "#181a1b",
     }),

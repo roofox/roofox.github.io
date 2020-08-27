@@ -3,7 +3,7 @@ import media from "../utils/media-query"
 
 export default css`
   html {
-    background-color: ${(p) => p.theme.colors.background};
+    background-color: ${(p) => p.theme.colors.backgroundPrimary};
     font-size: ${(p) => p.theme.fonts.sizes.base};
 
     ${media.lessThan("md")`
@@ -21,7 +21,7 @@ export default css`
   }
 
   ::-webkit-scrollbar {
-    background-color: ${(p) => p.theme.colors.background};
+    background-color: ${(p) => p.theme.colors.backgroundPrimary};
   }
   ::-webkit-scrollbar-thumb {
     background-color: ${(p) => p.theme.colors.primary};
