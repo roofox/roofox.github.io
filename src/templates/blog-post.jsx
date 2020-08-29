@@ -21,7 +21,6 @@ const Post = styled.article`
 
   p,
   ul {
-    margin: 1.5rem;
     font-size: 1.4375rem;
     line-height: 2.5875rem;
     text-align: justify;
