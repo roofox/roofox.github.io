@@ -32,7 +32,7 @@ const Sergio = styled.a`
 
 // TODO: Get this value from localStorage
 theme.mode = "light";
-theme.mode = "dark";
+// theme.mode = "dark";
 
 const MainLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
