@@ -30,7 +30,7 @@
     "js-base64": "^3.4.5",
     "normalize.css": "^8.0.1",
     "polished": "^3.0.3",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
