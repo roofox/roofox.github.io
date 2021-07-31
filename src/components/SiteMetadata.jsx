@@ -30,10 +30,6 @@ const SiteMetadata = ({ pathname, title }) => (
         <html lang="es" />
         <link rel="canonical" href={`${siteUrl}${pathname}`} />
         <meta name="docsearch:version" content="2.0" />
-        {/* <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,user-scalable=0"
-        /> */}
         <meta name="title" content={title}></meta>
         <meta name="description" content={title} />
 
