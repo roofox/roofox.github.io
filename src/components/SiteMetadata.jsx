@@ -22,15 +22,20 @@ const SiteMetadata = ({ pathname, title }) => (
         siteMetadata: { siteUrl, title: siteTitle, twitter },
       },
     }) => (
-      <Helmet defaultTitle={siteTitle} title={title} titleTemplate={`%s | ${siteTitle}`}>
-        <html lang="en" />
+      <Helmet
+        defaultTitle={siteTitle}
+        title={title}
+        titleTemplate={`%s | ${siteTitle}`}
+      >
+        <html lang="es" />
         <link rel="canonical" href={`${siteUrl}${pathname}`} />
         <meta name="docsearch:version" content="2.0" />
-        <meta
+        {/* <meta
           name="viewport"
           content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,user-scalable=0"
-        />
-        <meta name="description" content="roofox.dev" />
+        /> */}
+        <meta name="title" content={title}></meta>
+        <meta name="description" content={title} />
 
         <meta property="og:url" content={siteUrl} />
         <meta property="og:type" content="website" />

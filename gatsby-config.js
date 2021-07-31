@@ -91,13 +91,13 @@ const config = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `ROOFOX.dev`,
+        short_name: `ROOFOX.dev`,
         start_url: `/`,
         background_color: `#1E88E5`,
         theme_color: `#1E88E5`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/roofox.dev.svg`, // This path is relative to the root of the site.
       },
     },
     {
