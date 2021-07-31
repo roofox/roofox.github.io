@@ -103,7 +103,10 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <MainLayout>
-        <SiteMetadata pathname={post.frontmatter.path} />
+        <SiteMetadata
+          title={post.frontmatter.title}
+          pathname={post.frontmatter.path}
+        />
         <Post>
           <PostMeta>
             <Cover text={post.frontmatter.title} />

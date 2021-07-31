@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby"
 
 // import gatsbyIcon from "../assets/gatsby-icon.png"
 
-const SiteMetadata = ({ pathname }) => (
+const SiteMetadata = ({ pathname, title }) => (
   <StaticQuery
     query={graphql`
       query SiteMetadata {
@@ -19,10 +19,10 @@ const SiteMetadata = ({ pathname }) => (
     `}
     render={({
       site: {
-        siteMetadata: { siteUrl, title, twitter },
+        siteMetadata: { siteUrl, title: siteTitle, twitter },
       },
     }) => (
-      <Helmet defaultTitle={title} titleTemplate={`%s | ${title}`}>
+      <Helmet defaultTitle={siteTitle} title={title} titleTemplate={`%s | ${siteTitle}`}>
         <html lang="en" />
         <link rel="canonical" href={`${siteUrl}${pathname}`} />
         <meta name="docsearch:version" content="2.0" />
@@ -42,7 +42,10 @@ const SiteMetadata = ({ pathname }) => (
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={twitter} />
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;0,900;1,300&family=Space+Mono&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;0,900;1,300&family=Space+Mono&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
     )}
   />
