@@ -105,6 +105,7 @@ class BlogPostTemplate extends React.Component {
       <MainLayout>
         <SiteMetadata
           title={post.frontmatter.title}
+          excerpt={post.excerpt}
           pathname={post.frontmatter.path}
         />
         <Post>
@@ -112,6 +113,11 @@ class BlogPostTemplate extends React.Component {
             <Cover text={post.frontmatter.title} />
             <Hr />
             <DateTime format="MMMM d, yyyy">{post.frontmatter.date}</DateTime>
+            {post.frontmatter.updated_date && (
+              <DateTime format="MMMM d, yyyy" startText="Actualizado en: ">
+                {post.frontmatter.updated_date}
+              </DateTime>
+            )}
           </PostMeta>
           <PostContent
             /* eslint react/no-danger: 0 */
@@ -155,6 +161,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        updated_date
         description
         path,
         cover

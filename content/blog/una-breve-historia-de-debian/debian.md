@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Una breve historia de Debian"
-creation_date: "2020-07-04T12:48:00.00Z"
 date: "2020-07-04T12:48:00.00Z"
+creation_date: "2020-07-04T12:48:00.00Z"
+updated_date: "2021-07-31T14:16:00.00Z"
 description: Debian fué uno de los primeros sistemas operativos creado por la frustración de los sistemas operativos actuales.
 categories: debian operating-system
 author: sergio
@@ -191,6 +192,13 @@ _Toy Story_, comenzando con Buzz Lightyear[^toy-story].
 
 [!["Toy Story Bullseye" by Alan / Falcon is licensed under CC BY 2.0.](./bullseye.jpg)](https://www.flickr.com/photos/dafalcon/5213593610/in/album-72157625482417016/)
 
+### `12` _Bookworm_ (Por anunciar)
+
+[![Toy Story 3 Bookworm movie poster](./bookworm.jpg)](https://www.flickr.com/photos/3pigs/4557383894/in/photolist-7WHMN5-7WHMso-8WH2Dj-8WFXeU)
+
+### `13` _Trixie_ (Por anunciar)
+
+[![Toy Story Trixie](./trixie.jpg)](https://www.flickr.com/photos/dafalcon/5213591576/in/photolist-7WHMN5-8WH28W-7WHM7j-7WEyx8-86i8LH-ob2U1T-ob1S89-8WFXeU-oqtCb9-ougmR8-ob2T1X-ob1SAw-ougjEp-ob1RPJ-osvx5a-osu3b7-7WEzra-8cTd9n-93cyTM-sdNKvV-8wjX5f-8bxfm9-svdtUH-7RApzs-7Rx9Za-81BYLB-7RApvE-7RApyf-7RApyU-8BQmCV-8oDXwY-89a9pX-8me5Y3-8jRQU3-4odsJx)
 
 ## Enlaces externos
 

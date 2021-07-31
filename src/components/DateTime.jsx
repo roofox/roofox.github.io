@@ -13,10 +13,18 @@ const Time = styled.time`
   text-align: ${(p) => p.align};
   color: ${(p) => p.theme.colors.body};
   padding: 0.25rem 0;
+  &::before {
+    content: ${(p) => p.startText ? `'${p.startText}'` : null};
+  }
 `
 
-const DateTime = ({ children: date, format: dateFormat, align = 'center' }) => (
-  <Time align={align}>
+const DateTime = ({
+  children: date,
+  format: dateFormat,
+  align = "center",
+  startText = null,
+}) => (
+  <Time align={align} startText={startText}>
     {format(parseISO(date), dateFormat, {
       locale: EsLocale,
     })}

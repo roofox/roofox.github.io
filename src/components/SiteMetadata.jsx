@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby"
 
 // import gatsbyIcon from "../assets/gatsby-icon.png"
 
-const SiteMetadata = ({ pathname, title }) => (
+const SiteMetadata = ({ pathname, title, excerpt }) => (
   <StaticQuery
     query={graphql`
       query SiteMetadata {
@@ -31,7 +31,7 @@ const SiteMetadata = ({ pathname, title }) => (
         <link rel="canonical" href={`${siteUrl}${pathname}`} />
         <meta name="docsearch:version" content="2.0" />
         <meta name="title" content={title}></meta>
-        <meta name="description" content={title} />
+        <meta name="description" content={excerpt} />
 
         <meta property="og:url" content={siteUrl} />
         <meta property="og:type" content="website" />

@@ -31,6 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 date
+                updated_date
                 description
                 path
                 layout
@@ -47,29 +48,29 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+    const edges = result.data.allMarkdownRemark.edges
 
-    posts.forEach((post, index) => {
+    edges.forEach((edge, index) => {
       // const previous = index === posts.length - 1 ? null : posts[index + 1].node
       // const next = index === 0 ? null : posts[index - 1].node
 
-      if (post.node.frontmatter.layout === "post") {
+      if (edge.node.frontmatter.layout === "post") {
         createPage({
-          path: post.node.fields.slug,
-          slug: post.node.fields.slug,
+          path: edge.node.fields.slug,
+          slug: edge.node.fields.slug,
           component: blogPost,
           context: {
-            slug: post.node.fields.slug,
+            slug: edge.node.fields.slug,
           },
         })
-      } else if (post.node.frontmatter.layout === "quote") {
+      } else if (edge.node.frontmatter.layout === "quote") {
         createPage({
-          path: post.node.fields.slug,
-          slug: post.node.fields.slug,
+          path: edge.node.fields.slug,
+          slug: edge.node.fields.slug,
           component: quote,
           context: {
-            page: post.node.frontmatter,
-            html: post.node.html
+            page: edge.node.frontmatter,
+            html: edge.node.html,
           },
         })
       }
