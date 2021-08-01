@@ -3,6 +3,7 @@ import MainLayout from "../components/layouts/MainLayout"
 import SiteMetadata from "../components/SiteMetadata"
 import styled from "styled-components"
 import media from '../utils/media-query'
+import styles from "../styles"
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -11,6 +12,8 @@ const Post = styled.article`
   margin: 0;
   width: 100%;
   max-width: ${(p) => p.theme.breakpoints.lg};
+
+  ${() => styles.post.map((x) => x)}
 
   p,
   ul {
@@ -134,9 +137,9 @@ const QuoteTemplate = ({ pageContext }) => (
     <Post>
       <Quote>{pageContext.page.quote_text}</Quote>
       <Cite>{pageContext.page.quote_author}</Cite>
-      <Square role="img" aria-label="separator">⬛</Square>
-      <Square role="img" aria-label="separator">⬛</Square>
-      <Square role="img" aria-label="separator">⬛</Square>
+      <Square>◼</Square>
+      <Square>◼</Square>
+      <Square>◼</Square>
       <div dangerouslySetInnerHTML={{ __html: pageContext.html }} />
     </Post>
   </MainLayout>
