@@ -43,8 +43,11 @@ const SiteMetadata = ({ pathname, title, excerpt }) => (
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={twitter} />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;0,900;1,300&family=Space+Mono&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Merriweather:ital,wght@0,400;0,900;1,300&family=Space+Mono&family=Playfair+Display:ital@1&display=swap"
           rel="stylesheet"
         />
       </Helmet>

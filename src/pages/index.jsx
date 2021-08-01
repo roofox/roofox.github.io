@@ -33,6 +33,7 @@ const Post = styled(Link)`
   flex: 1 0 100%;
   margin-bottom: 2rem;
   font-size: 1.4375rem;
+  // TODO: use value from theme as rgb(0, 0, 0, 0.1)
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: 7px 7px 10px #020202;
   color: ${(p) => p.theme.colors.body};

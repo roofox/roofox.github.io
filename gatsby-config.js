@@ -21,29 +21,10 @@ const config = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `content`,
         path: `${__dirname}/content/`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: "Merriweather",
-    //         variants: ["400", "300", "900"],
-    //       },
-    //       {
-    //         family: "Kanit",
-    //         variants: ["700"],
-    //       },
-    //       {
-    //         family: "Space Mono",
-    //         variants: ["400", "700", "400", "700"],
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

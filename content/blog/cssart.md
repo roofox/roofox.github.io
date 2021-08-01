@@ -8,7 +8,7 @@ categories: css art
 author: sergio
 path: /cssart/
 cover: 7cfc
-draft: false
+draft: true
 ---
 
 `ccsart`

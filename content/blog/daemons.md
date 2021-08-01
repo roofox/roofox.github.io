@@ -8,7 +8,7 @@ categories: debian operating-system
 author: sergio
 path: "/daemons/"
 cover: 18c7
-draft: false
+draft: true
 ---
 
 # Ingles

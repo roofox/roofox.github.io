@@ -11,7 +11,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
 
-  padding: 0 ${(p) => p.theme.gutters.sidePadding};
+  padding: 2px ${(p) => p.theme.gutters.sidePadding};
   margin-top: 0;
 
   overflow: hidden;
