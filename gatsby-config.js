@@ -21,7 +21,7 @@ const config = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
+        name: `images`,
         path: `${__dirname}/content/`,
       },
     },
