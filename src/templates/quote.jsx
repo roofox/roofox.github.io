@@ -121,10 +121,11 @@ const Cite = styled.cite`
   `}
 `
 
-const Square = styled.p`
+const Square = styled.span`
   display: block;
   text-align: center!important;
   font-size: 1rem!important;
+  margin: 1rem 0;
 `;
 
 const QuoteTemplate = ({ pageContext }) => (
@@ -133,9 +134,9 @@ const QuoteTemplate = ({ pageContext }) => (
     <Post>
       <Quote>{pageContext.page.quote_text}</Quote>
       <Cite>{pageContext.page.quote_author}</Cite>
-      <Square>⬛</Square>
-      <Square>⬛</Square>
-      <Square>⬛</Square>
+      <Square role="img" aria-label="separator">⬛</Square>
+      <Square role="img" aria-label="separator">⬛</Square>
+      <Square role="img" aria-label="separator">⬛</Square>
       <div dangerouslySetInnerHTML={{ __html: pageContext.html }} />
     </Post>
   </MainLayout>
