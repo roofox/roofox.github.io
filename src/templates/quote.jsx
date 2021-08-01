@@ -23,7 +23,6 @@ const Post = styled.article`
   }
 
   ${media.lessThan("md")`
-    background-color: blue;
     max-width: 100%;
     p, ul {
       margin: 1rem 0;
@@ -31,7 +30,6 @@ const Post = styled.article`
   `}
 
   ${media.lessThan("sm")`
-    background-color: red;
     max-width: 100%;
     p, ul {
       margin: 0.5rem 0;
@@ -52,13 +50,7 @@ const Quote = styled.div`
   text-shadow: 10px 13px 5px #020202;
 
   ${media.lessThan("md")`
-    // margin-left: 6rem;
     font-size: 2.5rem;
-  `}
-
-  ${media.lessThan("sm")`
-    // margin-left: 0rem;
-    // margin-top: 3rem;
   `}
 
   &:before {
@@ -69,27 +61,11 @@ const Quote = styled.div`
     margin: 0 auto;
     pointer-events: none;
     font-size: 10rem;
-    // outline: 1px solid red;
     letter-spacing: normal;
     font-style: normal;
     font-weight: bold;
     color: rgb(123, 154, 185);
     text-shadow: 10px 13px 5px #020202;
-    /*
-    position: absolute;
-    top: 5rem;
-    left: -9rem;
-    
-
-    ${media.lessThan("md")`
-      font-size: 8em;
-      left: -7rem;
-    `}
-
-    ${media.lessThan("sm")`
-      content: "";
-    `}
-    */
   }
 `
 
@@ -114,10 +90,6 @@ const Cite = styled.cite`
   &:after {
     content: " —";
   }
-
-  ${media.lessThan("md")`
-    // font-size: 1rem;
-  `}
 
   ${media.lessThan("sm")`
     font-size: 1rem;
